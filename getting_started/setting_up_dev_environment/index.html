@@ -786,11 +786,13 @@
 
 <h1 id="before-setting-up-the-dev-environment"><p style="text-align: center;"> Before Setting Up the Dev Environment </p></h1>
 <p>Make sure that you have installed docker before doing this step. The following steps will not work if docker is not installed on your machine. The easiest way to check whether docker is installed correctly, open a terminal and type <code>docker</code>. If an error doesn't pop up that means that you can proceed!</p>
-<p>Also ensure that you have vscode or some other IDE that supports Docker dev environments installed. For the purposes of this documentation, we will be using VSCode but there are plenty of other IDEs that support this and they each have their own documentation for how to get this setup.</p>
+<p>Also ensure that you have VSCode or some other IDE that supports Docker dev environments installed <strong>in WSL</strong>. For the purposes of this documentation, we will be using VSCode but there are plenty of other IDEs that support this and they each have their own documentation for how to get this setup.</p>
 <h1 id="installing-the-development-container"><p style="text-align: center;"> Installing the Development Container </p></h1>
 <ul>
-<li>First, clone the main github repository from the following URL: https://github.com/sailbot-vt/sailbot_vt.</li>
-<li>Open VSCode up in that folder</li>
+<li>First, into a folder in WSL, clone the main github repository from the following URL: https://github.com/sailbot-vt/sailbot_vt. Open up a terminal and type the following command:
+<code>git clone https://github.com/sailbot-vt/sailbot_vt</code></li>
+<li>Then, open up that folder in VSCode by typing:
+<code>code .</code></li>
 <li>Install the Docker Dev Containers Extension on VSCode. It should look like the following: <img alt="Docker Dev Containers VSCode" src="../image.png" /></li>
 <li>Build and enter dev container for the repo by typing in the following into the search bar at the top <code>&gt;dev containers build</code>. You should see something similar to this at the top: <img alt="alt text" src="../image-1.png" />. Wait for a moment as the container sets itself up!</li>
 </ul>
