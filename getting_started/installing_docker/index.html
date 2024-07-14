@@ -373,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../running_simulation.md" class="md-nav__link">
+      <a href="../../examples/running_simulation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -394,7 +394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../running_individual_nodes.md" class="md-nav__link">
+      <a href="../../examples/running_individual_nodes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -436,7 +436,7 @@
             
   
   <span class="md-ellipsis">
-    Nodes/ Messages
+    Resources
   </span>
   
 
@@ -445,6 +445,69 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/diagram_of_groundstation_telemetry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flow of Information Between Groundstation and Autopilot Node
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Nodes/ Messages
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Nodes/ Messages
           </label>
@@ -660,10 +723,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -674,8 +737,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Misc
           </label>
@@ -803,7 +866,12 @@ For more information see the official WSL documentation:  <a href="https://learn
 <hr />
 <p>The following link contains the download link for docker desktop on windows. 
 Follow the download instructions, and when you are done, you should have docker installed!<br />
-<a href="https://docs.docker.com/desktop/install/windows-install/">Docker Desktop for Windows Install Page</a></p>
+<a href="https://docs.docker.com/desktop/install/windows-install/">Docker Desktop for Windows Install Page</a>  </p>
+<p>You may run into permission issues with docker, so you need to run the following commands in your WSL terminal to give your non-sudo user access to docker.
+<div class="highlight"><pre><span></span><code>sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+</code></pre></div></p>
 <p><br></p>
 <h1 id="installing-docker-on-ubuntu-linux"><p style="text-align: center;"> Installing Docker on Ubuntu Linux </p></h1>
 <hr />
@@ -823,6 +891,10 @@ sudo<span class="w"> </span>chmod<span class="w"> </span>a+r<span class="w"> </s
 sudo<span class="w"> </span>apt-get<span class="w"> </span>update
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>docker-ce<span class="w"> </span>docker-ce-cli<span class="w"> </span>containerd.io<span class="w"> </span>docker-buildx-plugin<span class="w"> </span>docker-compose-plugin
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
 </code></pre></div></p>
 <hr />
 <p><br></p>

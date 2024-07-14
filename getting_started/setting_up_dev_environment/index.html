@@ -373,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../running_simulation.md" class="md-nav__link">
+      <a href="../../examples/running_simulation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -394,7 +394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../running_individual_nodes.md" class="md-nav__link">
+      <a href="../../examples/running_individual_nodes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -436,7 +436,7 @@
             
   
   <span class="md-ellipsis">
-    Nodes/ Messages
+    Resources
   </span>
   
 
@@ -445,6 +445,69 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/diagram_of_groundstation_telemetry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flow of Information Between Groundstation and Autopilot Node
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Nodes/ Messages
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Nodes/ Messages
           </label>
@@ -660,10 +723,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -674,8 +737,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Misc
           </label>
@@ -793,8 +856,8 @@
 <code>git clone https://github.com/sailbot-vt/sailbot_vt</code></li>
 <li>Then, open up that folder in VSCode by typing the following into the same terminal:<br />
 <code>cd sailbot_vt &amp;&amp; code .</code></li>
-<li>Install the Docker Dev Containers Extension on VSCode. It should look like the following: <img alt="Docker Dev Containers VSCode" src="../image.png" /></li>
-<li>Build and enter dev container for the repo by typing in the following into the search bar at the top <code>&gt;dev containers build</code>. You should see something similar to this at the top: <img alt="alt text" src="../image-1.png" />. Wait for a moment as the container sets itself up!</li>
+<li>Install the Docker Dev Containers Extension on VSCode. It should look like the following: <img alt="Docker Dev Containers VSCode" src="../../images/dev_container_ext.png" /></li>
+<li>Build and enter dev container for the repo by typing in the following into the search bar at the top <code>&gt;dev containers build</code>. You should see something similar to this at the top: <img alt="alt text" src="../../images/dev_container_search_bar.png" />. Wait for a moment as the container sets itself up!</li>
 </ul>
 <h1 id="final-setup-after-loading-development-container"><p style="text-align: center;"> Final Setup after Loading Development Container </p></h1>
 <hr />
@@ -810,7 +873,6 @@ Restart VSCode by closing it and reopening it to make sure all of the changes re
 First, open a VSCode window and click on the search bar at the very top. Instead of searching like you would normally, instead type <code>&gt;open folder in container</code>. Remember to include the "&gt;" as thats what allows your VSCode search bar to run commands. Once you do that you should get a popup that looks something like this <img alt="Open Folder in Container" src="../../images/open_folder_in_container_vscode.png" />
 Click on Dev Containers: Open Folder in Container.<br />
 This should navigate you to a file explorer. Using it, simply navigate to the folder that you cloned the github repo into and you should be back to your development container.</p>
-<p>TODO: this would change if we want to make the base of the github repo the workspace instead of the src folder because you wouldn't use the folder that you cloned the github repo into </p>
 
 
 
