@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://localhost:8000/examples/running_a_custom_simulation/</loc>
+         <lastmod>2024-07-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://localhost:8000/examples/running_individual_nodes/</loc>
          <lastmod>2024-07-14</lastmod>
          <changefreq>daily</changefreq>
@@ -22,6 +27,11 @@
     </url>
     <url>
          <loc>https://localhost:8000/getting_started/setting_up_dev_environment/</loc>
+         <lastmod>2024-07-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://localhost:8000/getting_started/setting_up_the_groundstation/</loc>
          <lastmod>2024-07-14</lastmod>
          <changefreq>daily</changefreq>
     </url>

@@ -298,6 +298,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../getting_started/setting_up_ground_station.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting Up the Ground Station
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../getting_started/what_did_you_just_install/" class="md-nav__link">
         
   
@@ -559,15 +580,6 @@
   <a href="#summary" class="md-nav__link">
     <span class="md-ellipsis">
       Summary
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-groundstation" class="md-nav__link">
-    <span class="md-ellipsis">
-      The GroundStation
     </span>
   </a>
   
@@ -934,15 +946,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-groundstation" class="md-nav__link">
-    <span class="md-ellipsis">
-      The GroundStation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#the-autopilot-parameters-system" class="md-nav__link">
     <span class="md-ellipsis">
       The Autopilot Parameters System
@@ -1000,24 +1003,6 @@
 <p>An important thing to note is that this node also controls basic RC override, which is why it needs to listen into the raw RC data. There are several different types of RC override listed below:<br />
 <img alt="Code for Switching Modes" src="../../images/switches_and_autopilot_modes.png" />
 TODO: make this actually documented lol</p>
-<p><br></p>
-<h2 id="the-groundstation"><strong>The GroundStation</strong></h2>
-<p>There is a separate github repository that contains all of the code for the ground station. This code is supposed to be run on an operator's computer to control the boat while it is on the water by telling a cloud server what we want our boat to do. The boat (specifically the telemetry node) then listens to this cloud server, processes the data, and performs whatever action we told it to do. You can do various things like sending different parameters to the autopilot and sending waypoints. These parameters can look like the PID gains or the tacking distance or the size of the no go zone etc (in other words things that were chosen arbitrarily).</p>
-<p>You can also use the ground station code to control the simulation, so if you send waypoints or parameters while a simulation is running then the simulation will automatically listen to the cloud server and navigate to those waypoints/ change specific parameters.</p>
-<p>In order to use the code you need to clone the github repository from here:<br />
-https://github.com/sailbot-vt/ground_station<br />
-and then open up your terminal (if you are windows this should be your WSL terminal), make sure you navigate to the directory with the requirements.txt file, and type the following:</p>
-<p><code>pip install -r requirements.txt</code></p>
-<p>This will install all of the requirements for the ground station code into your computer. We aren't currently using the Docker Dev Environment for this but technically you could do this in your Docker Dev Environment if you wanted.</p>
-<div class="admonition note">
-<p class="admonition-title">NOTE: Groundstation Code Has Mostly Only Been Tested for Python 3.10</p>
-<p>Most of this code has been tested for python 3.10, so if you have an issue on another version of python please let an officer know although there aren't many reasons why the code wouldn't work on other versions unless they are very old versions of python (like before python 3.7).</p>
-</div>
-<p>As of right now the code is kind of a mess and the visualization barely works (one of the big things we are trying to do is have an actual ground station app ready by this year's competition)
-The primary files you should care about in the groundstation are the following files: desired_parameters.json, desired_waypoints.json, send_desired_parameters_and_waypoints.py, and main.py (although main.py is kind of a mess right now). </p>
-<p>The essential functionality is that send_desired_parameters_and_waypoints.py just sends the data from desired_parameters.json and desired_waypoints.json and you can edit those based on what you want to change. Waypoints are simply supplied as a list of [latitude, longitude] (TODO maybe add a picture here). The list of parameters that you can change are found in the autopilot node here: config/default_parameters.yaml</p>
-<p>For more information on how the ground station sends parameters, please see the resources section of the documentation.<br />
-The following section on the autopilot parameters system also gives more information on how the autopilot receives parameters from the telemetry node.</p>
 <p><br></p>
 <h2 id="the-autopilot-parameters-system"><strong>The Autopilot Parameters System</strong></h2>
 <p>In order for us to be able to control and tune parameters for the autopilot from the groundstation, this node also listens for autopilot_parameters. These are jsons (serialized as strings) which detail all of the new parameters and what their values should be. These values are sent from the groundstation to the telemetry server, then to the telemetry node and then finally to the autopilot. An example of these parameters is shown below:
