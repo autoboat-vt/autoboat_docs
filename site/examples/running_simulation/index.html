@@ -298,27 +298,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/setting_up_the_ground_station/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Setting Up the Ground Station
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../getting_started/what_did_you_just_install/" class="md-nav__link">
         
   
@@ -871,9 +850,10 @@
 <h1 id="running-the-simulation">Running the Simulation</h1>
 <p>To run the simulation, all you need to do is run the following command:</p>
 <p><code>ros2 launch /home/ws/src/launch/simulation.launch.py</code></p>
-<p>This command will then start the simulation and autopilot. Initially, however they won't do anything because they don't have any waypoint commands, so what you will need to do is go into your ground station repository in another terminal (not in the dev container) and type in the following command:  </p>
+<p>This command will then start the simulation and autopilot. Initially, however they won't do anything because they don't have any waypoint commands, so what you will need to do is go into your ground station folder in another terminal (not in the dev container) and type in the following command:  </p>
 <p><code>python send_desired_parameters_and_waypoints.py</code></p>
-<p>Doing this should make the boat in the visualization move around the pop up screen!</p>
+<p>Doing this should make the boat in the visualization move around the pop up screen!  </p>
+<p>The boat might be kind of slow though, so be sure to go check out how to run a custom simulation in the examples. With the custom simulations we can accelerate the speed of the simulation by a landslide!</p>
 
 
 

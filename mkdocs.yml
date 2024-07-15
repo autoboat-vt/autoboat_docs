@@ -6,7 +6,6 @@ nav:
   - Getting Started: 
     - Installing Docker: getting_started/installing_docker.md
     - Setting Up the Development Container: getting_started/setting_up_dev_environment.md
-    - Setting Up the Ground Station: getting_started/setting_up_the_ground_station.md
     - What Did You Just Install?: getting_started/what_did_you_just_install.md
   - Examples:
     - Running the Simulation: examples/running_simulation.md
