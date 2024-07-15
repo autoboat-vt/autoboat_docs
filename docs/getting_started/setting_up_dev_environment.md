@@ -1,19 +1,24 @@
 # <p style="text-align: center;"> Before Setting Up the Dev Environment </p>
-Make sure that you have installed docker before doing this step. The following steps will not work if docker is not installed on your machine. The easiest way to check whether docker is installed correctly, open a terminal and
+Make sure that you have installed docker before doing this step. The following steps will not work if docker is not installed on your machine. The easiest way to check whether docker is installed correctly, open a terminal and type `docker`. If an error doesn't pop up that means that you can proceed!
 
-Also ensure that you 
+Also ensure that you have VSCode or some other IDE that supports Docker dev environments installed (**If you are using Windows you install VSCode in WSL too**). For the purposes of this documentation, we will be using VSCode but there are plenty of other IDEs that support this and they each have their own documentation for how to get this setup.
+
 
 # <p style="text-align: center;"> Installing the Development Container </p>
-Clone the git repo
-Install Dev container extension
-Build and enter dev container for the repo
+
+- First, (**If you are using Windows you must do this in a WSL folder**) we need to clone the main github repository from the following URL: https://github.com/sailbot-vt/sailbot_vt. Open up a terminal and type the following command:  
+`git clone https://github.com/sailbot-vt/sailbot_vt`
+- Then, open up that folder in VSCode by typing the following into the same terminal:  
+`cd sailbot_vt && code .`
+- Install the Docker Dev Containers Extension on VSCode. It should look like the following: ![Docker Dev Containers VSCode](../images/dev_container_ext.png)
+- Build and enter dev container for the repo by typing in the following into the search bar at the top `>dev containers build`. You should see something similar to this at the top: ![alt text](../images/dev_container_search_bar.png). Wait for a moment as the container sets itself up!
 
 
 # <p style="text-align: center;"> Final Setup after Loading Development Container </p>
 ____________________________________________________________________________
 Once you are inside your development container, go to the terminal and input the following commands.
 ```sh
-cd src && bash setup.sh
+bash docker_dev_environment_setup.sh
 ```   
 ```sh
 source ~/.bashrc
@@ -28,4 +33,3 @@ First, open a VSCode window and click on the search bar at the very top. Instead
 Click on Dev Containers: Open Folder in Container.  
 This should navigate you to a file explorer. Using it, simply navigate to the folder that you cloned the github repo into and you should be back to your development container.
 
-TODO: this would change if we want to make the base of the github repo the workspace instead of the src folder because you wouldn't use the folder that you cloned the github repo into 

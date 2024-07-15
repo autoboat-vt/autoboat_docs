@@ -5,4 +5,4 @@ If you would like to see what we are currently working on then please visit the 
 
 ## Add the following aliases if they help:
 - alias python=python3
-- alias 'colcon build'='cd /home/src && colcon build'
+- alias 'colcon build'='cd /home/ws && colcon build'
