@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#command-to-run-the-node" class="md-skip">
+        <a href="#mcu-micro-controller-unit" class="md-skip">
           Skip to content
         </a>
       
@@ -298,7 +298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/setting_up_the_ground_station/" class="md-nav__link">
+      <a href="../../getting_started/setting_up_the_ground_station.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -621,6 +621,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -649,12 +651,23 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#command-to-run-the-node" class="md-nav__link">
@@ -896,12 +909,23 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#command-to-run-the-node" class="md-nav__link">
@@ -936,14 +960,16 @@
                   
 
 
-  <h1>MCU (Micro Controller Unit)</h1>
-
+<h1 id="mcu-micro-controller-unit"><p style="text-align: center;"> MCU (Micro Controller Unit) </p></h1>
+<h2 id="summary"><strong>Summary</strong></h2>
+<p>This node is responsible for communicating back and forth between our MCU, also known as just micro-controllers. micro-controllers are devices like arduinos that help our jetson communicate with the motors and some very specific sensors on board that we would rather route through the micro-controller (Please refer to the electrical the electrical schematic in for what we are routing through our micro-controller of choice). Primarily, this node's responsibility is to communicate with the MCU through a USB serial connection and whatever format that we decided to send our data in.</p>
+<p><em>Side Note</em>: There is an odd story behind us using a microcontroller to speak with everything. A while back (before even Chris's time) we used to control the motors and stuff directly with our on-board computer, but someone fried the on-board computer and ever since we were told to not control motors directly with the on-board computer. Its strange because there should never be a high voltage running through back to the on-board computer, so I don't quite know what happened there. Either way, I like it better this way because it allows us to easily unplug and replug everything into the jetson (since it is all plugged in via USB).</p>
 <p><br></p>
-<h3 id="command-to-run-the-node">Command to Run the Node</h3>
+<h2 id="command-to-run-the-node">Command to Run the Node</h2>
 <div class="highlight"><pre><span></span><code>ros2<span class="w"> </span>run<span class="w"> </span>mcu<span class="w"> </span>mcu
 </code></pre></div>
 <p><br></p>
-<h3 id="listens-to-the-following-topics">Listens to the Following Topics</h3>
+<h2 id="listens-to-the-following-topics">Listens to the Following Topics</h2>
 <ul>
 <li>/actions/sail_angle (Float32 from std_msgs)</li>
 <li>/actions/rudder_angle (Float32 from std_msgs)</li>
