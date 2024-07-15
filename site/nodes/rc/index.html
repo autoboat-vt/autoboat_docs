@@ -382,6 +382,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../examples/running_a_custom_simulation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running a Custom Simulation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../examples/running_individual_nodes/" class="md-nav__link">
         
   
@@ -450,6 +471,27 @@
   
   <span class="md-ellipsis">
     Flow of Information Between Groundstation and Autopilot Node
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/diagram_of_simulations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diagram of How the Simulation Works and Communicates with ROS
   </span>
   
 
@@ -669,6 +711,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#command-to-run-the-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command to Run the Node
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listens-to-the-following-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listens to the Following Topics
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -732,6 +792,27 @@
   
   <span class="md-ellipsis">
     Wind Sensor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what_about_the_other_nodes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What About the Other Nodes
   </span>
   
 
@@ -888,6 +969,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#command-to-run-the-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command to Run the Node
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listens-to-the-following-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listens to the Following Topics
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -911,6 +1010,15 @@ TODO
 TODO</p>
 <h2 id="summary"><strong>Summary</strong></h2>
 <p>This node is responsible for communicating back and forth between our RC (remote controller). I believe the RC we use is one in the Radiomaster RP series but I am not entirely sure about the specific model since it has been a while since I have looked at it (I'll hopefully update this when school starts again). The communication protocol that we use is called CRSF with ExpressLRS</p>
+<p><br></p>
+<h2 id="command-to-run-the-node">Command to Run the Node</h2>
+<div class="highlight"><pre><span></span><code>ros2<span class="w"> </span>run<span class="w"> </span>rc<span class="w"> </span>rc
+</code></pre></div>
+<p><br></p>
+<h2 id="listens-to-the-following-topics">Listens to the Following Topics</h2>
+<ul>
+<li>/rc_data (RCData from sailbot_msgs)</li>
+</ul>
 
 
 

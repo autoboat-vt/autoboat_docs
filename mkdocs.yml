@@ -9,9 +9,11 @@ nav:
     - What Did You Just Install?: getting_started/what_did_you_just_install.md
   - Examples:
     - Running the Simulation: examples/running_simulation.md
+    - Running a Custom Simulation: examples/running_a_custom_simulation.md
     - Running Individual Nodes for Testing: examples/running_individual_nodes.md
   - Resources:
     - Flow of Information Between Groundstation and Autopilot Node: resources/diagram_of_groundstation_telemetry.md
+    - Diagram of How the Simulation Works and Communicates with ROS: resources/diagram_of_simulations.md
   - Nodes/ Messages:
     - Autopilot: nodes/autopilot.md
     - Telemetry: nodes/telemetry.md
@@ -22,6 +24,7 @@ nav:
     - Sailbot Messages: nodes/sailbot_msgs.md
     - Simulation: nodes/simulation.md
     - Wind Sensor: nodes/wind_sensor.md
+    - What About the Other Nodes: nodes/what_about_the_other_nodes.md
   - Misc:
     - Potential Security Risks: misc/potential_security_risks.md
     - Known Issues: misc/known_issues.md
