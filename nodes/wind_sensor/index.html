@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#wind-sensor" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -721,6 +726,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Wind Sensor
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -731,6 +749,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-to-run-the-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command to Run the Node
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishes-to-the-following-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publishes to the Following Topics
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -887,6 +951,43 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-to-run-the-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command to Run the Node
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishes-to-the-following-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publishes to the Following Topics
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -901,9 +1002,24 @@
                   
 
 
-  <h1>Wind Sensor</h1>
-
-
+<h1 id="wind-sensor"><p style="text-align: center;"> Wind Sensor </p></h1>
+<h2 id="summary"><strong>Summary</strong></h2>
+<p>This node is responsible for communicating back and forth between our wind sensor (<a href="https://calypsoinstruments.com/shop/product/ultra-low-power-ultrasonic-wind-meter-pro-ulp-pro-197?category=2#attr=116,117,120">Calypso Wind Sensor</a>). The wind sensor gives us NMEA0183 sentences that look may look like the picture below.<br />
+<img alt="NMEA Sentence Example" src="../../images/nmea_sentence_example.png" /></p>
+<p><br></p>
+<p>The NMEA0183 message structure is very simple. The basics are that they always send a "$" when the message starts and separates different sub-messages with commas. If you would like to read more about NMEA0183, you can do so here: <a href="https://receiverhelp.trimble.com/alloy-gnss/en-us/NMEA-0183messages_MessageOverview.html">NMEA0183 explanation</a>.</p>
+<p><br></p>
+<p>Our wind sensor sends its sub-messages in the following order:
+<img alt="Wind Sensor Message Order" src="../../images/wind_sensor_message_order.png" /></p>
+<h2 id="command-to-run-the-node"><strong>Command to Run the Node</strong></h2>
+<div class="highlight"><pre><span></span><code>ros2<span class="w"> </span>run<span class="w"> </span>gps<span class="w"> </span>gps
+</code></pre></div>
+<p><br></p>
+<h2 id="publishes-to-the-following-topics"><strong>Publishes to the Following Topics</strong></h2>
+<ul>
+<li>/position (NavSatFix from sensor_msgs)</li>
+<li>/velocity (Twist from geometry_msgs)</li>
+</ul>
 
 
 
