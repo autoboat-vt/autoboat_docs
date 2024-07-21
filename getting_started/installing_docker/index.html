@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#installing-docker" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -259,6 +264,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Installing Docker
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -269,6 +287,61 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-docker-on-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Docker on Windows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-docker-on-ubuntu-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Docker on Ubuntu Linux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-docker-on-mac-os" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Docker on Mac OS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-docker-on-other-operating-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Docker on Other Operating Systems
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -887,6 +960,52 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-docker-on-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Docker on Windows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-docker-on-ubuntu-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Docker on Ubuntu Linux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-docker-on-mac-os" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Docker on Mac OS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-docker-on-other-operating-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Docker on Other Operating Systems
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -901,39 +1020,33 @@
                   
 
 
-  <h1>Installing Docker</h1>
-
-<p>!!!NOTE "NOTE: If You Meet Dificulties Installing Docker" Ensure that you meet the docker's system requirements listed on their documentation, if not then attempt to contact an officer or look through the docker documentation for what to do if you do not meet the system requirements. Heres the link to the Docker documentation <a href="https://docs.docker.com/get-docker/">Docker Documentation</a></p>
-<p>#</p>
-<p style="text-align: center;">
-
-Installing Docker on Windows
-
-</p>
-
+<h1 id="installing-docker"><p style="text-align: center"> Installing Docker </p></h1>
+<div class="admonition note">
+<p class="admonition-title">NOTE: If You Meet Dificulties Installing Docker</p>
+<p>Ensure that you meet the docker's system requirements listed on their documentation, if not then attempt to contact an officer or look through the docker documentation for what to do if you do not meet the system requirements. Heres the link to the Docker documentation <a href="https://docs.docker.com/get-docker/">Docker Documentation</a></p>
+</div>
+<p><br></p>
+<h2 id="installing-docker-on-windows"><p style="text-align: center"> <strong>Installing Docker on Windows</strong> </p></h2>
 <p>In order to install Docker on windows, first we must install WSL (Windows Subsystem in Linux).</p>
 <p>Open the command prompt <strong><em>with administrator privileges</em></strong> and type the following commands</p>
 <div class="highlight"><pre><span></span><code>wsl.exe<span class="w"> </span>--install<span class="w"> </span>-d<span class="w"> </span>Ubuntu-22.04
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>wsl<span class="w"> </span>--set-default<span class="w"> </span>Ubuntu-22.04
 </code></pre></div>
-<p>Enter your user info to complete the installation\
-__________________________________________________________________________</p>
+<p>Enter your user info to complete the installation  </p>
+<hr />
 <p>With these steps, this will have installed WSL and Ubuntu 22.04. Docker requires Ubuntu WSL to work on Windows. For more information see the official WSL documentation: <a href="https://learn.microsoft.com/en-us/windows/wsl/install">Official WSL Documentation</a></p>
-<p>Next, we must install the docker desktop application and connect it up to WSL. __________________________________________________________________________ The following link contains the download link for docker desktop on windows. Follow the download instructions, and when you are done, you should have docker installed!\
+<p>Next, we must install the docker desktop application and connect it up to WSL.  </p>
+<hr />
+<p>The following link contains the download link for docker desktop on windows. Follow the download instructions, and when you are done, you should have docker installed!\
 <a href="https://docs.docker.com/desktop/install/windows-install/">Docker Desktop for Windows Install Page</a></p>
 <p>You may run into permission issues with docker, so you need to run the following commands in your WSL terminal to give your non-sudo user access to docker.</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>groupadd<span class="w"> </span>docker
 sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="nv">$USER</span>
 newgrp<span class="w"> </span>docker
 </code></pre></div>
-<p><br> #</p>
-<p style="text-align: center;">
-
-Installing Docker on Ubuntu Linux
-
-</p>
-
+<p><br> </p>
+<h2 id="installing-docker-on-ubuntu-linux"><p style="text-align: center;"> <strong>Installing Docker on Ubuntu Linux</strong> </p></h2>
 <hr />
 <p>Please type the following sets of commands in a terminal.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Add Docker&#39;s official GPG key:</span>
@@ -957,13 +1070,8 @@ sudo usermod -aG docker $USER
 newgrp docker
 </code></pre></div>
 <hr />
-<p><br> #</p>
-<p style="text-align: center;">
-
-Installing Docker on Mac OS
-
-</p>
-
+<p><br> </p>
+<h2 id="installing-docker-on-mac-os"><p style="text-align: center;"> <strong>Installing Docker on Mac OS</strong> </p></h2>
 <p>Docker can be installed standalone from the <a href="https://docs.docker.com/desktop/install/mac-install/">website</a>, but it is recommended to instead install via <a href="https://brew.sh/">Homebrew</a>, the unofficial official package manager for Mac OS. Homebrew is recommended over the standalone installer as it simplifies the installation process and is nice to use.</p>
 <p>Please install Homebrew by entering the following command into the terminal</p>
 <div class="highlight"><pre><span></span><code>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">&quot;</span>
@@ -985,13 +1093,8 @@ Client:
 <span class="w"> </span>OS/Arch:<span class="w">           </span>darwin/arm64
 <span class="w"> </span>Context:<span class="w">           </span>desktop-linux
 </code></pre></div>
-<p><br> #</p>
-<p style="text-align: center;">
-
-Installing Docker on Other Operating Systems
-
-</p>
-
+<p><br>  </p>
+<h2 id="installing-docker-on-other-operating-systems"><p style="text-align: center;"> <strong>Installing Docker on Other Operating Systems</strong> </p></h2>
 <p>Documentation for the rest of the operating systems docker supports can be found here: <a href="https://docs.docker.com/engine/install/">Official Docker Installation Instructions for Every OS</a>.</p>
 
 
