@@ -71,11 +71,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#installing-docker-on-windows" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -263,8 +258,6 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
-      
-        
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
@@ -894,8 +887,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -910,35 +901,41 @@
                   
 
 
-<div class="admonition note">
-<p class="admonition-title">NOTE: If You Meet Dificulties Installing Docker</p>
-<p>Ensure that you meet the docker's system requirements listed on their documentation, if not then attempt to contact an officer or look through the docker documentation for what to do if you do not meet the system requirements. Heres the link to the Docker documentation <a href="https://docs.docker.com/get-docker/">Docker Documentation</a></p>
-</div>
-<h1 id="installing-docker-on-windows"><p style="text-align: center;"> Installing Docker on Windows </p></h1>
-<p>In order to install Docker on windows, first we must install WSL (Windows Subsystem in Linux).  </p>
-<p>Open the command prompt <strong><em>with administrator privileges</em></strong> and type the following commands<br />
+  <h1>Installing Docker</h1>
+
+<p>!!!NOTE "NOTE: If You Meet Dificulties Installing Docker" Ensure that you meet the docker's system requirements listed on their documentation, if not then attempt to contact an officer or look through the docker documentation for what to do if you do not meet the system requirements. Heres the link to the Docker documentation <a href="https://docs.docker.com/get-docker/">Docker Documentation</a></p>
+<p>#</p>
+<p style="text-align: center;">
+
+Installing Docker on Windows
+
+</p>
+
+<p>In order to install Docker on windows, first we must install WSL (Windows Subsystem in Linux).</p>
+<p>Open the command prompt <strong><em>with administrator privileges</em></strong> and type the following commands</p>
 <div class="highlight"><pre><span></span><code>wsl.exe<span class="w"> </span>--install<span class="w"> </span>-d<span class="w"> </span>Ubuntu-22.04
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>wsl<span class="w"> </span>--set-default<span class="w"> </span>Ubuntu-22.04
 </code></pre></div>
-Enter your user info to complete the installation  </p>
+<p>Enter your user info to complete the installation\
+__________________________________________________________________________</p>
+<p>With these steps, this will have installed WSL and Ubuntu 22.04. Docker requires Ubuntu WSL to work on Windows. For more information see the official WSL documentation: <a href="https://learn.microsoft.com/en-us/windows/wsl/install">Official WSL Documentation</a></p>
+<p>Next, we must install the docker desktop application and connect it up to WSL. __________________________________________________________________________ The following link contains the download link for docker desktop on windows. Follow the download instructions, and when you are done, you should have docker installed!\
+<a href="https://docs.docker.com/desktop/install/windows-install/">Docker Desktop for Windows Install Page</a></p>
+<p>You may run into permission issues with docker, so you need to run the following commands in your WSL terminal to give your non-sudo user access to docker.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>groupadd<span class="w"> </span>docker
+sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="nv">$USER</span>
+newgrp<span class="w"> </span>docker
+</code></pre></div>
+<p><br> #</p>
+<p style="text-align: center;">
+
+Installing Docker on Ubuntu Linux
+
+</p>
+
 <hr />
-<p>With these steps, this will have installed WSL and Ubuntu 22.04. Docker requires Ubuntu WSL to work on Windows. 
-For more information see the official WSL documentation:  <a href="https://learn.microsoft.com/en-us/windows/wsl/install">Official WSL Documentation</a></p>
-<p>Next, we must install the docker desktop application and connect it up to WSL.</p>
-<hr />
-<p>The following link contains the download link for docker desktop on windows. 
-Follow the download instructions, and when you are done, you should have docker installed!<br />
-<a href="https://docs.docker.com/desktop/install/windows-install/">Docker Desktop for Windows Install Page</a>  </p>
-<p>You may run into permission issues with docker, so you need to run the following commands in your WSL terminal to give your non-sudo user access to docker.
-<div class="highlight"><pre><span></span><code>sudo groupadd docker
-sudo usermod -aG docker $USER
-newgrp docker
-</code></pre></div></p>
-<p><br></p>
-<h1 id="installing-docker-on-ubuntu-linux"><p style="text-align: center;"> Installing Docker on Ubuntu Linux </p></h1>
-<hr />
-<p>Please type the following sets of commands in a terminal.
+<p>Please type the following sets of commands in a terminal.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Add Docker&#39;s official GPG key:</span>
 sudo<span class="w"> </span>apt-get<span class="w"> </span>update
 sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>ca-certificates<span class="w"> </span>curl
@@ -958,13 +955,43 @@ sudo<span class="w"> </span>apt-get<span class="w"> </span>update
 <div class="highlight"><pre><span></span><code>sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
-</code></pre></div></p>
+</code></pre></div>
 <hr />
-<p><br></p>
-<h1 id="installing-docker-on-mac-os"><p style="text-align: center;"> Installing Docker on Mac OS</p></h1>
-<p>Please follow the official docker installation instructions as I am not too familiar with Mac computers. However if you own a Mac and would like to contribute to the documentation by writing up explicit installation instructions for Mac, please feel free. <a href="https://docs.docker.com/desktop/install/mac-install/">Official Docker Installation Instruction Mac</a></p>
-<p><br></p>
-<h1 id="installing-docker-on-other-operating-systems"><p style="text-align: center;"> Installing Docker on Other Operating Systems </p></h1>
+<p><br> #</p>
+<p style="text-align: center;">
+
+Installing Docker on Mac OS
+
+</p>
+
+<p>Docker can be installed standalone from the <a href="https://docs.docker.com/desktop/install/mac-install/">website</a>, but it is recommended to instead install via <a href="https://brew.sh/">Homebrew</a>, the unofficial official package manager for Mac OS. Homebrew is recommended over the standalone installer as it simplifies the installation process and is nice to use.</p>
+<p>Please install Homebrew by entering the following command into the terminal</p>
+<div class="highlight"><pre><span></span><code>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">&quot;</span>
+</code></pre></div>
+<p>Now that Homebrew is installed, run the following command to install Docker Desktop</p>
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>docker
+</code></pre></div>
+<p>To verify that the installation was successful, run the following command</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>version
+</code></pre></div>
+<p>If the installation succeeded, you should get something along the lines of the following</p>
+<div class="highlight"><pre><span></span><code>❯<span class="w"> </span>docker<span class="w"> </span>version
+Client:
+<span class="w"> </span>Version:<span class="w">           </span><span class="m">27</span>.0.3
+<span class="w"> </span>API<span class="w"> </span>version:<span class="w">       </span><span class="m">1</span>.46
+<span class="w"> </span>Go<span class="w"> </span>version:<span class="w">        </span>go1.21.11
+<span class="w"> </span>Git<span class="w"> </span>commit:<span class="w">        </span>7d4bcd8
+<span class="w"> </span>Built:<span class="w">             </span>Fri<span class="w"> </span>Jun<span class="w"> </span><span class="m">28</span><span class="w"> </span><span class="m">23</span>:59:41<span class="w"> </span><span class="m">2024</span>
+<span class="w"> </span>OS/Arch:<span class="w">           </span>darwin/arm64
+<span class="w"> </span>Context:<span class="w">           </span>desktop-linux
+</code></pre></div>
+<p><br> #</p>
+<p style="text-align: center;">
+
+Installing Docker on Other Operating Systems
+
+</p>
+
 <p>Documentation for the rest of the operating systems docker supports can be found here: <a href="https://docs.docker.com/engine/install/">Official Docker Installation Instructions for Every OS</a>.</p>
 
 

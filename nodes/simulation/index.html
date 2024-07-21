@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#simulation" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -700,6 +705,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Simulation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -710,6 +728,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listens-to-the-following-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listens to the Following Topics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishes-to-the-following-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publishes to the Following Topics
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -887,6 +951,43 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listens-to-the-following-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listens to the Following Topics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishes-to-the-following-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publishes to the Following Topics
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -901,12 +1002,30 @@
                   
 
 
-  <h1>Simulation</h1>
-
+<h1 id="simulation"><p style="text-align: center;"> Simulation </p></h1>
+<h2 id="summary"><strong>Summary</strong></h2>
 <p><em>talk about building your own simulation gui and how to build sailboat-gym pip package from source
 </em>talk about building your own gazebo simulation situation through the other repo</p>
-<p>Remember when building the simulation container from source to first install docker-buildx:<br />
-<code>sudo apt install docker-buildx</code></p>
+<p><br></p>
+<h2 id="listens-to-the-following-topics"><strong>Listens to the Following Topics</strong></h2>
+<ul>
+<li>/position (NavSatFix from sensor_msgs)</li>
+<li>/velocity (Twist from geometry_msgs)</li>
+<li>/heading (Float32 from std_msgs)</li>
+<li>/apparent_wind_vector (Vector3 from geometry_msgs)</li>
+<li>/actions/sail_angle (Float32 from std_msgs)</li>
+<li>/actions/rudder_angle (Float32 from std_msgs)</li>
+<li>/desired_heading (Float32 from std_msgs)</li>
+<li>/waypoints_list (WaypointList from sailbot_msgs)</li>
+<li>/cur_waypoint_index (Int32 from std_msgs)</li>
+<li>/full_autonomy_maneuver (String from std_msgs)</li>
+<li>/autopilot_mode (String from std_msgs)</li>
+</ul>
+<h2 id="publishes-to-the-following-topics"><strong>Publishes to the Following Topics</strong></h2>
+<ul>
+<li>/waypoints_list (WaypointList from sailbot_msgs)</li>
+<li>/autopilot_parameters (String from std_msgs)</li>
+</ul>
 
 
 

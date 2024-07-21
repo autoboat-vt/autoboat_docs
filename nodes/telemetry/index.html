@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#telemetry" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -574,6 +579,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Telemetry
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -584,6 +602,61 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-to-run-the-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command to Run the Node
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listens-to-the-following-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listens to the Following Topics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishes-to-the-following-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publishes to the Following Topics
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -887,6 +960,52 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-to-run-the-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command to Run the Node
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listens-to-the-following-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listens to the Following Topics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishes-to-the-following-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publishes to the Following Topics
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -901,9 +1020,33 @@
                   
 
 
-  <h1>Telemetry</h1>
-
-
+<h1 id="telemetry"><p style="text-align: center;"> Telemetry </p></h1>
+<h2 id="summary"><strong>Summary</strong></h2>
+<p>This node is responsible for listening to various topics and sending the data to the telemetry server so that we, on the ground, can view the data. Additionally, this node is also responsible for listening to autopilot parameters and waypoints stored in the telemetry server and sending them to the autopilot node. This allows us to change parameters of the autopilot and change the waypoints the boat needs to follow from the shore.  </p>
+<p>The telemetry node listens to data about the boats current state such as the position, velocity, heading, apparent wind vector. It also listens in on data that lets us know what the autopilot is currently thinking such as the current sail/ rudder angle, the heading it is trying to sail towards, a list of all of the waypoints that it is trying to follow, an index that represents what waypoint the autopilot is currently on, the name of the mode the autopilot is currently on (whether it is in RC mode, full autonomy mode, or some semi-autonomous mode), and the maneuver the boat might be trying to perform if it is in full autonomous mode (like tacking/ jibing).</p>
+<h2 id="command-to-run-the-node"><strong>Command to Run the Node</strong></h2>
+<div class="highlight"><pre><span></span><code>ros2<span class="w"> </span>run<span class="w"> </span>autopilot<span class="w"> </span>telemetry
+</code></pre></div>
+<p><br></p>
+<h2 id="listens-to-the-following-topics"><strong>Listens to the Following Topics</strong></h2>
+<ul>
+<li>/position (NavSatFix from sensor_msgs)</li>
+<li>/velocity (Twist from geometry_msgs)</li>
+<li>/heading (Float32 from std_msgs)</li>
+<li>/apparent_wind_vector (Vector3 from geometry_msgs)</li>
+<li>/actions/sail_angle (Float32 from std_msgs)</li>
+<li>/actions/rudder_angle (Float32 from std_msgs)</li>
+<li>/desired_heading (Float32 from std_msgs)</li>
+<li>/waypoints_list (WaypointList from sailbot_msgs)</li>
+<li>/cur_waypoint_index (Int32 from std_msgs)</li>
+<li>/full_autonomy_maneuver (String from std_msgs)</li>
+<li>/autopilot_mode (String from std_msgs)</li>
+</ul>
+<h2 id="publishes-to-the-following-topics"><strong>Publishes to the Following Topics</strong></h2>
+<ul>
+<li>/waypoints_list (WaypointList from sailbot_msgs)</li>
+<li>/autopilot_parameters (String from std_msgs)</li>
+</ul>
 
 
 
