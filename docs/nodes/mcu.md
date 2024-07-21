@@ -7,12 +7,12 @@ This node is responsible for communicating back and forth between our MCU, also 
 
 
 <br>
-## Command to Run the Node
+## **Command to Run the Node**
 ``` sh
 ros2 run mcu mcu
 ```
 
 <br>
-## Listens to the Following Topics
+## **Listens to the Following Topics**
 - /actions/sail_angle (Float32 from std_msgs)
 - /actions/rudder_angle (Float32 from std_msgs)

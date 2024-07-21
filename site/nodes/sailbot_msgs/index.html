@@ -733,18 +733,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#command-to-run-the-node" class="md-nav__link">
+  <a href="#contains-the-following-messages" class="md-nav__link">
     <span class="md-ellipsis">
-      Command to Run the Node
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#publishes-to-the-following-topics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Publishes to the Following Topics
+      Contains the Following Messages
     </span>
   </a>
   
@@ -970,18 +961,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#command-to-run-the-node" class="md-nav__link">
+  <a href="#contains-the-following-messages" class="md-nav__link">
     <span class="md-ellipsis">
-      Command to Run the Node
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#publishes-to-the-following-topics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Publishes to the Following Topics
+      Contains the Following Messages
     </span>
   </a>
   
@@ -1004,19 +986,22 @@
 
 <h1 id="sailbot-messages"><p style="text-align: center;"> Sailbot Messages </p></h1>
 <h2 id="summary"><strong>Summary</strong></h2>
-<p>This package contains various custom messages types that nodes would need to send to each other</p>
-<h2 id="command-to-run-the-node">Command to Run the Node</h2>
-<div class="highlight"><pre><span></span><code>ros2<span class="w"> </span>run<span class="w"> </span>rc<span class="w"> </span>rc
-</code></pre></div>
+<p>This package contains various custom messages types that nodes would need to send to each other! Try to add messages to the custom messages library sparingly as we would like most nodes to only publish/ listen with a message type in the base ros2 messages. This keeps our code easily compatible with other peoples' drivers so we can just drop in other peoples' drivers if we ever need to.</p>
 <p><br></p>
-<p>TODO MAKE SURE THIS IS CORRECT
-TODO MAKE SURE THIS IS CORRECT
-TODO MAKE SURE THIS IS CORRECT
-TODO MAKE SURE THIS IS CORRECT</p>
-<h2 id="publishes-to-the-following-topics">Publishes to the Following Topics</h2>
-<ul>
-<li>/rc_data (RCData from sailbot_msgs)</li>
-</ul>
+<h2 id="contains-the-following-messages"><strong>Contains the Following Messages</strong></h2>
+<p><strong>RCData</strong><br />
+&nbsp;&nbsp;&nbsp;&nbsp;  float32 joystick_left_x<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  float32 joystick_left_y<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  float32 joystick_right_x<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  float32 joystick_right_y<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  bool button_a<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  uint8 toggle_b<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  uint8 toggle_c<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  bool button_d<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  uint8 toggle_e<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  uint8 toggle_f  </p>
+<p><strong>WaypointList</strong><br />
+&nbsp;&nbsp;&nbsp;&nbsp;  sensor_msgs/NavSatFix[] waypoints  </p>
 
 
 
