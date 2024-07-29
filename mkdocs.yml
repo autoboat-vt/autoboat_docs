@@ -14,7 +14,7 @@ nav:
   - Resources:
     - Flow of Information Between Groundstation and Autopilot Node: resources/diagram_of_groundstation_telemetry.md
     - Diagram of How the Simulation Works and Communicates with ROS: resources/diagram_of_simulations.md
-  - Nodes/ Messages:
+  - Nodes/Messages:
     - Autopilot: nodes/autopilot.md
     - Telemetry: nodes/telemetry.md
     - Compass: nodes/compass.md
@@ -56,6 +56,3 @@ markdown_extensions:
     - pymdownx.mark
     - pymdownx.tilde
     - admonition
-
-
-
