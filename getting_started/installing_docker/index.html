@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -607,7 +607,7 @@
             
   
   <span class="md-ellipsis">
-    Nodes/ Messages
+    Nodes/Messages
   </span>
   
 
@@ -617,7 +617,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            Nodes/ Messages
+            Nodes/Messages
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1022,25 +1022,25 @@
 
 <h1 id="installing-docker"><p style="text-align: center"> Installing Docker </p></h1>
 <div class="admonition note">
-<p class="admonition-title">NOTE: If You Meet Dificulties Installing Docker</p>
-<p>Ensure that you meet the docker's system requirements listed on their documentation, if not then attempt to contact an officer or look through the docker documentation for what to do if you do not meet the system requirements. Heres the link to the Docker documentation <a href="https://docs.docker.com/get-docker/">Docker Documentation</a></p>
+<p class="admonition-title">NOTE: If You Meet Difficulties Installing Docker</p>
+<p>Ensure that you meet Docker's system requirements listed on their <a href="https://docs.docker.com/get-docker/">documentation</a>, if not then attempt to contact an officer or look through the Docker documentation for what to do if you do not meet the system requirements.</p>
 </div>
 <p><br></p>
 <h2 id="installing-docker-on-windows"><p style="text-align: center"> <strong>Installing Docker on Windows</strong> </p></h2>
 <p>In order to install Docker on windows, first we must install WSL (Windows Subsystem in Linux).</p>
-<p>Open the command prompt <strong><em>with administrator privileges</em></strong> and type the following commands</p>
+<p>Open the command prompt <strong><em>with administrator privileges</em></strong> and type the following commands:</p>
 <div class="highlight"><pre><span></span><code>wsl.exe<span class="w"> </span>--install<span class="w"> </span>-d<span class="w"> </span>Ubuntu-22.04
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>wsl<span class="w"> </span>--set-default<span class="w"> </span>Ubuntu-22.04
 </code></pre></div>
-<p>Enter your user info to complete the installation  </p>
+<p>Enter your user info to complete the installation.  </p>
 <hr />
-<p>With these steps, this will have installed WSL and Ubuntu 22.04. Docker requires Ubuntu WSL to work on Windows. For more information see the official WSL documentation: <a href="https://learn.microsoft.com/en-us/windows/wsl/install">Official WSL Documentation</a></p>
-<p>Next, we must install the docker desktop application and connect it up to WSL.  </p>
+<p>With these steps, this will have installed WSL and Ubuntu 22.04. Docker requires Ubuntu WSL to work on Windows. For more information see the official WSL documentation: <a href="https://learn.microsoft.com/en-us/windows/wsl/install">Official WSL Documentation</a>.</p>
+<p>Next, we must install the Docker desktop application and connect it up to WSL.  </p>
 <hr />
-<p>The following link contains the download link for docker desktop on windows. Follow the download instructions, and when you are done, you should have docker installed!\
+<p>The following link contains the download link for Docker desktop on Windows. Follow the download instructions, and when you are done, you should have Docker installed!
 <a href="https://docs.docker.com/desktop/install/windows-install/">Docker Desktop for Windows Install Page</a></p>
-<p>You may run into permission issues with docker, so you need to run the following commands in your WSL terminal to give your non-sudo user access to docker.</p>
+<p>You may run into permission issues with docker, so you need to run the following commands in your WSL terminal to give your non-sudo user access to Docker.</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>groupadd<span class="w"> </span>docker
 sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="nv">$USER</span>
 newgrp<span class="w"> </span>docker
@@ -1065,12 +1065,12 @@ sudo<span class="w"> </span>apt-get<span class="w"> </span>update
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>docker-ce<span class="w"> </span>docker-ce-cli<span class="w"> </span>containerd.io<span class="w"> </span>docker-buildx-plugin<span class="w"> </span>docker-compose-plugin
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>sudo groupadd docker
-sudo usermod -aG docker $USER
-newgrp docker
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>groupadd<span class="w"> </span>docker
+sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="nv">$USER</span>
+newgrp<span class="w"> </span>docker
 </code></pre></div>
 <hr />
-<p><br> </p>
+<p><br></p>
 <h2 id="installing-docker-on-mac-os"><p style="text-align: center;"> <strong>Installing Docker on Mac OS</strong> </p></h2>
 <p>Docker can be installed standalone from the <a href="https://docs.docker.com/desktop/install/mac-install/">website</a>, but it is recommended to instead install via <a href="https://brew.sh/">Homebrew</a>, the unofficial official package manager for Mac OS. Homebrew is recommended over the standalone installer as it simplifies the installation process and is nice to use.</p>
 <p>Please install Homebrew by entering the following command into the terminal</p>
@@ -1145,7 +1145,7 @@ Client:
     <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
   </body>

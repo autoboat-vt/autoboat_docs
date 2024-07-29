@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -541,7 +541,7 @@
             
   
   <span class="md-ellipsis">
-    Nodes/ Messages
+    Nodes/Messages
   </span>
   
 
@@ -551,7 +551,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            Nodes/ Messages
+            Nodes/Messages
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -913,27 +913,27 @@
 <h1 id="running-a-custom-simulation">Running A Custom Simulation</h1>
 <div class="admonition note">
 <p class="admonition-title">NOTE: Do Not Clone the Code into Your Docker Development Environment</p>
-<p>Make sure you clone this repository outside of the docker development environment, because Docker gets a little fussy with building Docker images inside of a Docker Container, and I would rather not have to deal with that. If you are on windows, this means that you should do the rest of the setup steps in WSL.</p>
+<p>Make sure you clone this repository outside of the Docker development environment, because Docker gets a little fussy with building Docker images inside of a Docker Container, and I would rather not have to deal with that. If you are on Windows, this means that you should do the rest of the setup steps in WSL.</p>
 </div>
 <p>Before we can build a custom simulation, first we need to clone the sailbot_simulation repository.</p>
 <p>Open up a terminal in the folder you would like to place the code to build a new simulation in. Next type the following commands:</p>
 <hr />
-<div class="highlight"><pre><span></span><code>git clone https://github.com/sailbot-vt/sailbot_simulation 
-cd sailbot_simulation
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/sailbot-vt/sailbot_simulation<span class="w"> </span>
+<span class="nb">cd</span><span class="w"> </span>sailbot_simulation
 </code></pre></div>
 <hr />
 <p>Now that you have all of the code on your computer, there is only 1 dependency for working with the simulation and that is docker-buildx. You can install it like this on Windows WSL and Ubuntu:</p>
 <hr />
-<div class="highlight"><pre><span></span><code>sudo apt install docker-buildx
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>docker-buildx
 </code></pre></div>
 <hr />
 <p>Now, all you have to do to build the simulation now is type in the following command:</p>
 <hr />
-<div class="highlight"><pre><span></span><code>sudo bash build_sim.sh
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>bash<span class="w"> </span>build_sim.sh
 </code></pre></div>
 <hr />
 <p>And thats it! Now automatically, the simulation node will instead use the new, custom simulation instead of the default. The simulation itself is quite poorly documented so if you have any questions about it and how to do certain things, please ask Chris.</p>
-<p>If you would like to go back to using the default simulation then all you have to do is delete the simulation docker image and by default, the simulation node will pull the default simulation image and build it. </p>
+<p>If you would like to go back to using the default simulation then all you have to do is delete the simulation docker image and by default, the simulation node will pull the default simulation image and build it.</p>
 
 
 
@@ -983,7 +983,7 @@ cd sailbot_simulation
     <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
   </body>
