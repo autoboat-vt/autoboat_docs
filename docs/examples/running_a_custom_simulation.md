@@ -27,6 +27,16 @@ Now that you have all of the code on your computer, there is only 1 dependency f
 sudo apt install docker-buildx
 ```
 
+!!!NOTE "mac OS Users"
+
+    If you are on mac OS, you will need to install docker-buildx using the following command:
+
+    ``` sh
+    brew install docker-buildx
+    ```
+
+    Make sure to follow the instructions that brew gives you after running this command
+    to make sure that docker-buildx is properly installed on your system.
 -----  
 
 
