@@ -7,6 +7,7 @@ nav:
     - Installing Docker: getting_started/installing_docker.md
     - Setting Up the Development Container: getting_started/setting_up_dev_environment.md
     - What Did You Just Install?: getting_started/what_did_you_just_install.md
+    - Adding Documentation: getting_started/adding_documentation.md
   - Examples:
     - Running the Simulation: examples/running_simulation.md
     - Running a Custom Simulation: examples/running_a_custom_simulation.md
@@ -14,6 +15,9 @@ nav:
   - Resources:
     - Flow of Information Between Groundstation and Autopilot Node: resources/diagram_of_groundstation_telemetry.md
     - Diagram of How the Simulation Works and Communicates with ROS: resources/diagram_of_simulations.md
+  - Hardware:
+    - Wiring Color Scheme: hardware/wiring_color_scheme.md
+    - Squircuit: hardware/squircuit.md
   - Nodes/Messages:
     - Autopilot: nodes/autopilot.md
     - Telemetry: nodes/telemetry.md

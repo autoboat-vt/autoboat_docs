@@ -17,6 +17,10 @@
          <lastmod>2024-10-14</lastmod>
     </url>
     <url>
+         <loc>https://localhost:8000/getting_started/adding_documentation/</loc>
+         <lastmod>2024-10-14</lastmod>
+    </url>
+    <url>
          <loc>https://localhost:8000/getting_started/installing_docker/</loc>
          <lastmod>2024-10-14</lastmod>
     </url>
@@ -26,6 +30,14 @@
     </url>
     <url>
          <loc>https://localhost:8000/getting_started/what_did_you_just_install/</loc>
+         <lastmod>2024-10-14</lastmod>
+    </url>
+    <url>
+         <loc>https://localhost:8000/hardware/squircuit/</loc>
+         <lastmod>2024-10-14</lastmod>
+    </url>
+    <url>
+         <loc>https://localhost:8000/hardware/wiring_color_scheme/</loc>
          <lastmod>2024-10-14</lastmod>
     </url>
     <url>
