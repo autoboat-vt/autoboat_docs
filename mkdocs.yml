@@ -20,12 +20,14 @@ nav:
     - Compass: nodes/compass.md
     - GPS: nodes/gps.md
     - MCU (Micro Controller Unit): nodes/mcu.md
+    - Microros: nodes/microros.md
     - RC (Remote Controller): nodes/rc.md
     - Sailbot Messages: nodes/sailbot_msgs.md
     - Simulation: nodes/simulation.md
     - Wind Sensor: nodes/wind_sensor.md
     - What About the Other Nodes: nodes/what_about_the_other_nodes.md
   - Misc:
+    - Installing µROS: misc/installing_uROS.md
     - Potential Security Risks: misc/potential_security_risks.md
     - Known Issues: misc/known_issues.md
     - TODO: misc/todo.md
