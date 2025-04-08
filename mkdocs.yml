@@ -26,6 +26,7 @@ nav:
     - MCU (Micro Controller Unit): nodes/mcu.md
     - Microros: nodes/microros.md
     - RC (Remote Controller): nodes/rc.md
+    - Buoy Detection (Object Detection): nodes/buoy_detection.md
     - Sailbot Messages: nodes/sailbot_msgs.md
     - Simulation: nodes/simulation.md
     - Wind Sensor: nodes/wind_sensor.md
