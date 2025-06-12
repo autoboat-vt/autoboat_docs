@@ -7,6 +7,8 @@ To run the simulation, all you need to do is run the following command:
 ros2 launch /home/ws/src/launch/simulation.launch.py
 ```
 
+This command may take a lot of time to finish the first time you use it, since it needs to install the simulation which can take a while. 
+
 This command will then start the simulation and autopilot. Initially, however they won't do anything because they don't have any waypoint commands, so what you will need to do is go into your ground station folder in another terminal (not in the dev container) and type in the following command:  
 
 ``` sh
