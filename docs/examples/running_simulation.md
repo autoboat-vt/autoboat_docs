@@ -1,20 +1,28 @@
 # Running the Simulation  
 
-To run the simulation, all you need to do is run the following command:
+To run the simulation, run the following commands in order **after setting up the development container**:
 
+
+```sh
+sudo docker pull aanimated/sailbot_simulation:latest
+```
 
 ```sh 
 ros2 launch /home/ws/src/launch/simulation.launch.py
 ```
 
-This command may take a lot of time to finish the first time you use it, since it needs to install the simulation which can take a while. 
-
 This command will then start the simulation and autopilot. Initially, however they won't do anything because they don't have any waypoint commands, so what you will need to do is go into your ground station folder in another terminal (not in the dev container) and type in the following command:  
 
-``` sh
-python send_desired_parameters_and_waypoints.py
+
+```sh
+cd ground_station
 ```
 
-Doing this should make the boat in the visualization move around the pop up screen!  
+``` sh
+./run.sh
+```
 
-The boat might be kind of slow though, so be sure to go check out how to run a custom simulation in the examples. With the custom simulations we can accelerate the speed of the simulation by a landslide!
+Next, click on "zoom to boat". This should show you where the boat is currently located (likely longitude 0 and latitude 0 since this is the default location)
+
+Now, click somewhere on the map and then click "Send Waypoints". This should cause the boat on screen to start moving and indicates that you have correctly set everything up!  
+  

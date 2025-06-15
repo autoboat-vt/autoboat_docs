@@ -17,9 +17,4 @@ This code is supposed to be run on an operator's computer to control the boat wh
 
 You can also use the ground station code to control the simulation, so if you send waypoints or parameters while a simulation is running then the simulation will automatically listen to the cloud server and navigate to those waypoints/ change specific parameters.
 
-As of right now the code is kind of a mess and the visualization barely works (one of the big things we are trying to do is have an actual ground station app ready by this year's competition)
-The primary files you should care about in the groundstation are the following files: desired_parameters.json, desired_waypoints.json, send_desired_parameters_and_waypoints.py, and main.py (although main.py is kind of a mess right now).
-
-The essential functionality is that send_desired_parameters_and_waypoints.py just sends the data from desired_parameters.json and desired_waypoints.json and you can edit those based on what you want to change. Waypoints are simply supplied as a list of [latitude, longitude] (TODO maybe add a picture here). The list of parameters that you can change are found in the autopilot node here: config/default_parameters.yaml
-
 For more information on how the ground station sends parameters, please see the resources section of the documentation.
