@@ -2,114 +2,114 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://localhost:8000/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/examples/running_a_custom_simulation/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/examples/running_individual_nodes/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/examples/running_simulation/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/getting_started/adding_documentation/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/getting_started/installing_docker/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/getting_started/setting_up_dev_environment/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/getting_started/what_did_you_just_install/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/hardware/squircuit/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/hardware/wiring_color_scheme/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/misc/installing_uROS/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/misc/known_issues/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/misc/potential_security_risks/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/misc/todo/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/nodes/autopilot/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/nodes/buoy_detection/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/nodes/compass/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/nodes/gps/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/nodes/mcu/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/nodes/microros/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/nodes/rc/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/nodes/sailbot_msgs/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/nodes/simulation/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/nodes/telemetry/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/nodes/what_about_the_other_nodes/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/nodes/wind_sensor/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/resources/diagram_of_groundstation_telemetry/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://localhost:8000/resources/diagram_of_simulations/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
 </urlset>
