@@ -5,6 +5,8 @@
     Make sure you clone this repository outside of the Docker development environment, because Docker gets a little fussy with building Docker images inside of a Docker Container, and I would rather not have to deal with that. If you are on Windows, this means that you should do the rest of the setup steps in WSL.
 
 
+You should only care about this installation process if you care about modifying and doing direct development on the gazebo simulation. Following these steps will allow you to modify and test a new simulation environment with modified parameters or code.  
+
 Before we can build a custom simulation, first we need to clone the sailbot_simulation repository.
 
 Open up a terminal in the folder you would like to place the code to build a new simulation in. Next type the following commands:

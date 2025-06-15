@@ -1157,15 +1157,18 @@
 
 
 <h1 id="running-the-simulation">Running the Simulation</h1>
-<p>To run the simulation, all you need to do is run the following command:</p>
+<p>To run the simulation, run the following commands in order <strong>after setting up the development container</strong>:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>docker<span class="w"> </span>pull<span class="w"> </span>aanimated/sailbot_simulation:latest
+</code></pre></div>
 <div class="highlight"><pre><span></span><code>ros2<span class="w"> </span>launch<span class="w"> </span>/home/ws/src/launch/simulation.launch.py
 </code></pre></div>
-<p>This command may take a lot of time to finish the first time you use it, since it needs to install the simulation which can take a while. </p>
 <p>This command will then start the simulation and autopilot. Initially, however they won't do anything because they don't have any waypoint commands, so what you will need to do is go into your ground station folder in another terminal (not in the dev container) and type in the following command:  </p>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>send_desired_parameters_and_waypoints.py
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>ground_station
 </code></pre></div>
-<p>Doing this should make the boat in the visualization move around the pop up screen!  </p>
-<p>The boat might be kind of slow though, so be sure to go check out how to run a custom simulation in the examples. With the custom simulations we can accelerate the speed of the simulation by a landslide!</p>
+<div class="highlight"><pre><span></span><code>./run.sh
+</code></pre></div>
+<p>Next, click on "zoom to boat". This should show you where the boat is currently located (likely longitude 0 and latitude 0 since this is the default location)</p>
+<p>Now, click somewhere on the map and then click "Send Waypoints". This should cause the boat on screen to start moving and indicates that you have correctly set everything up!  </p>
 
 
 
