@@ -1,8 +1,8 @@
-# <p style="text-align: center;"> Installing µROS </p>
+# <p style="text-align: center;"> Installing MicroROS </p>
 
-To create a layer of protection between Jetson and high voltages, we use an RP2040 microcontroller, which communicates via a serial connection. Luckily, we are able to extend our software infrastructure to it through the µROS platform. What it does is runs nodes directly on the microcontroller, and then allows them to publish and listen on topics through the USB serial connection. Due to resource-restricted nature of the microcontrollers, the code is written in C and many of the principles when writing nodes for Jetson are inapplicable.
+To create a layer of protection between Jetson and high voltages, and extend the number of GPIO pins we have access to, we use an RP2040 microcontroller, which communicates via a serial connection. Luckily, we are able to extend our software infrastructure to it through the microros platform. It runs nodes directly on the microcontroller, and then allows them to publish and listen on topics through the USB serial connection. Due to resource-restricted nature of the microcontrollers, the code is written in C and many of the principles when writing nodes for Jetson are inapplicable.
 
-To install µROS on your machine, navigate to `/src/microros/` and run the following command. Note that the installation will take approximately 5 GB:
+To install microros on your machine, navigate to `/src/microros/` and run the following command. Note that the installation will take approximately 5 GB:
 
 ```sh
 	bash microros_setup.sh

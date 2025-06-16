@@ -7,11 +7,6 @@ The telemetry node listens to data about the boats current state such as the pos
 
 
 
-## **Command to Run the Node**
-``` sh
-ros2 run autopilot telemetry
-```
-
 <br>
 ## **Listens to the Following Topics**
 - /position (NavSatFix from sensor_msgs)

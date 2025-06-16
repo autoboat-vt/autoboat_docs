@@ -20,11 +20,6 @@ Not all of the parameters need to be included in the json. If only some of the p
 
 
 
-<br>
-## **Command to Run the Node**
-``` sh
-ros2 run autopilot autopilot
-```
 
 <br>
 ## **Listens to the Following Topics**

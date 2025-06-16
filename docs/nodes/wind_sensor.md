@@ -15,10 +15,6 @@ Our wind sensor sends its sub-messages in the following order:
 ![Wind Sensor Message Order](../images/wind_sensor_message_order.png)
 
 
-## **Command to Run the Node**
-``` sh
-ros2 run gps gps
-```
 
 <br>
 ## **Publishes to the Following Topics**

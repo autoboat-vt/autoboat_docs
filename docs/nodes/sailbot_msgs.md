@@ -6,17 +6,14 @@ This package contains various custom messages types that nodes would need to sen
 <br>
 
 ## **Contains the Following Messages**
-**RCData**  
-&nbsp;&nbsp;&nbsp;&nbsp;  float32 joystick_left_x  
-&nbsp;&nbsp;&nbsp;&nbsp;  float32 joystick_left_y  
-&nbsp;&nbsp;&nbsp;&nbsp;  float32 joystick_right_x  
-&nbsp;&nbsp;&nbsp;&nbsp;  float32 joystick_right_y  
-&nbsp;&nbsp;&nbsp;&nbsp;  bool button_a  
-&nbsp;&nbsp;&nbsp;&nbsp;  uint8 toggle_b  
-&nbsp;&nbsp;&nbsp;&nbsp;  uint8 toggle_c  
-&nbsp;&nbsp;&nbsp;&nbsp;  bool button_d  
-&nbsp;&nbsp;&nbsp;&nbsp;  uint8 toggle_e  
-&nbsp;&nbsp;&nbsp;&nbsp;  uint8 toggle_f  
+**RCData**: A standardized way to send RC Data based on the Radiomaster TX12 buttons. Includes both joysticks and all switches/ buttons
 
-**WaypointList**  
-&nbsp;&nbsp;&nbsp;&nbsp;  sensor_msgs/NavSatFix[] waypoints  
+**WaypointList**: A list of NavSatFix objects (https://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/NavSatFix.html) that represents a list of waypoints. These are passed around and then interpretted by the autopilot to figure out how it should move to get to those waypoints.
+
+**VESCControlData**: Contains all of the data that you need to send in order to command the vesc
+
+**VESCData**: Telemetry data from the VESC that gives us feedback about how fast the motor is spinning, how much voltage/ current is being used, etc
+
+**ObjectDetectionResult**: Contains a confidence value and an xy position for the object that the computer vision model found
+
+**ObjectDetectionResultsList**: A list of ObjectDetectionResults

@@ -7,32 +7,49 @@ nav:
     - Installing Docker: getting_started/installing_docker.md
     - Setting Up the Development Container: getting_started/setting_up_dev_environment.md
     - What Did You Just Install?: getting_started/what_did_you_just_install.md
+    - Installing MicroROS: getting_started/installing_microros.md
     - Adding Documentation: getting_started/adding_documentation.md
+
   - Examples:
     - Running the Simulation: examples/running_simulation.md
     - Running a Custom Simulation: examples/running_a_custom_simulation.md
     - Running Individual Nodes for Testing: examples/running_individual_nodes.md
+
   - Resources:
     - Flow of Information Between Groundstation and Autopilot Node: resources/diagram_of_groundstation_telemetry.md
     - Diagram of How the Simulation Works and Communicates with ROS: resources/diagram_of_simulations.md
+
   - Hardware:
     - Wiring Color Scheme: hardware/wiring_color_scheme.md
     - Squircuit: hardware/squircuit.md
-  - Nodes/Messages:
-    - Autopilot: nodes/autopilot.md
-    - Telemetry: nodes/telemetry.md
-    - Compass: nodes/compass.md
-    - GPS: nodes/gps.md
-    - MCU (Micro Controller Unit): nodes/mcu.md
-    - Microros: nodes/microros.md
-    - RC (Remote Controller): nodes/rc.md
-    - Buoy Detection (Object Detection): nodes/buoy_detection.md
-    - Sailbot Messages: nodes/sailbot_msgs.md
-    - Simulation: nodes/simulation.md
-    - Wind Sensor: nodes/wind_sensor.md
+
+  - ROS2 Packages and Nodes:
+    - Autopilot Package: 
+      - Sailboat Autopilot Node: nodes/sailboat_autopilot.md
+      - Motorboat Autopilot Node: nodes/motorboat_autopilot.md
+      - Telemetry: nodes/telemetry.md
+
+    - Sensors Package:
+      - GPS Node: nodes/gps.md
+      - RC (Remote Controller) Node: nodes/rc.md
+      - Wind Sensor Node: nodes/wind_sensor.md
+
+
+    - Microros Package:
+      - Raspberry Pi Pico Microros Node: nodes/microros.md
+
+    - Object Detection Package: 
+      - Object Detection Node: nodes/object_detection.md
+    
+    - Sailbot Messages Package:
+      - Sailbot Messages Node: nodes/sailbot_msgs.md
+    
+    - Simulation Package: 
+      - Simulation Node: nodes/simulation.md
+    
     - What About the Other Nodes: nodes/what_about_the_other_nodes.md
+
   - Misc:
-    - Installing µROS: misc/installing_uROS.md
     - Potential Security Risks: misc/potential_security_risks.md
     - Known Issues: misc/known_issues.md
     - TODO: misc/todo.md
