@@ -49,10 +49,13 @@ nav:
     
     - What About the Other Nodes: nodes/what_about_the_other_nodes.md
 
+
+  - Known Issues: known_issues.md
+
+
   - Misc:
     - Potential Security Risks: misc/potential_security_risks.md
-    - Known Issues: misc/known_issues.md
-    - TODO: misc/todo.md
+
 
 theme: 
   name: material

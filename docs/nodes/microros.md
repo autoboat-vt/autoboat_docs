@@ -10,15 +10,3 @@ To build an already existing project, execute the following commands inside `/mi
     make
 ```
 From here on, after making changes to the code, you can build it simply by running `make`. Next steps, such as opening communication with ROS or flashing Pico are detailed in **Installing MicroROS**. 
-
-# <p style="text-align: center;"> sensor_transmission </p>
-The node that obtains data from the VESC and the magnetometer and publishes it for Jetson to see. Uses another file called magnetometer_read.c to read I2C data. Runs on core0. Currently partially implemented.
-
-# <p style="text-align: center;"> sail_control </p>
-The node that implements PID control for the sail stepper motor. Intended to run on core0. Currently unimplemented.
-
-# <p style="text-align: center;"> rudder_control </p>
-The node that implements PID control for the rudder stepper motor. Intended to run on core1. Currently unimplemented.
-
-# <p style="text-align: center;"> manual_mode </p>
-The node that implements RC control of the boat. Intended to run on core1. Currently unimplemented.
