@@ -17,23 +17,3 @@ In order for us to be able to control and tune parameters for the autopilot from
 ![Example of Autopilot Parameters JSON](../images/autopilot_parameters_example.png)  
 
 Not all of the parameters need to be included in the json. If only some of the parameters are included, then only those parameters will get changed in the autopilot.
-
-
-
-
-<br>
-## **Listens to the Following Topics**
-- /position (NavSatFix from sensor_msgs)
-- /velocity (Twist from geometry_msgs)
-- /heading (Float32 from std_msgs)
-- /apparent_wind_vector (Vector3 from geometry_msgs)
-- /autopilot_parameters (String from std_msgs)
-- /rc_data (RCData from sailbot_msgs)
-- /autopilot_mode (String from std_msgs)
-- /waypoints_list (WaypointList from sailbot_msgs)
-
-## **Publishes to the Following Topics**
-- /full_autonomy_maneuver (String from std_msgs)
-- /desired_heading (Float32 from std_msgs)
-- /actions/sail_angle (Float32 from std_msgs)
-- /actions/rudder_angle (Float32 from std_msgs)

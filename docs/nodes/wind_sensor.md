@@ -11,12 +11,5 @@ The NMEA0183 message structure is very simple. The basics are that they always s
 
 <br>
 
-Our wind sensor sends its sub-messages in the following order:
+Our wind sensor device sends its sub-messages in the following order:
 ![Wind Sensor Message Order](../images/wind_sensor_message_order.png)
-
-
-
-<br>
-## **Publishes to the Following Topics**
-- /position (NavSatFix from sensor_msgs)
-- /velocity (Twist from geometry_msgs)
