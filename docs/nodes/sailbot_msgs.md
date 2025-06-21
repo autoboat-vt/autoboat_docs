@@ -12,7 +12,7 @@ This package contains various custom messages types that nodes would need to sen
 
 **VESCControlData**: Contains all of the data that you need to send in order to command the vesc
 
-**VESCData**: Telemetry data from the VESC that gives us feedback about how fast the motor is spinning, how much voltage/ current is being used, etc
+**VESCTelemetryData**: Telemetry data from the VESC that gives us feedback about how fast the motor is spinning, how much voltage/ current is being used, etc
 
 **ObjectDetectionResult**: Contains a confidence value and an xy position for the object that the computer vision model found
 
