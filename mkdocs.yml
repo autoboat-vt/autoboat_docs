@@ -65,7 +65,6 @@ nav:
 
   - Misc:
     - Potential Security Risks: misc/potential_security_risks.md
-    - Global True Wind Angle vs Apparent Wind Angle vs True Wind Angle: misc/standards_for_the_different_types_of_wind.md
 
 
 theme: 
