@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://localhost:8000/resources/diagram_of_groundstation_telemetry/">
+        <link rel="canonical" href="https://localhost:8000/crontabs/">
       
       
-        <link rel="prev" href="../../examples/running_individual_nodes/">
+        <link rel="prev" href="../nodes/what_about_the_other_nodes/">
       
       
-        <link rel="next" href="../diagram_of_simulations/">
+        <link rel="next" href="../known_issues/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>Flow of Information Between Groundstation and Autopilot Node - SailbotVT Documentation</title>
+        <title>Crontabs - SailbotVT Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,11 +71,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#flow-of-information-between-groundstation-and-autopilot-node" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -88,7 +83,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="SailbotVT Documentation" class="md-header__button md-logo" aria-label="SailbotVT Documentation" data-md-component="logo">
+    <a href=".." title="SailbotVT Documentation" class="md-header__button md-logo" aria-label="SailbotVT Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -108,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Flow of Information Between Groundstation and Autopilot Node
+              Crontabs
             
           </span>
         </div>
@@ -186,7 +181,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="SailbotVT Documentation" class="md-nav__button md-logo" aria-label="SailbotVT Documentation" data-md-component="logo">
+    <a href=".." title="SailbotVT Documentation" class="md-nav__button md-logo" aria-label="SailbotVT Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -204,7 +199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -264,7 +259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/installing_docker/" class="md-nav__link">
+      <a href="../getting_started/installing_docker/" class="md-nav__link">
         
   
   
@@ -287,7 +282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/setting_up_dev_environment/" class="md-nav__link">
+      <a href="../getting_started/setting_up_dev_environment/" class="md-nav__link">
         
   
   
@@ -310,7 +305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/what_did_you_just_install/" class="md-nav__link">
+      <a href="../getting_started/what_did_you_just_install/" class="md-nav__link">
         
   
   
@@ -333,7 +328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/installing_microros/" class="md-nav__link">
+      <a href="../getting_started/installing_microros/" class="md-nav__link">
         
   
   
@@ -356,7 +351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/adding_documentation/" class="md-nav__link">
+      <a href="../getting_started/adding_documentation/" class="md-nav__link">
         
   
   
@@ -424,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/running_simulation/" class="md-nav__link">
+      <a href="../examples/running_simulation/" class="md-nav__link">
         
   
   
@@ -447,7 +442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/running_a_custom_simulation/" class="md-nav__link">
+      <a href="../examples/running_a_custom_simulation/" class="md-nav__link">
         
   
   
@@ -470,7 +465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/running_individual_nodes/" class="md-nav__link">
+      <a href="../examples/running_individual_nodes/" class="md-nav__link">
         
   
   
@@ -497,20 +492,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -518,7 +511,7 @@
   
   
   <span class="md-ellipsis">
-    Resources
+    System Diagrams
     
   </span>
   
@@ -526,10 +519,10 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Resources
+            System Diagrams
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -537,19 +530,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../system_diagrams/diagram_of_groundstation_telemetry/" class="md-nav__link">
         
   
   
@@ -560,7 +544,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -573,12 +556,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../diagram_of_simulations/" class="md-nav__link">
+      <a href="../system_diagrams/diagram_of_simulations/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Diagram of How the Simulation Works and Communicates with ROS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system_diagrams/diagram_of_ros_nodes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ROS2 Node Diagrams
     
   </span>
   
@@ -641,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/wiring_color_scheme/" class="md-nav__link">
+      <a href="../hardware/wiring_color_scheme/" class="md-nav__link">
         
   
   
@@ -664,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/squircuit/" class="md-nav__link">
+      <a href="../hardware/squircuit/" class="md-nav__link">
         
   
   
@@ -770,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nodes/sailboat_autopilot/" class="md-nav__link">
+      <a href="../nodes/sailboat_autopilot/" class="md-nav__link">
         
   
   
@@ -793,7 +799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nodes/motorboat_autopilot/" class="md-nav__link">
+      <a href="../nodes/motorboat_autopilot/" class="md-nav__link">
         
   
   
@@ -816,7 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nodes/telemetry/" class="md-nav__link">
+      <a href="../nodes/telemetry/" class="md-nav__link">
         
   
   
@@ -885,7 +891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nodes/gps/" class="md-nav__link">
+      <a href="../nodes/gps/" class="md-nav__link">
         
   
   
@@ -908,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nodes/rc/" class="md-nav__link">
+      <a href="../nodes/rc/" class="md-nav__link">
         
   
   
@@ -931,7 +937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nodes/wind_sensor/" class="md-nav__link">
+      <a href="../nodes/wind_sensor/" class="md-nav__link">
         
   
   
@@ -1000,7 +1006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nodes/microros/" class="md-nav__link">
+      <a href="../nodes/microros/" class="md-nav__link">
         
   
   
@@ -1069,7 +1075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nodes/object_detection/" class="md-nav__link">
+      <a href="../nodes/object_detection/" class="md-nav__link">
         
   
   
@@ -1138,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nodes/sailbot_msgs/" class="md-nav__link">
+      <a href="../nodes/sailbot_msgs/" class="md-nav__link">
         
   
   
@@ -1207,7 +1213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nodes/simulation/" class="md-nav__link">
+      <a href="../nodes/simulation/" class="md-nav__link">
         
   
   
@@ -1238,7 +1244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nodes/what_about_the_other_nodes/" class="md-nav__link">
+      <a href="../nodes/what_about_the_other_nodes/" class="md-nav__link">
         
   
   
@@ -1265,10 +1271,40 @@
       
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Crontabs
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../../known_issues/" class="md-nav__link">
+      <a href="../known_issues/" class="md-nav__link">
         
   
   
@@ -1298,10 +1334,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
   
   
@@ -1314,8 +1350,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Misc
           </label>
@@ -1328,7 +1364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../misc/potential_security_risks/" class="md-nav__link">
+      <a href="../misc/potential_security_risks/" class="md-nav__link">
         
   
   
@@ -1368,8 +1404,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -1385,8 +1419,9 @@
 
 
 
-<h1 id="flow-of-information-between-groundstation-and-autopilot-node"><p style="text-align: center;"> Flow of Information Between Groundstation and Autopilot Node </p></h1>
-<p><img alt="Flow of Information Between Groundstation and Autopilot Node" src="../../images/diagram_of_groundstation_telemetry.png" /></p>
+  <h1>Crontabs</h1>
+
+
 
 
 
@@ -1435,10 +1470,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.select"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>
