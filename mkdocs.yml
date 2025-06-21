@@ -16,6 +16,8 @@ nav:
     - Running a Custom Simulation: examples/running_a_custom_simulation.md
     - Running Individual Nodes for Testing: examples/running_individual_nodes.md
 
+  - Standards and Definitions: standards_and_definitions.md
+  
   - System Diagrams:
     - Flow of Information Between Groundstation and Autopilot Node: system_diagrams/diagram_of_groundstation_telemetry.md
     - Diagram of How the Simulation Works and Communicates with ROS: system_diagrams/diagram_of_simulations.md

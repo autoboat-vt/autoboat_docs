@@ -1,0 +1,1 @@
+TODO: autopilot mode vs full autonomy maneuver, apparent wind angle vs true wind angle vs global true wind angle and their corresponding vectors. Maybe explain the is_propeller_motor_enabled

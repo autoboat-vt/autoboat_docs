@@ -852,24 +852,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#listens-to-the-following-topics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Listens to the Following Topics
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#publishes-to-the-following-topics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Publishes to the Following Topics
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1533,24 +1515,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#listens-to-the-following-topics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Listens to the Following Topics
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#publishes-to-the-following-topics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Publishes to the Following Topics
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1579,25 +1543,6 @@ TODO: make this actually documented lol</p>
 <p>In order for us to be able to control and tune parameters for the autopilot from the groundstation, this node also listens for autopilot_parameters. These are jsons (serialized as strings) which detail all of the new parameters and what their values should be. These values are sent from the groundstation to the telemetry server, then to the telemetry node and then finally to the autopilot. An example of these parameters is shown below:
 <img alt="Example of Autopilot Parameters JSON" src="../../images/autopilot_parameters_example.png" />  </p>
 <p>Not all of the parameters need to be included in the json. If only some of the parameters are included, then only those parameters will get changed in the autopilot.</p>
-<p><br></p>
-<h2 id="listens-to-the-following-topics"><strong>Listens to the Following Topics</strong></h2>
-<ul>
-<li>/position (NavSatFix from sensor_msgs)</li>
-<li>/velocity (Twist from geometry_msgs)</li>
-<li>/heading (Float32 from std_msgs)</li>
-<li>/apparent_wind_vector (Vector3 from geometry_msgs)</li>
-<li>/autopilot_parameters (String from std_msgs)</li>
-<li>/rc_data (RCData from sailbot_msgs)</li>
-<li>/autopilot_mode (String from std_msgs)</li>
-<li>/waypoints_list (WaypointList from sailbot_msgs)</li>
-</ul>
-<h2 id="publishes-to-the-following-topics"><strong>Publishes to the Following Topics</strong></h2>
-<ul>
-<li>/full_autonomy_maneuver (String from std_msgs)</li>
-<li>/desired_heading (Float32 from std_msgs)</li>
-<li>/actions/sail_angle (Float32 from std_msgs)</li>
-<li>/actions/rudder_angle (Float32 from std_msgs)</li>
-</ul>
 
 
 
