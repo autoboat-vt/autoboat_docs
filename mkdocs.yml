@@ -57,14 +57,14 @@ nav:
     
     - What About the Other Nodes: nodes/what_about_the_other_nodes.md
 
+  - Misc:
+    - Importing Libraries in ROS2 Nodes: misc/importing_libraries_in_ros2_nodes.md
+    - Potential Security Risks: misc/potential_security_risks.md
 
   - Crontabs: crontabs.md
 
-  - Known Issues: known_issues.md
+  - Known Issues: known_installation_issues.md
 
-
-  - Misc:
-    - Potential Security Risks: misc/potential_security_risks.md
 
 
 theme: 
