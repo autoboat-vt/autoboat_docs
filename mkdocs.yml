@@ -17,7 +17,7 @@ nav:
     - Running Individual Nodes for Testing: examples/running_individual_nodes.md
 
   - Standards and Definitions: standards_and_definitions.md
-  
+
   - System Diagrams:
     - Flow of Information Between Groundstation and Autopilot Node: system_diagrams/diagram_of_groundstation_telemetry.md
     - Diagram of How the Simulation Works and Communicates with ROS: system_diagrams/diagram_of_simulations.md
@@ -40,6 +40,8 @@ nav:
       - RC (Remote Controller) Node: nodes/rc.md
       - Wind Sensor Node: nodes/wind_sensor.md
 
+    - VESC Package:
+      - VESC Node: nodes/vesc.md
 
     - Microros Package:
       - Raspberry Pi Pico Microros Node: nodes/microros.md
