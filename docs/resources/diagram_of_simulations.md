@@ -1,1 +1,0 @@
-![Diagram of Simulations](../images/diagram_of_simulations.png)

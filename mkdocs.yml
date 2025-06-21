@@ -3,6 +3,7 @@ site_url: https://localhost:8000
 
 nav:
   - Home: index.md
+
   - Getting Started: 
     - Installing Docker: getting_started/installing_docker.md
     - Setting Up the Development Container: getting_started/setting_up_dev_environment.md
@@ -15,15 +16,18 @@ nav:
     - Running a Custom Simulation: examples/running_a_custom_simulation.md
     - Running Individual Nodes for Testing: examples/running_individual_nodes.md
 
-  - Resources:
-    - Flow of Information Between Groundstation and Autopilot Node: resources/diagram_of_groundstation_telemetry.md
-    - Diagram of How the Simulation Works and Communicates with ROS: resources/diagram_of_simulations.md
+  - System Diagrams:
+    - Flow of Information Between Groundstation and Autopilot Node: system_diagrams/diagram_of_groundstation_telemetry.md
+    - Diagram of How the Simulation Works and Communicates with ROS: system_diagrams/diagram_of_simulations.md
+    - ROS2 Node Diagrams: system_diagrams/diagram_of_ros_nodes.md
 
   - Hardware:
     - Wiring Color Scheme: hardware/wiring_color_scheme.md
     - Squircuit: hardware/squircuit.md
 
+
   - ROS2 Packages and Nodes:
+
     - Autopilot Package: 
       - Sailboat Autopilot Node: nodes/sailboat_autopilot.md
       - Motorboat Autopilot Node: nodes/motorboat_autopilot.md
@@ -49,6 +53,8 @@ nav:
     
     - What About the Other Nodes: nodes/what_about_the_other_nodes.md
 
+
+  - Crontabs: crontabs.md
 
   - Known Issues: known_issues.md
 
