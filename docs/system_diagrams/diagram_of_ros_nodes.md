@@ -10,7 +10,7 @@ The following is the source file if you want to make edits to the diagram: [Sail
 
 ![Diagram of Groundstation Telemetry](../images/sailboat_jetson_node_diagram.png)
 
-The following is the source file if you want to make edits to the diagram: [Sailboat Simulation Node Diagram Source File Download](../system_diagram_files/ros2_node_diagram_sailboat_jetson.drawio.xml)
+The following is the source file if you want to make edits to the diagram: [Sailboat on Real Hardware Node Diagram Source File Download](../system_diagram_files/ros2_node_diagram_sailboat_jetson.drawio.xml)
 
 
 <br>
@@ -19,4 +19,4 @@ The following is the source file if you want to make edits to the diagram: [Sail
 
 ![Diagram of Groundstation Telemetry](../images/motorboat_jetson_node_diagram.png)
 
-The following is the source file if you want to make edits to the diagram: [Sailboat Simulation Node Diagram Source File Download](../system_diagram_files/ros2_node_diagram_motorboat_jetson.drawio.xml)
+The following is the source file if you want to make edits to the diagram: [Motorboat on Real Hardware Node Diagram Source File Download](../system_diagram_files/ros2_node_diagram_motorboat_jetson.drawio.xml)
