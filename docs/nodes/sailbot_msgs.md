@@ -1,7 +1,7 @@
 # <p style="text-align: center;"> Sailbot Messages </p>
 
 ## **Summary**
-This package contains various custom messages types that nodes would need to send to each other! Try to add messages to the custom messages library sparingly as we would like most nodes to only publish/ listen with a message type in the base ros2 messages. This keeps our code easily compatible with other peoples' drivers so we can just drop in other peoples' drivers if we ever need to.
+This package contains various custom messages types that nodes would need to send to each other! Try to add messages to the custom messages library sparingly as we would like most nodes to only publish/ listen with a message type in the base ros2 messages. [Here is a list of all of the standard messages that I would recommend using](https://github.com/ros2/common_interfaces). This keeps our code easily compatible with other peoples' drivers so we can just drop in other peoples' drivers if we ever need to.
 
 <br>
 
