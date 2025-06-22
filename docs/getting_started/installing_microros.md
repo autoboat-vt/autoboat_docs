@@ -15,7 +15,7 @@ Don't forget to source your ~/.bashrc file:
 ```
 
 !!!NOTE
-	Notice that you need to establish communication between Pi Pico and WSL by USB to flash it. If you are on Windows, download and install the latest release of USB support software from <a href="https://gitlab.com/alelec/wsl-usb-gui/-/releases/">WSL USB GUI Releases</a>. By default, devices are not automatically shared with WSL, so you will need to manually autoattach. If you are on MacOS... condolences.
+	Notice that you need to establish communication between Pi Pico and WSL by USB to flash it. If you are on Windows, download and install the latest release of USB support software from <a href="https://gitlab.com/alelec/wsl-usb-gui/-/releases/">WSL USB GUI Releases</a>. By default, devices are not automatically shared with WSL, so you will need to manually autoattach.
 
 
 To flash Pi Pico with a .uf2 file, plug Pico into your computer while pressing the Boot Select button (you may release it after Pi Pico is in) and run:
