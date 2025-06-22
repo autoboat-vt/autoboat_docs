@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://localhost:8000/nodes/motorboat_autopilot/">
+        <link rel="canonical" href="https://localhost:8000/nodes/common_documentation_between_the_motorboat_autopilot_and_the_sailboat_autopilot/">
       
       
-        <link rel="prev" href="../sailboat_autopilot/">
+        <link rel="prev" href="../../hardware/squircuit/">
       
       
-        <link rel="next" href="../telemetry/">
+        <link rel="next" href="../sailboat_autopilot/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Motorboat Autopilot Node - SailbotVT Documentation</title>
+        <title>Common Documentation Between the Motorboat Autopilot and the Sailboat Autopilot - SailbotVT Documentation</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sailboat-autopilot" class="md-skip">
+        <a href="#autopilot-nodes" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Motorboat Autopilot Node
+              Common Documentation Between the Motorboat Autopilot and the Sailboat Autopilot
             
           </span>
         </div>
@@ -804,10 +804,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../common_documentation_between_the_motorboat_autopilot_and_the_sailboat_autopilot/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Common Documentation Between the Motorboat Autopilot and the Sailboat Autopilot
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -818,6 +840,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-autopilot-parameters-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Autopilot Parameters System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-correct-rudder-angle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing the Correct Rudder Angle
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -850,19 +919,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../motorboat_autopilot/" class="md-nav__link">
         
   
   
@@ -873,7 +933,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1555,6 +1614,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-autopilot-parameters-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Autopilot Parameters System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-correct-rudder-angle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing the Correct Rudder Angle
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1569,8 +1663,21 @@
 
 
 
-<h1 id="sailboat-autopilot"><p style="text-align: center;"> Sailboat Autopilot </p></h1>
-<p>TODO: explain the should_propeller_motor_be_powered topic</p>
+<h1 id="autopilot-nodes"><p style="text-align: center;"> Autopilot Nodes </p></h1>
+<h2 id="summary"><strong>Summary</strong></h2>
+<p>These nodes are responsible for listening to data about the current state of the boat and a set of waypoints and publishing the desired motor behaviour based on our autopilot software. These nodes run completely asynchronously on an internal timer, which means that a few times every seconds it runs a <em>non-blocking</em> script to calculate what the desired motor behaviours should be and publishes them when its done. This node does not actually have code to communicate with motors directly, but instead lets the microcontroller figure out the specifics of how to communicate with the motor.</p>
+<p>Additionally, these nodes publish data that is useful for telemetry and debugging such as the the current maneuver it is attempting to perform and what its desired heading is currently.</p>
+<p>An important thing to note is that these nodes also control basic RC override, which is why they need to listen into the raw RC data. There are several different types of RC override listed below:<br />
+<img alt="Code for Switching Modes" src="../../images/switches_and_autopilot_modes.png" />
+TODO: make this actually documented lol</p>
+<p><br></p>
+<h2 id="the-autopilot-parameters-system"><strong>The Autopilot Parameters System</strong></h2>
+<p>In order for us to be able to control and tune parameters for the autopilot from the groundstation, these nodes also listen for autopilot_parameters. These are jsons (serialized as strings) which detail all of the new parameters and what their values should be. These values are sent from the groundstation to the telemetry server, then to the telemetry node and then finally to the autopilot (a diagram of how exactly this is done can be found in the system diagrams). An example of these parameters is shown below:
+<img alt="Example of Autopilot Parameters JSON" src="../../images/autopilot_parameters_example.png" />  </p>
+<p>Not all of the parameters need to be included in the json. If only some of the parameters are included, then only those parameters will get changed in the autopilot. The default parameters can be found in the config folder and whenever a parameter is not specified by the groundstation, it will default to the parameter values found in the config folder. Also, the default parameter files in the config folder represent all of the parameters that the autopilot can accept, so if you are ever curious about which parameters you can change in the autopilot, then please check out the default parameters files.</p>
+<p><br></p>
+<h2 id="choosing-the-correct-rudder-angle"><strong>Choosing the Correct Rudder Angle</strong></h2>
+<p>TODO: explain how we decide on the rudder angle</p>
 
 
 

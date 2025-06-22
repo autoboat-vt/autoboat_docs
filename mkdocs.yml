@@ -31,6 +31,7 @@ nav:
   - ROS2 Packages and Nodes:
 
     - Autopilot Package: 
+      - Common Documentation Between the Motorboat Autopilot and the Sailboat Autopilot: nodes/common_documentation_between_the_motorboat_autopilot_and_the_sailboat_autopilot.md
       - Sailboat Autopilot Node: nodes/sailboat_autopilot.md
       - Motorboat Autopilot Node: nodes/motorboat_autopilot.md
       - Telemetry: nodes/telemetry.md
