@@ -17,6 +17,14 @@
          <lastmod>2025-06-28</lastmod>
     </url>
     <url>
+         <loc>https://localhost:8000/examples/adding_a_new_ros2_node/</loc>
+         <lastmod>2025-06-28</lastmod>
+    </url>
+    <url>
+         <loc>https://localhost:8000/examples/adding_a_new_ros2_package/</loc>
+         <lastmod>2025-06-28</lastmod>
+    </url>
+    <url>
          <loc>https://localhost:8000/examples/running_a_custom_simulation/</loc>
          <lastmod>2025-06-28</lastmod>
     </url>
