@@ -1677,7 +1677,9 @@ TODO: make this actually documented lol</p>
 <p>Not all of the parameters need to be included in the json. If only some of the parameters are included, then only those parameters will get changed in the autopilot. The default parameters can be found in the config folder and whenever a parameter is not specified by the groundstation, it will default to the parameter values found in the config folder. Also, the default parameter files in the config folder represent all of the parameters that the autopilot can accept, so if you are ever curious about which parameters you can change in the autopilot, then please check out the default parameters files.</p>
 <p><br></p>
 <h2 id="choosing-the-correct-rudder-angle"><strong>Choosing the Correct Rudder Angle</strong></h2>
-<p>TODO: explain how we decide on the rudder angle</p>
+<p>One of the tasks that the autopilot aims to do is to choose the correct rudder angle, so that our boats can follow a certain heading. A lot of the time, this isn't so simple because of how non-linear this problem ends up being. So, we choose to use a PID controller to be flexible enough to handle non-linearity, while still having the option to revert back to a simple proportional controller. </p>
+<p><br></p>
+<p>If you are lost on any of the controls terminology, then I would recommend that you look at some of the following resources: <a href="https://www.youtube.com/watch?v=E0rdLQLMZdA&amp;t=1s">Proportional Controller Tutorial</a> and <a href="https://www.youtube.com/watch?v=UR0hOmjaHp0">PID Controller Introduction</a>. These resources are just a start, and if you would like to work on the autopilot, I would highly recommend you look more into basic control theory and become intimately familiar with how these work. </p>
 
 
 
