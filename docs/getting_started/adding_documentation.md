@@ -22,7 +22,7 @@ To put your changes on the website, run:
     mkdocs serve
 ```
 
-This will set the website to run locally on the `http://127.0.0.1:8000/` (local) IP address. To access it, just type that link in the web-browser.
+This will set the website to run locally on the `http://127.0.0.1:8000/` (localhost) IP address. To access it, just type that link in the web-browser.
 
 After you feel good about your changes, deploy them to the internet:
 ```sh

@@ -1,1 +1,1 @@
-vesc, sailboat_autopilot, simulation, common docs between the autopilots, importing libraries in ros2 nodes
+sailboat_autopilot, simulation, importing libraries in ros2 nodes, adding new ros2 node, adding new ros2 package

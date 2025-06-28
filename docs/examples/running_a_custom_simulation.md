@@ -1,4 +1,4 @@
-# Running A Custom Simulation
+# <p style="text-align: center;"> Running A Custom Simulation </p>
 
 
 !!!NOTE "NOTE: Do Not Clone the Code into Your Docker Development Environment"

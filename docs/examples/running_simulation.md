@@ -1,4 +1,4 @@
-# Running the Simulation  
+# <p style="text-align: center;"> Running the Simulation </p>
 
 To run the simulation, run the following commands in order **after setting up the development container**:
 
