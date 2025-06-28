@@ -24,5 +24,8 @@ Not all of the parameters need to be included in the json. If only some of the p
 
 ## **Choosing the Correct Rudder Angle**
 
+One of the tasks that the autopilot aims to do is to choose the correct rudder angle, so that our boats can follow a certain heading. A lot of the time, this isn't so simple because of how non-linear this problem ends up being. So, we choose to use a PID controller to be flexible enough to handle non-linearity, while still having the option to revert back to a simple proportional controller. 
 
-TODO: explain how we decide on the rudder angle
+<br>
+
+If you are lost on any of the controls terminology, then I would recommend that you look at some of the following resources: [Proportional Controller Tutorial](https://www.youtube.com/watch?v=E0rdLQLMZdA&t=1s) and [PID Controller Introduction](https://www.youtube.com/watch?v=UR0hOmjaHp0). These resources are just a start, and if you would like to work on the autopilot, I would highly recommend you look more into basic control theory and become intimately familiar with how these work. 
