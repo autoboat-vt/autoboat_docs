@@ -39,7 +39,3 @@ If control_type_for_vesc is "rpm", then the only other entry in the struct that 
 
 
 
-
-
-
-TODO TODO TODO TODO 
