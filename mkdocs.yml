@@ -15,8 +15,9 @@ nav:
     - Running the Simulation: examples/running_simulation.md
     - Running a Custom Simulation: examples/running_a_custom_simulation.md
     - Running Individual Nodes for Testing: examples/running_individual_nodes.md
-    - Adding A New ROS2 Node: examples/adding_a_new_ros2_package.md
-    - Adding A New ROS2 Package: examples/adding_a_new_ros2_node.md
+    - Adding A New ROS2 Package to the Workspace: examples/adding_a_new_ros2_node.md
+    - Adding a New ROS2 Node to A Package: examples/adding_a_new_ros2_package.md
+    - Adding A New External Library that We Can Edit: examples/how_we_handle_external_libraries.md
 
   - Standards and Definitions: standards_and_definitions.md
 
@@ -61,7 +62,6 @@ nav:
     - What About the Other Nodes: nodes/what_about_the_other_nodes.md
 
   - Misc:
-    - Importing Libraries in ROS2 Nodes: misc/importing_libraries_in_ros2_nodes.md
     - Potential Security Risks: misc/potential_security_risks.md
 
   - Crontabs: crontabs.md
