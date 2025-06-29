@@ -1,1 +1,1 @@
-sailboat_autopilot, simulation, importing libraries in ros2 nodes, adding new ros2 node, adding new ros2 package
+sailboat_autopilot, simulation

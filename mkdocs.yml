@@ -57,7 +57,7 @@ nav:
       - Sailbot Messages Node: nodes/sailbot_msgs.md
     
     - Simulation Package: 
-      - Simulation Node: nodes/simulation.md
+      - Sailboat Simulation Node: nodes/sailboat_simulation.md
     
     - What About the Other Nodes: nodes/what_about_the_other_nodes.md
 
