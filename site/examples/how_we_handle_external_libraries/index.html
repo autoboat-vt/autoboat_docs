@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://localhost:8000/misc/importing_libraries_in_ros2_nodes/">
+        <link rel="canonical" href="https://localhost:8000/examples/how_we_handle_external_libraries/">
       
       
-        <link rel="prev" href="../../nodes/what_about_the_other_nodes/">
+        <link rel="prev" href="../adding_a_new_ros2_package/">
       
       
-        <link rel="next" href="../potential_security_risks/">
+        <link rel="next" href="../../standards_and_definitions/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Importing Libraries in ROS2 Nodes - SailbotVT Documentation</title>
+        <title>Adding A New External Library that We Can Edit - SailbotVT Documentation</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#importing-libraries-and-other-files-in-ros2-nodes" class="md-skip">
+        <a href="#how-to-add-external-libraries-that-we-can-edit" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Importing Libraries in ROS2 Nodes
+              Adding A New External Library that We Can Edit
             
           </span>
         </div>
@@ -383,18 +383,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -410,7 +412,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Examples
@@ -424,7 +426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/running_simulation/" class="md-nav__link">
+      <a href="../running_simulation/" class="md-nav__link">
         
   
   
@@ -447,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/running_a_custom_simulation/" class="md-nav__link">
+      <a href="../running_a_custom_simulation/" class="md-nav__link">
         
   
   
@@ -470,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/running_individual_nodes/" class="md-nav__link">
+      <a href="../running_individual_nodes/" class="md-nav__link">
         
   
   
@@ -493,12 +495,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/adding_a_new_ros2_package/" class="md-nav__link">
+      <a href="../adding_a_new_ros2_node/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Adding A New ROS2 Node
+    Adding A New ROS2 Package to the Workspace
     
   </span>
   
@@ -516,17 +518,50 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/adding_a_new_ros2_node/" class="md-nav__link">
+      <a href="../adding_a_new_ros2_package/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Adding A New ROS2 Package
+    Adding a New ROS2 Node to A Package
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Adding A New External Library that We Can Edit
+    
+  </span>
+  
+
+      </a>
+      
     </li>
   
 
@@ -1436,20 +1471,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -1465,7 +1498,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Misc
@@ -1476,43 +1509,10 @@
                 
   
   
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    Importing Libraries in ROS2 Nodes
-    
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
-      <a href="../potential_security_risks/" class="md-nav__link">
+      <a href="../../misc/potential_security_risks/" class="md-nav__link">
         
   
   
@@ -1613,7 +1613,15 @@
 
 
 
-<h1 id="importing-libraries-and-other-files-in-ros2-nodes"><p style="text-align: center;"> Importing Libraries and other Files in ROS2 Nodes </p></h1>
+<h1 id="how-to-add-external-libraries-that-we-can-edit"><p style="text-align: center;"> How to Add External Libraries that We Can Edit</p></h1>
+<p>Sometimes, we would like to use external pip packages, but still be able to edit the source code for them on the fly. One great example of this is the pyvesc library for the VESC node, where there are some minor differences between what the library does by default and what we want the library to do. In order to acheieve this, we will take advantage of the "-e" option in pip install, which allows us to install a <em>local pip package</em> as editable. Taking the example of the pyvesc library, here is how the source code is laid out:</p>
+<p><img alt="pyvesc library example" src="../../images/pyvesc_library_example.png" /></p>
+<p>Inside of the vesc ros2 package, we have the pyvesc library, which is very similar to the copy of the pyvesc library you can find here: <a href="https://github.com/LiamBindle/PyVESC">Official pyvesc Library</a>. This is where we would normally like to place our custom pip packages since it is easy to find what pip packages each ros2 package would like to use. Also, whenever you clone a git repository, it generates a folder named <strong>.git</strong> which contains all of the history of the repository. In short, we don't care about the history of the repository and in fact keeping this file makes it more annoying to use it in our codebase by automatically creating a nested repository. Nested repositories can become a nightmare to deal with, so to make all of our lives easier, just delete the .git folder. You can do so by using the rm -rf command:</p>
+<div class="highlight"><pre><span></span><code>rm<span class="w"> </span>-rf<span class="w"> </span>src/vesc/pyvesc/.git
+</code></pre></div>
+<p>Now that we have that working, we will need to make it so that we automatically install that package whenever someone runs <code>bash docker_dev_environment_setup.sh</code>. So, we need to add a line into the docker_dev_environment_setup.sh file like so:</p>
+<p><img alt="docker dev environment setup example for pyvesc" src="../../images/pyvesc_docker_dev_environment_setup.png" /></p>
+<p>This will automatically install the local pip package in editable mode, so if you make a change in the code of the pip package, then it will automatically reflect in any code that uses that package. If we did not have it in editable mode, then we would need to rebuild the package everytime we make a change to the source code. Now, to install the pip package, simply rerun <code>bash docker_dev_environment_setup.sh</code> and it should be ready to import in any python script inside of the dev container!</p>
 
 
 
