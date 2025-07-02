@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://localhost:8000/examples/adding_a_new_ros2_node/">
+        <link rel="canonical" href="https://localhost:8000/examples/adding_documentation/">
       
       
-        <link rel="prev" href="../adding_documentation/">
+        <link rel="prev" href="../connecting_a_usb_device_to_wsl/">
       
       
-        <link rel="next" href="../adding_a_new_ros2_package/">
+        <link rel="next" href="../adding_a_new_ros2_node/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Adding A New ROS2 Package to the Workspace - SailbotVT Documentation</title>
+        <title>Adding Documentation - SailbotVT Documentation</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#adding-a-new-ros2-node-to-a-package" class="md-skip">
+        <a href="#adding-documentation" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Adding A New ROS2 Package to the Workspace
+              Adding Documentation
             
           </span>
         </div>
@@ -492,29 +492,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../adding_documentation/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Adding Documentation
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -527,20 +504,31 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
   
   
   <span class="md-ellipsis">
-    Adding A New ROS2 Package to the Workspace
+    Adding Documentation
     
   </span>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+      </a>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding_a_new_ros2_node/" class="md-nav__link">
         
   
   
@@ -551,35 +539,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#python-nodes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Python Nodes
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1663,23 +1622,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#python-nodes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Python Nodes
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1694,11 +1636,25 @@
 
 
 
-<h1 id="adding-a-new-ros2-node-to-a-package"><p style="text-align: center;"> Adding a New ROS2 Node to A Package </p></h1>
-<h2 id="python-nodes">Python Nodes</h2>
-<p>There are some really good tutorials online found here: <a href="https://www.youtube.com/watch?v=wfCuPQ_6VbI">Creating a ROS Node Tutorial</a>, <a href="https://www.youtube.com/watch?v=MwEXX6a-TWw&amp;list=PLLSegLrePWgJudpPUof4-nVFHGkB62Izy&amp;index=6">What is a ROS Topic</a>, <a href="https://www.youtube.com/watch?v=Yy4OgGwEAj8&amp;list=PLLSegLrePWgJudpPUof4-nVFHGkB62Izy&amp;index=7">Creating a ROS Publisher Node</a>, <a href="https://www.youtube.com/watch?v=od3JwOeyEXc&amp;list=PLLSegLrePWgJudpPUof4-nVFHGkB62Izy&amp;index=8">Creating a ROS Subscriber Node</a>, and <a href="https://www.youtube.com/watch?v=DXEnVEQjImo&amp;list=PLLSegLrePWgJudpPUof4-nVFHGkB62Izy&amp;index=9">Combining a ROS Subscriber with a ROS Publisher</a>. </p>
-<p><br></p>
-<p>This tutorial series is very good in general, and I would recommend looking at all the videos in the series although it is not strictly necessary.</p>
+<h1 id="adding-documentation"><p style="text-align: center;"> Adding Documentation </p></h1>
+<p>As a team, we want our software and hardware decisions well-documented and kept in one place to ensure that new members can easily learn the big and complex system they work with, as well as quickly be plugged into development process. As such, after achieving a significant milestone, it is highly recommended to document it and contribute to this website. It is a lot easier than it sounds.</p>
+<p>To start, install the necessary dependencies. You do not have to do it in docker.</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>mkdocs
+pip<span class="w"> </span>install<span class="w"> </span>mkdocs-material
+</code></pre></div>
+<p>Then, clone the github repository:
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>-b<span class="w"> </span>https://github.com/sailbot-vt/sailbot_docs
+</code></pre></div></p>
+<p>You may now make changes to the website code. To edit an existing page, simply find its .md file in <code>docs</code> and edit the text inside. To add a new page, add the file into whichever folder you want it to be (or create a new folder), type it up, and then include in <code>mkdocs.yml</code> under the nav section. The documentation supports html, markdown, and several extensions. <a href="https://facelessuser.github.io/pymdown-extensions">You can read about the extensions here</a>.</p>
+<p>To put your changes on the website, run:
+<div class="highlight"><pre><span></span><code><span class="w">    </span>mkdocs<span class="w"> </span>build
+<span class="w">    </span>mkdocs<span class="w"> </span>serve
+</code></pre></div></p>
+<p>This will set the website to run locally on the <code>http://127.0.0.1:8000/</code> (localhost) IP address. To access it, just type that link in the web-browser.</p>
+<p>After you feel good about your changes, deploy them to the internet:
+<div class="highlight"><pre><span></span><code><span class="w">    </span>mkdocs<span class="w"> </span>gh-deploy
+</code></pre></div></p>
+<p>And don't forget to push them to the github repository!</p>
 
 
 
