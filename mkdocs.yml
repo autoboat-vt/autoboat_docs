@@ -9,15 +9,17 @@ nav:
     - Setting Up the Development Container: getting_started/setting_up_dev_environment.md
     - What Did You Just Install?: getting_started/what_did_you_just_install.md
     - Installing MicroROS: getting_started/installing_microros.md
-    - Adding Documentation: getting_started/adding_documentation.md
 
   - Examples:
     - Running the Simulation: examples/running_simulation.md
     - Running a Custom Simulation: examples/running_a_custom_simulation.md
     - Running Individual Nodes for Testing: examples/running_individual_nodes.md
+    - Connecting A USB Device to WSL: examples/connecting_a_usb_device_to_wsl.md
+    - Adding Documentation: examples/adding_documentation.md
     - Adding A New ROS2 Package to the Workspace: examples/adding_a_new_ros2_node.md
     - Adding a New ROS2 Node to A Package: examples/adding_a_new_ros2_package.md
     - Adding A New External Library that We Can Edit: examples/how_we_handle_external_libraries.md
+
 
   - Standards and Definitions: standards_and_definitions.md
 
