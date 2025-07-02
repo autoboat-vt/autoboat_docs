@@ -29,14 +29,22 @@ This means that if the boat is going downwind, then the wind angle is 0 degrees.
 
 In the next section about the true wind angle, we will talk about the true wind vector and the apparent wind vector, so it may be useful to define them since we have not talked about them before. Whenever we are talking about a wind vector in any standard, the vectors always have a specific definition in relation to their corresponding wind angles and magnitudes and it is the following:
 
-$wind_vector_x = wind_magnitude * cos(wind_angle)$
+$\text{wind_vector_x} = \text{wind_magnitude} * cos(\text{wind_angle})$
 
-$wind_vector_y = wind_magnitude * sin(wind_angle)$ 
+$\text{wind_vector_y} = \text{wind_magnitude} * sin(\text{wind_angle})$ 
+
+
+This gives some pretty funky results when we start talking about the global true wind angle, but I promise it makes the math easier if you are able to follow along. Here are the x and y axes labeled for the apparent wind angle using this definition of the apparent wind vector:
+
+![Apparent Wind Vector Axes Labeled](images/apparent_wind_vector_axes_labeled.png)
+
+
+This means that the axes that the apparent wind vector are based off of change if the heading/ direction of the boat changes. **You have to keep this fact in mind when doing calculations with the apparent wind vector because this is very important**.
 
 
 ### True Wind Angle
 
-The true wind vector is basically just the wind speed of the location as measured by a stationary sensor, and is just computed by taking the apparent wind vector and adding the velocity vector of the boat. The true wind angle is also measured counter-clockwise from the centerline of the boat just like the apparent wind angle. This measurement doesn't actually do anything on its own, but it can be used to compute the global true wind angle, which is quite useful for us in plotting courses and in visualizations.
+The true wind vector is basically just the wind speed of the location as measured by a stationary sensor, and is just computed by taking the apparent wind vector and adding the velocity vector of the boat. **You must make sure that the velocity vector is measured using the same axes as the apparent wind vector**. The true wind angle is also measured counter-clockwise from the centerline of the boat just like the apparent wind angle, and the true wind vector has the same base axes as the apparent wind vector. The true wind angle doesn't actually do anything on its own, but it can be used to compute the global true wind angle, which is quite useful for us in plotting courses and in visualizations.
 
 
 
@@ -45,5 +53,12 @@ The true wind vector is basically just the wind speed of the location as measure
 
 As you may have realized, both of the two previous standards for determining the wind angle are relative to the centerline of the boat and if the direction of the boat changes, then the apparent/ true wind angles will change even if the real wind hasn't shifted. So in order to account for this, we would like to cancel out the direction the boat is facing from the true wind angle. The formula for this is quite simple: 
 
-global_true_wind_angle = heading_counterclockwise_from_true_east + true_wind_angle 
+$\text{global_true_wind_angle} = \text{heading_counterclockwise_from_true_east} + \text{true_wind_angle}$ 
+
+
+I would encourage you to draw this out and convince yourself of why this fact is true and follows naturally from how we have defined everything so far.
+
+This calculation gives us a really good sense of where the wind is actually going regardless of our current heading/ direction and regardless of our velocity vector, which is very useful for displaying wind information to a map and figuring out where the no sail zone is.
+
+If you haven't realized already, this definition of the global true wind angle means that the global true wind vector has the x axis defined as true east and the y axis defined as true north. **This is very different from the apparent/ true wind vectors so keep that in mind. The apparent/ true wind vector will change if the boat changes directions but the global true wind vector does not change if the boat changes directions**.
 
