@@ -53,7 +53,7 @@ The true wind vector is basically just the wind speed of the location as measure
 
 As you may have realized, both of the two previous standards for determining the wind angle are relative to the centerline of the boat and if the direction of the boat changes, then the apparent/ true wind angles will change even if the real wind hasn't shifted. So in order to account for this, we would like to cancel out the direction the boat is facing from the true wind angle. The formula for this is quite simple: 
 
-$\text{global_true_wind_angle} = \text{heading_counterclockwise_from_true_east} + \text{true_wind_angle}$ 
+$\text{global_true_wind_angle} = \text{heading_counter_clockwise_from_true_east} + \text{true_wind_angle}$ 
 
 
 I would encourage you to draw this out and convince yourself of why this fact is true and follows naturally from how we have defined everything so far.
