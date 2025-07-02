@@ -21,4 +21,12 @@ Back in the day, we used to have to use a command line tool called [usbipd-win](
 ![WSL USB GUI Releases Image](../images/wsl_usb_gui_releases.png)
 
 
-**TODO TODO**
+- Run the installer and click through all of the options with the defaults until you have installed WSL USB GUI
+
+- Once you have finished installing the program, you should see the following show up if you search for WSL USB in the windows search bar:
+
+![WSL USB Search Bar](../images/wsl_usb_search_bar.png)
+
+- Run WSL USB GUI
+
+- You should see the USB device that is plugged into your computer on here. Simply click on the device and then click "attach". Once the device is properly attached to WSL, you should see the device in the forwarded devices tab, and if this is true, that means that WSL can successfully see the USB device!
