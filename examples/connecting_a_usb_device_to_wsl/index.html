@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -574,7 +574,7 @@
   
   
   <span class="md-ellipsis">
-    Adding A New ROS2 Package to the Workspace
+    Adding a New ROS2 Node to A Package
     
   </span>
   
@@ -597,7 +597,7 @@
   
   
   <span class="md-ellipsis">
-    Adding a New ROS2 Node to A Package
+    Adding A New ROS2 Package to the Workspace
     
   </span>
   
@@ -1699,7 +1699,7 @@
 <p class="admonition-title">Note</p>
 <p>If you are on Linux or Mac, USB devices should <em>just work</em> in the dev containers, so you do not need any additional steps</p>
 </div>
-<p>Sometimes, we want to test usb devices and their respective ROS nodes before we run them with the Jetson such as the GPS, RC receiver, wind sensor, Raspberry Pi Pico, VESC, etc. Most people run Windows for their personal computer, and unfortunately we have to do some slightly jank things to get everything working on windows like it would work on the Jetson. One of which is giving USB devices to WSL so that WSL can have full access to read/ write to those USB devices. Unfortunately with how WSL works, USB devices have to belong to either WSL <em>or</em> Windows, so you have to manually give access over to WSL and by default, access is given to Windows.</p>
+<p>Sometimes, we want to test usb devices and their respective ROS nodes before we run them with the Jetson such as the GPS, RC receiver, wind sensor, Raspberry Pi Pico, VESC, etc. Most people run Windows for their personal computer, and unfortunately we have to do some slightly jank things to get everything working on Windows like it would work on the Jetson. One of which is giving USB devices to WSL so that WSL can have full access to read/ write to those USB devices. Unfortunately with how WSL works, USB devices have to belong to either WSL <em>or</em> Windows, so you have to manually give access over to WSL and by default, access is given to Windows.</p>
 <p><br></p>
 <p>Back in the day, we used to have to use a command line tool called <a href="https://github.com/dorssel/usbipd-win">usbipd-win</a>, but to put it bluntly, this tool sucks. You have to interact with powershell, manually bind and attach specific devices, and figuring out which device is mounted to which bus were all just annoying. Nowadays, there exists a GUI called WSL USB GUI that simplifies all of the process of binding and attaching a USB device between Windows and WSL.</p>
 <h2 id="how-to-install-wsl-usb-gui"><strong>How to Install WSL USB GUI</strong></h2>
@@ -1717,7 +1717,7 @@
 <p>Run the installer and click through all of the options with the defaults until you have installed WSL USB GUI</p>
 </li>
 <li>
-<p>Once you have finished installing the program, you should see the following show up if you search for WSL USB in the windows search bar:</p>
+<p>Once you have finished installing the program, you should see the following show up if you search for WSL USB in the Windows search bar:</p>
 </li>
 </ul>
 <p><img alt="WSL USB Search Bar" src="../../images/wsl_usb_search_bar.png" /></p>
@@ -1780,7 +1780,7 @@
       <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       
