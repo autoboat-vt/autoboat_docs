@@ -18,11 +18,11 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>Standards and Definitions - SailbotVT Documentation</title>
+        <title>Units, Standards, and Definitions - SailbotVT Documentation</title>
       
     
     
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Standards and Definitions
+              Units, Standards, and Definitions
             
           </span>
         </div>
@@ -521,7 +521,7 @@
   
   
   <span class="md-ellipsis">
-    Adding A New ROS2 Package to the Workspace
+    Adding a New ROS2 Node to A Package
     
   </span>
   
@@ -544,7 +544,7 @@
   
   
   <span class="md-ellipsis">
-    Adding a New ROS2 Node to A Package
+    Adding A New ROS2 Package to the Workspace
     
   </span>
   
@@ -1545,7 +1545,7 @@
   
   
   <span class="md-ellipsis">
-    Standards and Definitions
+    Units, Standards, and Definitions
     
   </span>
   
@@ -1558,7 +1558,7 @@
   
   
   <span class="md-ellipsis">
-    Standards and Definitions
+    Units, Standards, and Definitions
     
   </span>
   
@@ -1579,6 +1579,15 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Units:
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#definitions" class="md-nav__link">
@@ -1637,6 +1646,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-and-local-velocity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global and Local Velocity
+    </span>
+  </a>
   
 </li>
       
@@ -1719,6 +1737,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Units:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#definitions" class="md-nav__link">
     <span class="md-ellipsis">
       Definitions:
@@ -1778,6 +1805,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#global-and-local-velocity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global and Local Velocity
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1795,6 +1831,8 @@
 
 
 <h1 id="standards-and-definitions"><p style="text-align: center;"> Standards and Definitions</p></h1>
+<h2 id="units">Units:</h2>
+<p>Unless stated otherwise, all variables are in SI units (meters, seconds, etc). All measurements of angles by default are in degrees from 0 to 360 degrees. </p>
 <h2 id="definitions">Definitions:</h2>
 <ul>
 <li>
@@ -1819,13 +1857,23 @@
 <p><img alt="Apparent Wind Vector Axes Labeled" src="../images/apparent_wind_vector_axes_labeled.png" /></p>
 <p>This means that the axes that the apparent wind vector are based off of change if the heading/ direction of the boat changes. <strong>You have to keep this fact in mind when doing calculations with the apparent wind vector because this is very important</strong>.</p>
 <h3 id="true-wind-angle">True Wind Angle</h3>
-<p>The true wind vector is basically just the wind speed of the location as measured by a stationary sensor, and is just computed by taking the apparent wind vector and adding the velocity vector of the boat. <strong>You must make sure that the velocity vector is measured using the same axes as the apparent wind vector</strong>. The true wind angle is also measured counter-clockwise from the centerline of the boat just like the apparent wind angle, and the true wind vector has the same base axes as the apparent wind vector. The true wind angle doesn't actually do anything on its own, but it can be used to compute the global true wind angle, which is quite useful for us in plotting courses and in visualizations.</p>
+<p>The true wind vector is basically just the wind speed of the location as measured by a stationary sensor, and is just computed by taking the apparent wind vector and adding the local velocity vector of the boat. <strong>You must make sure that the velocity vector is measured using the same axes as the apparent wind vector. This is called the local velocity vector and is mentioned in a following section</strong>. </p>
+<p><span class="arithmatex">\(\text{true_wind_angle} = \text{apparent_wind_vector} + \text{local_velocity_vector}\)</span></p>
+<p>The true wind angle is also measured counter-clockwise from the centerline of the boat just like the apparent wind angle, and the true wind vector has the same base axes as the apparent wind vector. The true wind angle doesn't actually do anything on its own, but it can be used to compute the global true wind angle, which is quite useful for us in plotting courses and in visualizations.</p>
 <h3 id="global-true-wind-angle">Global True Wind Angle</h3>
 <p>As you may have realized, both of the two previous standards for determining the wind angle are relative to the centerline of the boat and if the direction of the boat changes, then the apparent/ true wind angles will change even if the real wind hasn't shifted. So in order to account for this, we would like to cancel out the direction the boat is facing from the true wind angle. The formula for this is quite simple: </p>
-<p><span class="arithmatex">\(\text{global_true_wind_angle} = \text{heading_counterclockwise_from_true_east} + \text{true_wind_angle}\)</span> </p>
+<p><span class="arithmatex">\(\text{global_true_wind_angle} = \text{heading_counter_clockwise_from_true_east} + \text{true_wind_angle}\)</span> </p>
 <p>I would encourage you to draw this out and convince yourself of why this fact is true and follows naturally from how we have defined everything so far.</p>
 <p>This calculation gives us a really good sense of where the wind is actually going regardless of our current heading/ direction and regardless of our velocity vector, which is very useful for displaying wind information to a map and figuring out where the no sail zone is.</p>
 <p>If you haven't realized already, this definition of the global true wind angle means that the global true wind vector has the x axis defined as true east and the y axis defined as true north. <strong>This is very different from the apparent/ true wind vectors so keep that in mind. The apparent/ true wind vector will change if the boat changes directions but the global true wind vector does not change if the boat changes directions</strong>.</p>
+<h2 id="global-and-local-velocity">Global and Local Velocity</h2>
+<p>Similarly to the wind angle, there is a distinction between the global velocity and the local velocity. The global velocity is simply the velocity that the GPS gives us which is measured with the x axis being true east and the y axis being true north. In order to convert this into something where the x axis is the centerline of the boat and the y axis points to the left of the boat, we need to convert to the local velocity which can be done with the following equations:</p>
+<p><span class="arithmatex">\(\text{boat_speed} = \sqrt{\text{global_velocity_vector_y}^2 + \text{global_velocity_vector_y}^2}\)</span></p>
+<p><span class="arithmatex">\(\text{global_velocity_angle} = arctan2(\text{global_velocity_vector_y}, \text{global_velocity_vector_x})\)</span></p>
+<p><span class="arithmatex">\(\text{local_velocity_angle} = \text{global_velocity_angle} - \text{heading_angle}\)</span></p>
+<p><span class="arithmatex">\(\text{local_velocity_vector_x} = \text{boat_speed} * cos(\text{local_velocity_angle})\)</span></p>
+<p><span class="arithmatex">\(\text{local_velocity_vector_y} = \text{boat_speed} * sin(\text{local_velocity_angle})\)</span></p>
+<p>Now, similarly to the apparent/ true wind angle, local_velocity_vector_x faces the same direction as the centerline of the boat, and local_velocity_vector_y faces to the left of the boat. This version of the velocity vector can now be added to the apparent wind vector since now both of them are being measured the same way.</p>
 
 
 
@@ -1877,7 +1925,7 @@
       <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.select"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../javascripts/mathjax.js"></script>
       

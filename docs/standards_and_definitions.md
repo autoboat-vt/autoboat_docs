@@ -1,5 +1,10 @@
 # <p style="text-align: center;"> Standards and Definitions</p>
 
+## Units:
+
+Unless stated otherwise, all variables are in SI units (meters, seconds, etc). All measurements of angles by default are in degrees from 0 to 360 degrees. 
+
+
 ## Definitions:
 
 - Autopilot Mode: Autopilot mode typically refers to whether or not the autopilot is in RC control, a semi-autonomous mode like hold heading, or in a full autonomous mode. This is just a string that describes the autopilot mode for the telemetry.
@@ -44,7 +49,11 @@ This means that the axes that the apparent wind vector are based off of change i
 
 ### True Wind Angle
 
-The true wind vector is basically just the wind speed of the location as measured by a stationary sensor, and is just computed by taking the apparent wind vector and adding the velocity vector of the boat. **You must make sure that the velocity vector is measured using the same axes as the apparent wind vector**. The true wind angle is also measured counter-clockwise from the centerline of the boat just like the apparent wind angle, and the true wind vector has the same base axes as the apparent wind vector. The true wind angle doesn't actually do anything on its own, but it can be used to compute the global true wind angle, which is quite useful for us in plotting courses and in visualizations.
+The true wind vector is basically just the wind speed of the location as measured by a stationary sensor, and is just computed by taking the apparent wind vector and adding the local velocity vector of the boat. **You must make sure that the velocity vector is measured using the same axes as the apparent wind vector. This is called the local velocity vector and is mentioned in a following section**. 
+
+$\text{true_wind_angle} = \text{apparent_wind_vector} + \text{local_velocity_vector}$
+
+The true wind angle is also measured counter-clockwise from the centerline of the boat just like the apparent wind angle, and the true wind vector has the same base axes as the apparent wind vector. The true wind angle doesn't actually do anything on its own, but it can be used to compute the global true wind angle, which is quite useful for us in plotting courses and in visualizations.
 
 
 
@@ -62,3 +71,21 @@ This calculation gives us a really good sense of where the wind is actually goin
 
 If you haven't realized already, this definition of the global true wind angle means that the global true wind vector has the x axis defined as true east and the y axis defined as true north. **This is very different from the apparent/ true wind vectors so keep that in mind. The apparent/ true wind vector will change if the boat changes directions but the global true wind vector does not change if the boat changes directions**.
 
+
+
+## Global and Local Velocity
+
+Similarly to the wind angle, there is a distinction between the global velocity and the local velocity. The global velocity is simply the velocity that the GPS gives us which is measured with the x axis being true east and the y axis being true north. In order to convert this into something where the x axis is the centerline of the boat and the y axis points to the left of the boat, we need to convert to the local velocity which can be done with the following equations:
+
+
+$\text{boat_speed} = \sqrt{\text{global_velocity_vector_y}^2 + \text{global_velocity_vector_y}^2}$
+
+$\text{global_velocity_angle} = arctan2(\text{global_velocity_vector_y}, \text{global_velocity_vector_x})$
+
+$\text{local_velocity_angle} = \text{global_velocity_angle} - \text{heading_angle}$
+
+$\text{local_velocity_vector_x} = \text{boat_speed} * cos(\text{local_velocity_angle})$
+
+$\text{local_velocity_vector_y} = \text{boat_speed} * sin(\text{local_velocity_angle})$
+
+Now, similarly to the apparent/ true wind angle, local_velocity_vector_x faces the same direction as the centerline of the boat, and local_velocity_vector_y faces to the left of the boat. This version of the velocity vector can now be added to the apparent wind vector since now both of them are being measured the same way.
