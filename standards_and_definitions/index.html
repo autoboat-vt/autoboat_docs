@@ -1873,6 +1873,7 @@
 <p><span class="arithmatex">\(\text{local_velocity_angle} = \text{global_velocity_angle} - \text{heading_angle}\)</span></p>
 <p><span class="arithmatex">\(\text{local_velocity_vector_x} = \text{boat_speed} * cos(\text{local_velocity_angle})\)</span></p>
 <p><span class="arithmatex">\(\text{local_velocity_vector_y} = \text{boat_speed} * sin(\text{local_velocity_angle})\)</span></p>
+<p>arctan2 is defined as simply a function that takes in the x and y components of a vector and outputs the angle that vector makes counter-clockwise from the x axis. See the following link for more details: <a href="https://en.wikipedia.org/wiki/Atan2">Arctan2 Wikipedia Page</a></p>
 <p>Now, similarly to the apparent/ true wind angle, local_velocity_vector_x faces the same direction as the centerline of the boat, and local_velocity_vector_y faces to the left of the boat. This version of the velocity vector can now be added to the apparent wind vector since now both of them are being measured the same way.</p>
 
 
