@@ -1701,6 +1701,10 @@
 </code></pre></div>
 <p>Once you have created your package, you should see a new folder pop up in <code>/home/ws/src</code> that looks a little bit like this:</p>
 <p><img alt="Test Package Folder Example" src="../../images/test_package_folder_example.png" /></p>
+<p>Once you add the package, ensure that you run the following commands:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/home/ws<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>colcon<span class="w"> </span>build<span class="w"> </span>--symlink-install<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/.bashrc
+</code></pre></div>
+<p>This will rebuild the environment to recognize that the new package exists. Without this, ROS2 won't be able to find your new package.</p>
 <p>A more comprehensive tutorial can be found here: <a href="https://www.youtube.com/watch?v=iBGZ8LEvkCY">Comprehensive tutorial on how to create a ROS2 python package</a></p>
 <p><br></p>
 <p>Once you have the ROS2 python package created, you should make your way to the next section on adding new ROS2 nodes, where we will talk about how to add new nodes to ROS2 python packages.</p>
