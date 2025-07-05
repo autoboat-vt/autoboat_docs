@@ -21,8 +21,8 @@ nav:
     - Adding A New External Library that We Can Edit: examples/how_we_handle_external_libraries.md
 
   - System Diagrams:
-    - Flow of Information Between Groundstation and Autopilot Node: system_diagrams/diagram_of_groundstation_telemetry.md
-    - Diagram of How the Simulation Works and Communicates with ROS: system_diagrams/diagram_of_simulations.md
+    - Communication Between Groundstation and Autopilot: system_diagrams/diagram_of_groundstation_telemetry.md
+    - How the Simulation Works and Communicates with ROS: system_diagrams/diagram_of_simulations.md
     - ROS2 Node Diagrams: system_diagrams/diagram_of_ros_nodes.md
 
   - Hardware:
@@ -104,3 +104,6 @@ markdown_extensions:
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - styles/extra.css
