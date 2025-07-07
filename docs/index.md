@@ -1,4 +1,4 @@
-# <p style="text-align: center;"> Welcome to the Virginia Tech Sailbot and PEP Documentation!</p>
+# <p style="text-align: center;"> Welcome to the Virginia Tech AutoBoat Documentation!</p>
 This document will outline how to set up the software stack on theoretically any modern computer.
 For more information on how to run simulations, testing, and how to run this code on the Jetson, please refer to the other docs.
 

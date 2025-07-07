@@ -7,15 +7,15 @@
 
 You should only care about this installation process if you care about modifying and doing direct development on the gazebo simulation. Following these steps will allow you to modify and test a new simulation environment with modified parameters or code.  
 
-Before we can build a custom simulation, first we need to clone the sailbot_simulation repository.
+Before we can build a custom simulation, first we need to clone the autoboat_simulation repository.
 
 Open up a terminal in the folder you would like to place the code to build a new simulation in. Next type the following commands:
 
 ------
 
 ``` sh
-git clone https://github.com/sailbot-vt/sailbot_simulation 
-cd sailbot_simulation
+git clone https://github.com/autoboat-vt/autoboat_simulation 
+cd autoboat_simulation
 ```
 
 ------

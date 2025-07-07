@@ -19,13 +19,13 @@ Also ensure that you have VSCode or some other IDE that supports Docker dev envi
 
 # <p style="text-align: center;"> Installing the Development Container </p>
 
-- First, (**If you are using Windows you must do this in a WSL folder**) we need to clone the main Github repository from the following URL: <https://github.com/sailbot-vt/sailbot_vt>. Open up a terminal and type the following command:
+- First, (**If you are using Windows you must do this in a WSL folder**) we need to clone the main Github repository from the following URL: <https://github.com/autoboat-vt/autoboat_vt>. Open up a terminal and type the following command:
 
-    `git clone https://github.com/sailbot-vt/sailbot_vt`
+    `git clone https://github.com/autoboat-vt/autoboat_vt`
 
 - Then, open up that folder in VSCode by typing the following into the same terminal:
 
-    `cd sailbot_vt && code .`
+    `cd autoboat_vt && code .`
 
 - Install the Docker Dev Containers Extension on VSCode. It should look like the following: ![Docker Dev Containers VSCode](../images/dev_container_ext.png)
 

@@ -1,4 +1,4 @@
-site_name: SailbotVT Documentation
+site_name: AutoBoat @ VT Documentation
 site_url: https://localhost:8000
 
 nav:
@@ -52,8 +52,8 @@ nav:
     - Object Detection Package: 
       - Object Detection Node: nodes/object_detection.md
     
-    - Sailbot Messages Package:
-      - Sailbot Messages Node: nodes/sailbot_msgs.md
+    - AutoBoat Messages Package:
+      - AutoBoat Messages Node: nodes/autoboat_msgs.md
     
     - Simulation Package: 
       - Sailboat Simulation Node: nodes/sailboat_simulation.md

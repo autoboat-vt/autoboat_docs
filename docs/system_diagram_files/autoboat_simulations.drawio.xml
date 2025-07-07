@@ -14,7 +14,7 @@
         <mxCell id="Ti7d3drXXmg_eyW_WhI5-3" value="Autopilot" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="610" y="710" width="170" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="Ti7d3drXXmg_eyW_WhI5-7" value="&lt;div&gt;Uses the docker image built from sailbot_simulation. If a docker image from sailbot_simulation is not built yet, then, by default it uses the one from&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;https://github.com/lucasmrdt/usv_sim_lsa&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+        <mxCell id="Ti7d3drXXmg_eyW_WhI5-7" value="&lt;div&gt;Uses the docker image built from autoboat_simulation. If a docker image from autoboat_simulation is not built yet, then, by default it uses the one from&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;https://github.com/lucasmrdt/usv_sim_lsa&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="380" y="330" width="210" height="160" as="geometry" />
         </mxCell>
         <mxCell id="hRgx_qFmmP3Cpn2144IV-1" value="sailboat_gym pip package" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
