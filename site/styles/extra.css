@@ -1,14 +1,11 @@
 .md-sidebar--primary {
-  width: 440px; 
-  margin-left: -15%;
+  width: 380px; 
+  margin-left: -10%;
 }
-
-
 
 .md-nav--primary {
-  width: 420px;
+  width: 360px;
 }
-
 
 /* Widen the right sidebar (Table of Contents) */
 .md-sidebar--secondary {
