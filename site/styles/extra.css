@@ -1,6 +1,6 @@
 .md-sidebar--primary {
   width: 380px; 
-  margin-left: -10%;
+  margin-left: -5%;
 }
 
 .md-nav--primary {
@@ -9,12 +9,12 @@
 
 /* Widen the right sidebar (Table of Contents) */
 .md-sidebar--secondary {
-  width: 440px; /* Adjust as needed */
-  margin-right: -15%
+  width: 300px; /* Adjust as needed */
+  margin-right: -13%
 }
 
 /* Let ToC items use full width of sidebar */
 .md-nav--secondary {
-  width: 420px;
-  margin-right: -15%
+  width: 280px;
+  margin-right: -13%
 }
