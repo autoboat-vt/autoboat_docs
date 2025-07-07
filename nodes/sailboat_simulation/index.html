@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://localhost:8000/nodes/sailboat_simulation/">
       
       
-        <link rel="prev" href="../sailbot_msgs/">
+        <link rel="prev" href="../autoboat_msgs/">
       
       
         <link rel="next" href="../what_about_the_other_nodes/">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Sailboat Simulation Node - SailbotVT Documentation</title>
+        <title>Sailboat Simulation Node - AutoBoat @ VT Documentation</title>
       
     
     
@@ -90,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="SailbotVT Documentation" class="md-header__button md-logo" aria-label="SailbotVT Documentation" data-md-component="logo">
+    <a href="../.." title="AutoBoat @ VT Documentation" class="md-header__button md-logo" aria-label="AutoBoat @ VT Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -104,7 +104,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            SailbotVT Documentation
+            AutoBoat @ VT Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -188,13 +188,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="SailbotVT Documentation" class="md-nav__button md-logo" aria-label="SailbotVT Documentation" data-md-component="logo">
+    <a href="../.." title="AutoBoat @ VT Documentation" class="md-nav__button md-logo" aria-label="AutoBoat @ VT Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    SailbotVT Documentation
+    AutoBoat @ VT Documentation
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -1315,7 +1315,7 @@
   
   
   <span class="md-ellipsis">
-    Sailbot Messages Package
+    AutoBoat Messages Package
     
   </span>
   
@@ -1326,7 +1326,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_6">
             <span class="md-nav__icon md-icon"></span>
-            Sailbot Messages Package
+            AutoBoat Messages Package
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1337,12 +1337,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../sailbot_msgs/" class="md-nav__link">
+      <a href="../autoboat_msgs/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Sailbot Messages Node
+    AutoBoat Messages Node
     
   </span>
   
@@ -1738,7 +1738,7 @@
 <h2 id="summary"><strong>Summary</strong></h2>
 <p>The simulation node simulates all of the real world interactions that the boat will undergo without having to put the boat on the water. The simulation essentially takes the place of all of the sensor nodes and the microros nodes and should publish/ subscribe to the same things as those nodes. For more information on how the simulation interacts with everything else, please look at the system diagram for ros nodes for the simulation.</p>
 <h2 id="how-it-works"><strong>How it Works</strong></h2>
-<p>The simulation node is basically a wrapper around the sailboat_gym repository, which can be found here: <a href="https://github.com/lucasmrdt/sailboat-gym">Sailboat Gym Github Repository</a>. This repository basically has a docker container that all of the actual simulations happen in because there is a gazebo simulator for the sailboat inside of the docker container. The sailboat_gym repository then communicates with the docker container and controls the sailboat that exists inside of the docker container. The docker container is based off of the following repository: <a href="https://github.com/disaster-robotics-proalertas/usv_sim_lsa">USV Sim LSA Github Repository</a>, which is the gazebo environment that is run inside of the docker container. We can actually edit the docker container ourselves and have our own custom versions of the simulation, which is what I have set up the following repository for: <a href="https://github.com/sailbot-vt/sailbot_simulation">Our Sailboat Simulation</a>. In this github repository, you can edit the code for the simulation and then rebuild the docker image to be used whenever you use the simulation node. For more information, please look at the <em>running a custom simulation</em> documentation. You should also check out the system diagram for the simulation stack as it provides a visual explanation for how all of these pieces of code interact with each other.</p>
+<p>The simulation node is basically a wrapper around the sailboat_gym repository, which can be found here: <a href="https://github.com/lucasmrdt/sailboat-gym">Sailboat Gym Github Repository</a>. This repository basically has a docker container that all of the actual simulations happen in because there is a gazebo simulator for the sailboat inside of the docker container. The sailboat_gym repository then communicates with the docker container and controls the sailboat that exists inside of the docker container. The docker container is based off of the following repository: <a href="https://github.com/disaster-robotics-proalertas/usv_sim_lsa">USV Sim LSA Github Repository</a>, which is the gazebo environment that is run inside of the docker container. We can actually edit the docker container ourselves and have our own custom versions of the simulation, which is what I have set up the following repository for: <a href="https://github.com/autoboat-vt/autoboat_simulation">Our Sailboat Simulation</a>. In this github repository, you can edit the code for the simulation and then rebuild the docker image to be used whenever you use the simulation node. For more information, please look at the <em>running a custom simulation</em> documentation. You should also check out the system diagram for the simulation stack as it provides a visual explanation for how all of these pieces of code interact with each other.</p>
 <p>The simulation node simply imports the sailboat_gym repository and then ties specific actions to publishers and subscribers. For instance, if you publish a sail and rudder command, then the simulation node will pass that onto the sailboat_gym repository which will correspondingly control the boat in the simulation.</p>
 <p><br></p>
 <h2 id="how-to-run"><strong>How to Run</strong></h2>
