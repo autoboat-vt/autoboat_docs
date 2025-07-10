@@ -10,11 +10,11 @@
 /* Widen the right sidebar (Table of Contents) */
 .md-sidebar--secondary {
   width: 300px; /* Adjust as needed */
-  margin-right: -20%
+  margin-right: -10%
 }
 
 /* Let ToC items use full width of sidebar */
 .md-nav--secondary {
   width: 280px;
-  margin-right: -20%
+  margin-right: -10%
 }
