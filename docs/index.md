@@ -1,6 +1,5 @@
 # <p style="text-align: center;"> Welcome to the Virginia Tech AutoBoat Documentation!</p>
-This document will outline how to set up the software stack on theoretically any modern computer.
-For more information on how to run simulations, testing, and how to run this code on the Jetson, please refer to the other docs.
+This document will outline how to set up the software stack on theoretically any modern computer. All of our code is contained in [this Github repository](https://github.com/autoboat-vt), so if you want to check this out then feel free! All of the code is open source and we have a commitment to keeping all of our stuff open source for the forseable future.
 
 <br>
 ## *<p style="text-align: center;"> What Is the Purpose of This Document? </p>*
