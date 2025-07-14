@@ -4,7 +4,7 @@ To run the simulation, run the following commands in order **after setting up th
 
 
 ```sh
-sudo docker pull aanimated/autoboat_simulation:latest
+sudo docker pull autoboatvt/autoboat_simulation:latest
 ```
 
 ```sh 
