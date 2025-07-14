@@ -1736,8 +1736,8 @@
 <p>This command will pull the simulation docker image, which is where all of the simulation work is actually taking place! <strong>This command only needs to be run once. Once the docker image has been pulled, you shouldn't need to repull</strong>. The command may take a while, but once it is finished, run the following command:</p>
 <div class="highlight"><pre><span></span><code>ros2<span class="w"> </span>launch<span class="w"> </span>/home/ws/src/launch/simulation.launch.py
 </code></pre></div>
-<p>This command will then start the simulation and autopilot. Initially, however they won't do anything because they don't have any waypoint commands, so what you will need to do is go into your ground station folder in another terminal (not in the dev container) and type in the following command:  </p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>ground_station
+<p>This command will then start the simulation and autopilot. Initially, however they won't do anything because they don't have any waypoint commands, so what you will need to do is to type in the following command:  </p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/home/ws/ground_station
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>./run.sh
 </code></pre></div>

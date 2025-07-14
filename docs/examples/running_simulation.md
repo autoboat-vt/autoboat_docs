@@ -13,11 +13,11 @@ This command will pull the simulation docker image, which is where all of the si
 ros2 launch /home/ws/src/launch/simulation.launch.py
 ```
 
-This command will then start the simulation and autopilot. Initially, however they won't do anything because they don't have any waypoint commands, so what you will need to do is go into your ground station folder in another terminal (not in the dev container) and type in the following command:  
+This command will then start the simulation and autopilot. Initially, however they won't do anything because they don't have any waypoint commands, so what you will need to do is to type in the following command:  
 
 
 ```sh
-cd ground_station
+cd /home/ws/ground_station
 ```
 
 ``` sh
