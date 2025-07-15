@@ -27,4 +27,3 @@ A more comprehensive tutorial can be found here: [Comprehensive tutorial on how 
 <br>
 
 Once you have the ROS2 python package created, you should make your way to the next section on adding new ROS2 nodes, where we will talk about how to add new nodes to ROS2 python packages.
-

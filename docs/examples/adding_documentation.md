@@ -9,6 +9,13 @@ pip install mkdocs
 pip install mkdocs-material
 ```
 
+!!!NOTE "mac OS Users"
+We can use brew for this.
+
+```sh
+brew install mkdocs-material
+```
+
 Then, clone the github repository:
 ```sh
 git clone -b https://github.com/autoboat-vt/autoboat_docs
