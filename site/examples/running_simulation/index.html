@@ -1493,7 +1493,7 @@
   
   
   <span class="md-ellipsis">
-    Misc
+    Telmetry Server
     
   </span>
   
@@ -1503,6 +1503,97 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Telmetry Server
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../telemetry_server/telemetry_server_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Telemetry Server Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../telemetry_server/telemetry_server_api_routes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Telemetry Server API Routes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Misc
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Misc
           </label>
@@ -1640,12 +1731,13 @@
 
 <h1 id="running-the-simulation"><p style="text-align: center;"> Running the Simulation </p></h1>
 <p>To run the simulation, run the following commands in order <strong>after setting up the development container</strong>:</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>docker<span class="w"> </span>pull<span class="w"> </span>aanimated/autoboat_simulation:latest
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>docker<span class="w"> </span>pull<span class="w"> </span>autoboatvt/autoboat_simulation:latest
 </code></pre></div>
+<p>This command will pull the simulation docker image, which is where all of the simulation work is actually taking place! <strong>This command only needs to be run once. Once the docker image has been pulled, you shouldn't need to repull</strong>. The command may take a while, but once it is finished, run the following command:</p>
 <div class="highlight"><pre><span></span><code>ros2<span class="w"> </span>launch<span class="w"> </span>/home/ws/src/launch/simulation.launch.py
 </code></pre></div>
-<p>This command will then start the simulation and autopilot. Initially, however they won't do anything because they don't have any waypoint commands, so what you will need to do is go into your ground station folder in another terminal (not in the dev container) and type in the following command:  </p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>ground_station
+<p>This command will then start the simulation and autopilot. Initially, however they won't do anything because they don't have any waypoint commands, so what you will need to do is to type in the following command:  </p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/home/ws/ground_station
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>./run.sh
 </code></pre></div>
