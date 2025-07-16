@@ -7,7 +7,7 @@ The purpose of this document is to be an installation guide, overview of all of 
 
 <br>
 ## *<p style="text-align: center;"> How Do I Get Started? </p>*
-Head over to the *Getting Started* part of the documentation and complete the installation steps over at *Installing Docker* to install Docker. Then, complete the installation steps found in *Setting Up the Development Container*, and once you have the development container all set up, you should be ready to test everything! To get a simple simulation scenario up and running, then please visit *Examples*. 
+Head over to the *Getting Started* part of the documentation and complete the installation steps over at [*Installing Docker*](getting_started/installing_docker.md) to install Docker. Then, complete the installation steps found in [*Setting Up the Development Container*](getting_started/setting_up_dev_environment.md), and once you have the development container all set up, you should be ready to test everything! To get a simple simulation scenario up and running, then please visit *Examples* and click on the [*Running the Simulation*](examples/running_simulation.md). 
 
 <br>
 ## *<p style="text-align: center;"> What Frameworks and Tools Should I Learn? </p>*
