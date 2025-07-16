@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
@@ -1741,7 +1741,15 @@
 <li>Launch XQuartz. Under the XQuartz menu, select Settings.</li>
 <li>Go to the Security tab and ensure "Allow connections from network clients" is checked.</li>
 <li><em>Restart XQuartz</em>.</li>
+<li>In the Terminal app or whichever terminal your using, run the following:</li>
 </ol>
+<div class="highlight"><pre><span></span><code><span class="nv">IP</span><span class="o">=</span><span class="k">$(</span>/usr/sbin/ipconfig<span class="w"> </span>getifaddr<span class="w"> </span>en0<span class="k">)</span>
+/opt/X11/bin/xhost<span class="w"> </span>+<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$IP</span><span class="s2">&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">DISPLAY</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">IP</span><span class="si">}</span><span class="s2">:0&quot;</span>
+</code></pre></div>
+<p>You will need to run this everytime you are about to start the docker container.
+It is not advised to have this code in your <code>.bashrc</code> or <code>.zshrc</code> as macos is not expecting
+<code>$DISPLAY</code> to be set to this value and x11 apps run outside the docker container will not work.</p>
 </div>
 <p>Also ensure that you have VSCode or some other IDE that supports Docker dev environments installed (<strong>If you are using Windows you install VSCode in WSL too</strong>). For the purposes of this documentation, we will be using VSCode but there are plenty of other IDEs that support this and they each have their own documentation for how to get this setup.</p>
 <h1 id="installing-the-development-container"><p style="text-align: center;"> Installing the Development Container </p></h1>
@@ -1841,7 +1849,7 @@ This should navigate you to a file explorer. Using it, simply navigate to the fo
       <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       
