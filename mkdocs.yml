@@ -61,10 +61,12 @@ nav:
     - What About the Other Nodes: nodes/what_about_the_other_nodes.md
 
 
-  - Telmetry Server:
+  - Telemetry Server:
     - Telemetry Server Overview: telemetry_server/telemetry_server_overview.md
     - Telemetry Server API Routes: telemetry_server/telemetry_server_api_routes.md
 
+  - Groundstation:
+    - Groundstation Overview: groundstation/groundstation_overview.md
 
   - Misc:
     - Potential Security Risks: misc/potential_security_risks.md
