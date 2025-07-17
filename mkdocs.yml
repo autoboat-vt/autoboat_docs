@@ -32,61 +32,61 @@ nav:
 
   - ROS2 Packages and Nodes:
 
-    - Autopilot Package: 
-      - Common Documentation Between the Motorboat Autopilot and the Sailboat Autopilot: nodes/common_documentation_between_the_motorboat_autopilot_and_the_sailboat_autopilot.md
-      - Sailboat Autopilot Node: nodes/sailboat_autopilot.md
-      - Motorboat Autopilot Node: nodes/motorboat_autopilot.md
-      - Telemetry: nodes/telemetry.md
-
-    - Sensors Package:
-      - GPS Node: nodes/gps.md
-      - RC (Remote Controller) Node: nodes/rc.md
-      - Wind Sensor Node: nodes/wind_sensor.md
-
-    - VESC Package:
-      - VESC Node: nodes/vesc.md
-
-    - Microros Package:
-      - Raspberry Pi Pico Microros Node: nodes/microros.md
-
-    - Object Detection Package: 
-      - Object Detection Node: nodes/object_detection.md
-    
-    - AutoBoat Messages Package:
-      - AutoBoat Messages Node: nodes/autoboat_msgs.md
-    
-    - Simulation Package: 
-      - Sailboat Simulation Node: nodes/sailboat_simulation.md
-    
-    - What About the Other Nodes: nodes/what_about_the_other_nodes.md
-
     # - Autopilot Package: 
-    #   - Common Documentation Between the Motorboat Autopilot and the Sailboat Autopilot: ros2_packages/autopilot_package/common_documentation_between_the_motorboat_autopilot_and_the_sailboat_autopilot.md
-    #   - Sailboat Autopilot Node: ros2_packages/autopilot_package/sailboat_autopilot.md
-    #   - Motorboat Autopilot Node: ros2_packages/autopilot_package/motorboat_autopilot.md
-    #   - Telemetry: ros2_packages/autopilot_package/telemetry.md
+    #   - Common Documentation Between the Motorboat Autopilot and the Sailboat Autopilot: nodes/common_documentation_between_the_motorboat_autopilot_and_the_sailboat_autopilot.md
+    #   - Sailboat Autopilot Node: nodes/sailboat_autopilot.md
+    #   - Motorboat Autopilot Node: nodes/motorboat_autopilot.md
+    #   - Telemetry: nodes/telemetry.md
 
     # - Sensors Package:
-    #   - GPS Node: ros2_packages/sensors_package/gps.md
-    #   - RC (Remote Controller) Node: ros2_packages/sensors_package/rc.md
-    #   - Wind Sensor Node: ros2_packages/sensors_package/wind_sensor.md
+    #   - GPS Node: nodes/gps.md
+    #   - RC (Remote Controller) Node: nodes/rc.md
+    #   - Wind Sensor Node: nodes/wind_sensor.md
 
     # - VESC Package:
-    #   - VESC Node: ros2_packages/vesc_package/vesc.md
+    #   - VESC Node: nodes/vesc.md
 
     # - Microros Package:
-    #   - Raspberry Pi Pico Microros Node: ros2_packages/microros_package/microros.md
+    #   - Raspberry Pi Pico Microros Node: nodes/microros.md
 
     # - Object Detection Package: 
-    #   - Object Detection Node: ros2_packages/object_detection_package/object_detection.md
+    #   - Object Detection Node: nodes/object_detection.md
     
     # - AutoBoat Messages Package:
-    #   - AutoBoat Messages Node: ros2_packages/autoboat_messages_package/autoboat_msgs.md
+    #   - AutoBoat Messages Node: nodes/autoboat_msgs.md
     
     # - Simulation Package: 
-    #   - Sailboat Simulation Node: ros2_packages/simulation_package/sailboat_simulation.md
+    #   - Sailboat Simulation Node: nodes/sailboat_simulation.md
     
-    # - What About the Other Nodes: ros2_packages/other_nodes/what_about_the_other_nodes.md
+    # - What About the Other Nodes: nodes/what_about_the_other_nodes.md
+
+    - Autopilot Package: 
+      - Common Documentation Between the Motorboat Autopilot and the Sailboat Autopilot: ros2_packages/autopilot_package/common_documentation_between_the_motorboat_autopilot_and_the_sailboat_autopilot.md
+      - Sailboat Autopilot Node: ros2_packages/autopilot_package/sailboat_autopilot.md
+      - Motorboat Autopilot Node: ros2_packages/autopilot_package/motorboat_autopilot.md
+      - Telemetry: ros2_packages/autopilot_package/telemetry.md
+
+    - Sensors Package:
+      - GPS Node: ros2_packages/sensors_package/gps.md
+      - RC (Remote Controller) Node: ros2_packages/sensors_package/rc.md
+      - Wind Sensor Node: ros2_packages/sensors_package/wind_sensor.md
+
+    - VESC Package:
+      - VESC Node: ros2_packages/vesc_package/vesc.md
+
+    - Microros Package:
+      - Raspberry Pi Pico Microros Node: ros2_packages/microros_package/microros.md
+
+    - Object Detection Package: 
+      - Object Detection Node: ros2_packages/object_detection_package/object_detection.md
+    
+    - AutoBoat Messages Package:
+      - AutoBoat Messages Node: ros2_packages/autoboat_messages_package/autoboat_msgs.md
+    
+    - Simulation Package: 
+      - Sailboat Simulation Node: ros2_packages/simulation_package/sailboat_simulation.md
+    
+    - What About the Other Nodes: ros2_packages/other_nodes/what_about_the_other_nodes.md
 
 
   - Telemetry Server:
@@ -95,6 +95,9 @@ nav:
 
   - Groundstation:
     - Groundstation Overview: groundstation/groundstation_overview.md
+
+  - Website:
+    - How to Start Developing on the Website: website/how_to_start_developing_on_the_website.md
 
   - Misc:
     - Potential Security Risks: misc/potential_security_risks.md

@@ -1,13 +1,26 @@
 # <p style="text-align: center;"> Autopilot Nodes </p>
 
 ## **Summary**
-These nodes are responsible for listening to data about the current state of the boat and a set of waypoints and publishing the desired motor behaviour based on our autopilot software. These nodes run completely asynchronously on an internal timer, which means that a few times every seconds it runs a *non-blocking* script to calculate what the desired motor behaviours should be and publishes them when its done. This node does not actually have code to communicate with motors directly, but instead lets the microcontroller figure out the specifics of how to communicate with the motor.
+These nodes are responsible for listening to data about the current state of the boat and a set of waypoints and publishing the desired motor behaviour based on our autopilot software. These nodes run completely asynchronously on an internal timer, which means that a few times every seconds it runs a *non-blocking* script to calculate what the desired motor behaviours should be and publishes them when its done. This node does not actually have code to communicate with motors directly, but instead lets the microcontroller and vesc node figure out the specifics of how to communicate with the motor controllers.
 
 Additionally, these nodes publish data that is useful for telemetry and debugging such as the the current maneuver it is attempting to perform and what its desired heading is currently.
 
 An important thing to note is that these nodes also control basic RC override, which is why they need to listen into the raw RC data. There are several different types of RC override listed below:  
 ![Code for Switching Modes](../images/switches_and_autopilot_modes.png)
-TODO: make this actually documented lol
+
+Above, you can find all of the different operating modes of the sailboat autopilot, which all depend on the current values of the toggle on the remote controller. The "toggle" or 3 way switches on the remote control are the main way that we select which autopilot mode we are in. Autopilot modes describe whether the autopilot is in RC mode, waypoint mission mode, hold current heading mode, etc etc. This encompasses all manner of autonomous and semiautonomous modes, which are useful to easily change from the ground. When the 3 way switch is all the way down (or in other words farthest away from you), then the switch is considered to be in "state 0". If the switch is in the middle, it is considered to be in "state 1", and if the switch is fully up (or fully towards you) then the switch is considered to be in "state 2".
+
+The following is an explanation of what all of the current autopilot modes do. In the future, we will likely want to add more of these modes to have different behaviours. 
+
+Full_RC (sailboat + motorboat): The rudder/sail or the rudder/propeller are both controlled by the remote controller.
+
+Waypoint_Mission (sailboat + motorboat): The boat will attempt to follow a set of waypoints that are given to it by the groundstation.
+
+Hold_Heading (sailboat + motorboat): The boat will attempt to keep the heading that it entered the Hold_Heading mode in with its rudder. For example, if you put the boat in Hold_Heading mode while the boat has a heading of 30 degrees, then the boat will attempt to keep its heading at 30 degrees. The sail/propeller is still controlled by the remote controller.
+
+Hold_Best_Sail (sailboat): The boat will attempt to hold the best sail angle. Generally, for every state the boat is in, there is an optimal angle to hold the sail at. For more information, check out the [Sailboat Autopilot Documentation](sailboat_autopilot.md). The rudder is still controlled by the remote controller.
+
+Hold_Heading_And_Best_Sail (sailboat): the boat will attempt to do Hold_Heading and Hold_Best_Sail at the same time.
 
 
 <br>
