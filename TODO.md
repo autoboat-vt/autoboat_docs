@@ -11,6 +11,8 @@
 # **ADD DOCUMENTATION THAT EXPLAINS WHAT YOU SHOULD KNOW HOW TO DO WITH DOCKER, ROS, ETC**
 for example explain for docker that you should understand what containers, images, and devcontainers are. You should understand how to build an image, run an image (create a container), and how to push images to docker hub. You should also be familiar with simple build commands in a Dockerfile
 
+# **TODO ADD A MENTION OF THE STUFF IN THE ISSUES.TXT IN THE SETUP INSTRUCTIONS**
+
 
 **TODO MAYBE ADD A VISUAL EXAMPLE OF THE GLOBAL TRUE WIND VECTOR TO MAKE IT MAKE SENSE**
 
