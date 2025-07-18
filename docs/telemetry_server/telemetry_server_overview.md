@@ -4,12 +4,6 @@
 
 As shown above, both the telemetry node and the groundstation will communicate with the telemetry server to send and receive information about the boat. The telemetry server is implemented as a Python [Flask](https://flask.palletsprojects.com/en/stable/) API that both the groundstation and the telemetry node on the jetson use as an intermediary to exchange messages.
 
-
-## <p style="text-align: center;"> **How to Start Developing on the Telemetry Server** </p>
-
-**TODO TODO TODO TODO**
-
-
 ## <p style="text-align: center;"> **Future Plans** </p>
 
 In the future, we would like to support having multiple boats/ simulations talking to the telemetry server at the same time. The end goal of this is to have the groundstation be able to choose which boat to connect to so you can receive telemetry data and send parameters to a specific boat thats currently active.

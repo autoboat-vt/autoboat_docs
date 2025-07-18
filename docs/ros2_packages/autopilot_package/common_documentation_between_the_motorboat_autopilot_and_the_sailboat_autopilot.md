@@ -12,6 +12,8 @@ Above, you can find all of the different operating modes of the sailboat autopil
 
 The following is an explanation of what all of the current autopilot modes do. In the future, we will likely want to add more of these modes to have different behaviours. 
 
+Disabled (sailboat + motorboat): The rudder/sail/propeller will not move and the boat is basically limp. This functions pretty much as a kill switch.
+
 Full_RC (sailboat + motorboat): The rudder/sail or the rudder/propeller are both controlled by the remote controller.
 
 Waypoint_Mission (sailboat + motorboat): The boat will attempt to follow a set of waypoints that are given to it by the groundstation.
