@@ -1994,8 +1994,10 @@
 </code></pre></div>
 <p>If the version is incorrect or the command gives you an error because python is not found, then you will need to install the correct version of python. The easiest way to do this is probably through miniconda which is a tool that allows you to manage multiple different versions of python on the same computer very easily.</p>
 <p>To install miniconda, please follow the installation instructions found here: <a href="https://www.anaconda.com/docs/getting-started/miniconda/install">Miniconda installation instructions</a>.</p>
-<p>!! Note "Windows Users"
-    If you are on Windows, then make sure that you do this installation for linux in your WSL environment. We would like to develop the telemetry server using a unix environment because it makes everything a whole lot easier, so you need to install the correct version of python through WSL linux.</p>
+<div class="admonition note">
+<p class="admonition-title">Windows Users</p>
+<p>If you are on Windows, then make sure that you do this installation for linux in your WSL environment. We would like to develop the telemetry server using a unix environment because it makes everything a whole lot easier, so you need to install the correct version of python through WSL linux.</p>
+</div>
 <p>Once your installation is done and you open up a terminal, then if you run the following command:</p>
 <div class="highlight"><pre><span></span><code>conda<span class="w"> </span>activate<span class="w"> </span>base
 </code></pre></div>
@@ -2003,16 +2005,20 @@
 <div class="highlight"><pre><span></span><code>conda<span class="w"> </span>install<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
 </code></pre></div>
 <h2 id="downloading-the-codebase-for-the-telemetry-server"><p style="text-align: center;"> <strong>Downloading the Codebase for the Telemetry Server</strong> </p></h2>
-<p>!! Note "Windows Users"
-    Ensure that you are running the following commands in a WSL terminal in a WSL linux filesystem. If you would like to navigate to your linux filesystem from the WSL terminal then run the following command: <code>cd ~</code>, which will take you to the home directory for the linux filesystem. If you do not install this in the linux filesystem, then developing the telemetry server will be noticably laggier.</p>
+<div class="admonition note">
+<p class="admonition-title">Windows Users</p>
+<p>Ensure that you are running the following commands in a WSL terminal in a WSL linux filesystem. If you would like to navigate to your linux filesystem from the WSL terminal then run the following command: <code>cd ~</code>, which will take you to the home directory for the linux filesystem. If you do not install this in the linux filesystem, then developing the telemetry server will be noticably laggier.</p>
+</div>
 <p>Run the following commands:</p>
 <div class="highlight"><pre><span></span><code>conda<span class="w"> </span>activate<span class="w"> </span>base
 git<span class="w"> </span>clone<span class="w"> </span>https://github.com/autoboat-vt/telemetry_server
 <span class="nb">cd</span><span class="w"> </span>telemetry_server
 pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </code></pre></div>
-<p>!! Note "Make Sure You Have Conda Activated When Developing"
-    If you do not see the word "(base)" next to your terminal, then conda is not activated and in order to use the correct version of python, you need to make sure you run <code>conda activate base</code> before you start running programs.</p>
+<div class="admonition note">
+<p class="admonition-title">Make Sure You Have Conda Activated When Developing</p>
+<p>If you do not see the word "(base)" next to your terminal, then conda is not activated and in order to use the correct version of python, you need to make sure you run <code>conda activate base</code> before you start running programs.</p>
+</div>
 
 
 
