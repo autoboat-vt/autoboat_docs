@@ -192,3 +192,13 @@ This is a deprecated route that is no longer required and is probably bad practi
 This route would be accessed via a POST request.
 <br>
 <br>
+
+
+
+## <p style="text-align: center;"> **FAQ** </p>
+
+### <p style="text-align: center;"> **I am still confused about the get_new routes** </p>
+
+This is likely best explained with an example: If you set the waypoints once from the groundstation, then those waypoints get stored in the telemetry server. How we have it set up right now, the telemetry node will constantly poll every 0.5 seconds for the new waypoints. You can imagine that if we are always sending back a large list of data, that would eat up our LTE data and cost us more money, so to optimize that, we would only like to send the waypoints to the telemetry node if there is something new for it to see. If there isnt, then we should just send an empty JSON because that uses the least amount of LTE data.
+
+The autopilot parameters are slightly different because we have 1 extra distinction when using get vs get_new for the autopilot parameters. When using get on the autopilot parameters, it will send all of the parameters regardless of if they were changed in the last call to set. However, if you use get_new it will only return the JSON payload in the last call to "set" and if you access it more than once, it will send over an empty JSON.
