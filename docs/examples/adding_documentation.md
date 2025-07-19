@@ -10,11 +10,11 @@ pip install mkdocs-material
 ```
 
 !!!NOTE "mac OS Users"
-We can use brew for this.
+    We can use brew for this.
 
-```sh
-brew install mkdocs-material
-```
+    ```sh
+    brew install mkdocs-material
+    ```
 
 Then, clone the github repository:
 ```sh

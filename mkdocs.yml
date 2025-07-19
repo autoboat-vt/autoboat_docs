@@ -9,6 +9,8 @@ nav:
     - Setting Up the Development Container: getting_started/setting_up_dev_environment.md
     - What Did You Just Install?: getting_started/what_did_you_just_install.md
     - Installing MicroROS: getting_started/installing_microros.md
+    - How to Start Developing on the Telemetry Server: getting_started/how_to_develop_telemetry_server.md
+    - How to Start Developing on the Website: getting_started/how_to_develop_website.md
 
   - Examples:
     - Running the Simulation: examples/running_simulation.md
@@ -31,35 +33,6 @@ nav:
 
 
   - ROS2 Packages and Nodes:
-
-    # - Autopilot Package: 
-    #   - Common Documentation Between the Motorboat Autopilot and the Sailboat Autopilot: nodes/common_documentation_between_the_motorboat_autopilot_and_the_sailboat_autopilot.md
-    #   - Sailboat Autopilot Node: nodes/sailboat_autopilot.md
-    #   - Motorboat Autopilot Node: nodes/motorboat_autopilot.md
-    #   - Telemetry: nodes/telemetry.md
-
-    # - Sensors Package:
-    #   - GPS Node: nodes/gps.md
-    #   - RC (Remote Controller) Node: nodes/rc.md
-    #   - Wind Sensor Node: nodes/wind_sensor.md
-
-    # - VESC Package:
-    #   - VESC Node: nodes/vesc.md
-
-    # - Microros Package:
-    #   - Raspberry Pi Pico Microros Node: nodes/microros.md
-
-    # - Object Detection Package: 
-    #   - Object Detection Node: nodes/object_detection.md
-    
-    # - AutoBoat Messages Package:
-    #   - AutoBoat Messages Node: nodes/autoboat_msgs.md
-    
-    # - Simulation Package: 
-    #   - Sailboat Simulation Node: nodes/sailboat_simulation.md
-    
-    # - What About the Other Nodes: nodes/what_about_the_other_nodes.md
-
     - Autopilot Package: 
       - Common Documentation Between the Motorboat Autopilot and the Sailboat Autopilot: ros2_packages/autopilot_package/common_documentation_between_the_motorboat_autopilot_and_the_sailboat_autopilot.md
       - Sailboat Autopilot Node: ros2_packages/autopilot_package/sailboat_autopilot.md
@@ -97,7 +70,7 @@ nav:
     - Groundstation Overview: groundstation/groundstation_overview.md
 
   - Website:
-    - How to Start Developing on the Website: website/how_to_start_developing_on_the_website.md
+    - How to Start Developing on the Website: website/website_overview.md
 
   - Misc:
     - Potential Security Risks: misc/potential_security_risks.md
