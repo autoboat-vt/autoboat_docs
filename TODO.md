@@ -19,3 +19,6 @@ for example explain for docker that you should understand what containers, image
 maybe rename local velocity to something else
 
 in every case where there is a note only relevant to macOS users, add an apple logo to ensure its totally clear to someone glancing over the documentation that you should only do those things if you own a mac.
+
+
+add a checklist before commiting anything that says: "have you changed a node, check if anything in that node's documentation has changed, have you changed something with how the system as a whole functions, change the system diagrams, etc etc" this will help people update the documentation before they commit hopefully
