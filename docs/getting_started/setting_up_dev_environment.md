@@ -54,7 +54,6 @@ Also ensure that you have VSCode or some other IDE that supports Docker dev envi
 
 # <p style="text-align: center;"> Final Setup after Loading Development Container </p>
 
-------------------------------------------------------------------------
 
 Once you are inside your development container, go to the terminal and input the following command.
 
@@ -74,7 +73,6 @@ bash docker_dev_environment_setup.sh && source ~/.bashrc
 
 Restart VSCode by closing it and reopening it to make sure all of the changes refresh properly.
 
-------------------------------------------------------------------------
 
 # <p style="text-align: center;"> Connecting Back to The Dev Container </p>
 

@@ -69,27 +69,46 @@ The boat status has a very specific format whenever you are receiving or sending
 ```
 
 
+------------------------------------------------------------------------
 
 ```/boat_status/get```
 Accessing this route will allow you to get the current status of the boat as a dictionary. This will be the last dictionary that has been sent to the telemetry server.
 
 This route is primarily accessed by the groundstation
+
+
+------------------------------------------------------------------------
+
 <br>
+
+
 
 
 ```/boat_status/get_new```
 Gets latest boat status dictionary if the latest boat status hasn't already been seen. If the latest boat status has been seen, then simply send an empty dictionary. This helps save on LTE data since we aren't sending data to the groundstation it has already seen it.
 
 This route is primarily accessed by the groundstation
+
+
+------------------------------------------------------------------------
+
 <br>
+
+
 
 
 ```/boat_status/set``
 Sets the boat status of the boat with the JSON thats passed to the route as a JSON payload.
 
 This route is primarily accessed by the telemetry node on the Jetson on the boat
+
+------------------------------------------------------------------------
+
 <br>
+
 <br>
+
+
 
 
 ### <p style="text-align: center;"> **Autopilot Parameter Routes** </p>
@@ -111,40 +130,66 @@ The default autopilot parameters are primarily defined in the src/autopilot/auto
 
 This JSON will only contain the parameters that you would like to change, and you can only change the parameters that exist in the src/autopilot/autopilot/config folder. If you are reading parameters off of the /autopilot_parameters/get route, then you will receive all of the parameters including the ones that the groundstation has not manually changed. If you are reading parameters off of the /autopilot_parameters/get_new route, then you will only receive the parameters that have most recently changed (if they have not already been read already). No matter which route you are pulling the parameters off of, however, the format will be pretty much identical.
 
+------------------------------------------------------------------------
+
 
 ```/autopilot_parameters/get```
 Accessing this route will allow you to get all of the parameters that the boat is currently using. This is useful if on the groundstation you would like to pull all of the parameters that the boat is currently using so that you can show the user what the boat is thinking. You can also use this as a more data intensive version of /autopilot_parameters/get_new on the telemetry node.
 
 
 This route can be accessed by either the groundstation or the telemetry node on the Jetson on the boat
+
+------------------------------------------------------------------------
+
 <br>
+
+
+
 
 ```/autopilot_parameters/get_new```
 Accessing this route will allow you to get the autopilot_parameters of the boat as a dictionary. This will be equivalent to the last JSON that has been sent to the telemetry server through the /autopilot_parameters/set route if it has not already been read. If the /autopilot_parameters/get_new route has already been read from and no new autopilot parameters were set, then this route will just return an empty JSON to save on LTE data.
 
 This route is primarily accessed by the telemetry node on the Jetson on the boat
+
+------------------------------------------------------------------------
+
 <br>
+
+
 
 ```/autopilot_parameters/set```
 Sets the autopilot parameters for the boat with the JSON thats passed to the route. You can send a JSON with just one autopilot parameter that you would like to change or you can change all of the autopilot_parameters at once. It is up to you.
 
 
 This route is primarily accessed by the groundstation
+
+------------------------------------------------------------------------
+
 <br>
+
+
 
 ```/autopilot_parameters/set_default```
 Sets the default parameters that the telemetry node is using. These are the same parameters that are in the src/autopilot/autopilot/config folder and should only be set once while the telemetry node is booting up and gives the telemetry server and the groundstation an idea of what parameters the boat is using if you haven't manually set certain parameters. This also tells you which parameters that you can set via /autopilot_parameters/set, since you can't add any other parameters other than the default parameters.
 
 This route is primarily accessed by the telemetry node on the Jetson on the boat
+
+------------------------------------------------------------------------
+
 <br>
+
 
 ```/autopilot_parameters/get_default```
 Views the default parameters that the telemetry node has been using. This is the same JSON as the JSON sent by the /autopilot_parameters/set_default route.
 
 This route is primarily accessed by the groundstation
-<br>
+
+------------------------------------------------------------------------
 
 <br>
+<br>
+
+
 
 
 
@@ -162,6 +207,8 @@ This route is how we send waypoints to the boat from the groundstation. Once the
 }
 ```
 
+------------------------------------------------------------------------
+
 
 
 ```/waypoints/get```
@@ -169,7 +216,12 @@ Gets the current waypoint route that the boat should be currently trying to foll
 
 This route is primarily accessed by the telemetry node on the Jetson on the boat via a GET request.
 
+------------------------------------------------------------------------
+
+
 <br>
+
+
 
 ```/waypoints/get_new```
 Gets latest waypoints if the latest waypoints haven't already been seen. If the latest waypoints have been seen, then simply send an empty dictionary. This helps save on LTE data since we aren't sending data to the boat if it has already seen it.
@@ -177,14 +229,22 @@ Gets latest waypoints if the latest waypoints haven't already been seen. If the 
 
 This route is primarily accessed by the telemetry node on the Jetson on the boat via a GET request.
 
+------------------------------------------------------------------------
+
+
 <br>
+
+
 
 ```/waypoints/set```
 Sets the waypoints via a JSON payload. Make sure that you use the format provided above for the JSON that you send to the telemetry server or else the boat/ the telemetry node will not understand what to do.
 
 This route is primarily accessed by the groundstation as a POST request.
 
+------------------------------------------------------------------------
+
 <br>
+
 
 ```/waypoints/delete```
 This is a deprecated route that is no longer required and is probably bad practice to use. But what it used to do was delete the last waypoint entry so that /waypoints/get would return an empty set until you set new waypoints, but this is almost always better done using /waypoints/get_new, so you shouldn't really bother with this.

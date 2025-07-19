@@ -12,7 +12,7 @@ python --version
 
 If the version is incorrect or the command gives you an error because python is not found, then you will need to install the correct version of python. The easiest way to do this is probably through miniconda which is a tool that allows you to manage multiple different versions of python on the same computer very easily.
 
-To install miniconda, please follow the installation instructions found here: [Miniconda installation instructions](/docs/getting-started/miniconda/install#using-miniconda-in-a-commercial-setting).
+To install miniconda, please follow the installation instructions found here: [Miniconda installation instructions](https://www.anaconda.com/docs/getting-started/miniconda/install).
 
 !! Note "Windows Users"
     If you are on Windows, then make sure that you do this installation for linux in your WSL environment. We would like to develop the telemetry server using a unix environment because it makes everything a whole lot easier, so you need to install the correct version of python through WSL linux.
