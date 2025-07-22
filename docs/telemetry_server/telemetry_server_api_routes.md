@@ -130,6 +130,18 @@ The default autopilot parameters are primarily defined in the src/autopilot/auto
 
 This JSON will only contain the parameters that you would like to change, and you can only change the parameters that exist in the src/autopilot/autopilot/config folder. If you are reading parameters off of the /autopilot_parameters/get route, then you will receive all of the parameters including the ones that the groundstation has not manually changed. If you are reading parameters off of the /autopilot_parameters/get_new route, then you will only receive the parameters that have most recently changed (if they have not already been read already). No matter which route you are pulling the parameters off of, however, the format will be pretty much identical.
 
+Here is an example to help you understand what these routes should look like when implemented. In this example, these calls to the API routes are happening sequentially:
+
+
+on the telemetry node: POST autopilot_parameters/set_defaults: json={“a”: 1, “b”: 2}
+
+on the groundstation: POST autopilot_parameters/set: json={“a”: 3}
+
+GET autopilot_parameters/get would return {“a”: 3, “b”: 2} 
+ 
+GET autopilot_parameters/get_defaults would return {“a”: 1, “b”: 2}
+
+
 ------------------------------------------------------------------------
 
 
