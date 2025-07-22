@@ -1674,6 +1674,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAQ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i-am-still-confused-about-the-get_new-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      I am still confused about the get_new routes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2037,6 +2061,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAQ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i-am-still-confused-about-the-get_new-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      I am still confused about the get_new routes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2130,6 +2178,11 @@ Sets the boat status of the boat with the JSON thats passed to the route as a JS
 <span class="p">}</span>
 </code></pre></div>
 <p>This JSON will only contain the parameters that you would like to change, and you can only change the parameters that exist in the src/autopilot/autopilot/config folder. If you are reading parameters off of the /autopilot_parameters/get route, then you will receive all of the parameters including the ones that the groundstation has not manually changed. If you are reading parameters off of the /autopilot_parameters/get_new route, then you will only receive the parameters that have most recently changed (if they have not already been read already). No matter which route you are pulling the parameters off of, however, the format will be pretty much identical.</p>
+<p>Here is an example to help you understand what these routes should look like when implemented. In this example, these calls to the API routes are happening sequentially:</p>
+<p>on the telemetry node: POST autopilot_parameters/set_defaults: json={“a”: 1, “b”: 2}</p>
+<p>on the groundstation: POST autopilot_parameters/set: json={“a”: 3}</p>
+<p>GET autopilot_parameters/get would return {“a”: 3, “b”: 2} </p>
+<p>GET autopilot_parameters/get_defaults would return {“a”: 1, “b”: 2}</p>
 <hr />
 <p><code>/autopilot_parameters/get</code>
 Accessing this route will allow you to get all of the parameters that the boat is currently using. This is useful if on the groundstation you would like to pull all of the parameters that the boat is currently using so that you can show the user what the boat is thinking. You can also use this as a more data intensive version of /autopilot_parameters/get_new on the telemetry node.</p>
@@ -2188,6 +2241,10 @@ This is a deprecated route that is no longer required and is probably bad practi
 <p>This route would be accessed via a POST request.
 <br>
 <br></p>
+<h2 id="faq"><p style="text-align: center;"> <strong>FAQ</strong> </p></h2>
+<h3 id="i-am-still-confused-about-the-get_new-routes"><p style="text-align: center;"> <strong>I am still confused about the get_new routes</strong> </p></h3>
+<p>This is likely best explained with an example: If you set the waypoints once from the groundstation, then those waypoints get stored in the telemetry server. How we have it set up right now, the telemetry node will constantly poll every 0.5 seconds for the new waypoints. You can imagine that if we are always sending back a large list of data, that would eat up our LTE data and cost us more money, so to optimize that, we would only like to send the waypoints to the telemetry node if there is something new for it to see. If there isnt, then we should just send an empty JSON because that uses the least amount of LTE data.</p>
+<p>The autopilot parameters are slightly different because we have 1 extra distinction when using get vs get_new for the autopilot parameters. When using get on the autopilot parameters, it will send all of the parameters regardless of if they were changed in the last call to set. However, if you use get_new it will only return the JSON payload in the last call to "set" and if you access it more than once, it will send over an empty JSON.</p>
 
 
 
