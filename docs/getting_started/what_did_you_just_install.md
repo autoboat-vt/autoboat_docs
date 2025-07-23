@@ -17,4 +17,4 @@ This code is supposed to be run on an operator's computer to control the boat wh
 
 You can also use the ground station code to control the simulation, so if you send waypoints or parameters while a simulation is running then the simulation will automatically listen to the cloud server and navigate to those waypoints/ change specific parameters.
 
-For more information on how the ground station sends parameters, please see the resources section of the documentation.
+For more information on how the ground station sends parameters, please see the telemetry server and groundstation parts of the documentation.
