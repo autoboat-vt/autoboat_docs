@@ -141,6 +141,10 @@ GET autopilot_parameters/get would return {“a”: 3, “b”: 2}
  
 GET autopilot_parameters/get_defaults would return {“a”: 1, “b”: 2}
 
+GET autopilot_parameters/get_new would return {“a”: 3}
+
+GET autopilot_parameters/get_new a second time would return {}
+
 
 ------------------------------------------------------------------------
 
