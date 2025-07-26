@@ -1920,7 +1920,7 @@
 <h1 id="what-about-the-ground-station"><p style="text-align: center;"> What About the Ground Station? </p></h1>
 <p>This code is supposed to be run on an operator's computer to control the boat while it is on the water by telling a cloud server what we want our boat to do. The boat (specifically the telemetry node) then listens to this cloud server, processes the data, and performs whatever action we told it to do. You can do various things like sending different parameters to the autopilot and sending waypoints. These parameters can look like the PID gains or the tacking distance or the size of the no go zone etc (in other words things that were chosen arbitrarily).</p>
 <p>You can also use the ground station code to control the simulation, so if you send waypoints or parameters while a simulation is running then the simulation will automatically listen to the cloud server and navigate to those waypoints/ change specific parameters.</p>
-<p>For more information on how the ground station sends parameters, please see the resources section of the documentation.</p>
+<p>For more information on how the ground station sends parameters, please see the telemetry server and groundstation parts of the documentation.</p>
 
 
 
