@@ -2183,6 +2183,8 @@ Sets the boat status of the boat with the JSON thats passed to the route as a JS
 <p>on the groundstation: POST autopilot_parameters/set: json={“a”: 3}</p>
 <p>GET autopilot_parameters/get would return {“a”: 3, “b”: 2} </p>
 <p>GET autopilot_parameters/get_defaults would return {“a”: 1, “b”: 2}</p>
+<p>GET autopilot_parameters/get_new would return {“a”: 3}</p>
+<p>GET autopilot_parameters/get_new a second time would return {}</p>
 <hr />
 <p><code>/autopilot_parameters/get</code>
 Accessing this route will allow you to get all of the parameters that the boat is currently using. This is useful if on the groundstation you would like to pull all of the parameters that the boat is currently using so that you can show the user what the boat is thinking. You can also use this as a more data intensive version of /autopilot_parameters/get_new on the telemetry node.</p>
