@@ -34,7 +34,7 @@ Here are the things you should make sure you know how to do before you start wor
 
 Here are the things you should make sure you know how to do before you start working on anything:
 
-- Understand what [symlink installing](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html) a ROS2 package is since this is what we use instead of the traditional ROS2 build system
+- Understand what [symlink installing](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html) a ROS2 package is since this is what we use instead of the traditional ROS2 build system. Another good resource can be found here: [symlink install explanation](https://robotics.stackexchange.com/questions/98303/what-is-the-use-of-symlink-install-in-ros2-colcon-build)
 - Understand how to create ROS2 Humble packages, nodes, and entrypoints
 - Understand what topics and nodes are and how nodes are able to communicate over topics
 - Understand how to publish and subscribe to topics in code and through the command line
