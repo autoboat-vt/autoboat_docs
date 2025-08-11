@@ -97,7 +97,7 @@ This route is primarily accessed by the groundstation
 
 
 
-```/boat_status/set``
+```/boat_status/set```
 Sets the boat status of the boat with the JSON thats passed to the route as a JSON payload.
 
 This route is primarily accessed by the telemetry node on the Jetson on the boat
