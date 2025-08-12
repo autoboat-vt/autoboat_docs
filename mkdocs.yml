@@ -77,7 +77,11 @@ nav:
 
   - Units, Standards, and Definitions: standards_and_definitions.md
 
-  - Crontabs: crontabs.md
+  - Running ROS2 on Jetson Startup with Systemctl: systemctl.md
+  
+  - Automatically Finding Which Port Devices Are on with Udev Rules: udev_rules.md
+
+  - Automating Periodic Scripts with Crontabs: crontabs.md
 
   - Known Issues: known_installation_issues.md
 

@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://localhost:8000/ros2_packages/sensors_package/gps/">
+        <link rel="canonical" href="https://localhost:8000/systemctl/">
       
       
-        <link rel="prev" href="../../autopilot_package/telemetry/">
+        <link rel="prev" href="../standards_and_definitions/">
       
       
-        <link rel="next" href="../rc/">
+        <link rel="next" href="../udev_rules/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>GPS Node - AutoBoat @ VT Documentation</title>
+        <title>Running ROS2 on Jetson Startup with Systemctl - AutoBoat @ VT Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../styles/extra.css">
+      <link rel="stylesheet" href="../styles/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gps" class="md-skip">
+        <a href="#what-is-systemctl" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="AutoBoat @ VT Documentation" class="md-header__button md-logo" aria-label="AutoBoat @ VT Documentation" data-md-component="logo">
+    <a href=".." title="AutoBoat @ VT Documentation" class="md-header__button md-logo" aria-label="AutoBoat @ VT Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GPS Node
+              Running ROS2 on Jetson Startup with Systemctl
             
           </span>
         </div>
@@ -188,7 +188,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="AutoBoat @ VT Documentation" class="md-nav__button md-logo" aria-label="AutoBoat @ VT Documentation" data-md-component="logo">
+    <a href=".." title="AutoBoat @ VT Documentation" class="md-nav__button md-logo" aria-label="AutoBoat @ VT Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -206,7 +206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -266,7 +266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting_started/installing_docker/" class="md-nav__link">
+      <a href="../getting_started/installing_docker/" class="md-nav__link">
         
   
   
@@ -289,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting_started/setting_up_dev_environment/" class="md-nav__link">
+      <a href="../getting_started/setting_up_dev_environment/" class="md-nav__link">
         
   
   
@@ -312,7 +312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting_started/what_did_you_just_install/" class="md-nav__link">
+      <a href="../getting_started/what_did_you_just_install/" class="md-nav__link">
         
   
   
@@ -335,7 +335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting_started/installing_microros/" class="md-nav__link">
+      <a href="../getting_started/installing_microros/" class="md-nav__link">
         
   
   
@@ -358,7 +358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting_started/how_to_develop_telemetry_server/" class="md-nav__link">
+      <a href="../getting_started/how_to_develop_telemetry_server/" class="md-nav__link">
         
   
   
@@ -381,7 +381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting_started/how_to_develop_website/" class="md-nav__link">
+      <a href="../getting_started/how_to_develop_website/" class="md-nav__link">
         
   
   
@@ -449,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/running_simulation/" class="md-nav__link">
+      <a href="../examples/running_simulation/" class="md-nav__link">
         
   
   
@@ -472,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/running_a_custom_simulation/" class="md-nav__link">
+      <a href="../examples/running_a_custom_simulation/" class="md-nav__link">
         
   
   
@@ -495,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/running_individual_nodes/" class="md-nav__link">
+      <a href="../examples/running_individual_nodes/" class="md-nav__link">
         
   
   
@@ -518,7 +518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/connecting_a_usb_device_to_wsl/" class="md-nav__link">
+      <a href="../examples/connecting_a_usb_device_to_wsl/" class="md-nav__link">
         
   
   
@@ -541,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/adding_documentation/" class="md-nav__link">
+      <a href="../examples/adding_documentation/" class="md-nav__link">
         
   
   
@@ -564,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/adding_a_new_ros2_node/" class="md-nav__link">
+      <a href="../examples/adding_a_new_ros2_node/" class="md-nav__link">
         
   
   
@@ -587,7 +587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/adding_a_new_ros2_package/" class="md-nav__link">
+      <a href="../examples/adding_a_new_ros2_package/" class="md-nav__link">
         
   
   
@@ -610,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/how_we_handle_external_libraries/" class="md-nav__link">
+      <a href="../examples/how_we_handle_external_libraries/" class="md-nav__link">
         
   
   
@@ -678,7 +678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../system_diagrams/diagram_of_groundstation_telemetry/" class="md-nav__link">
+      <a href="../system_diagrams/diagram_of_groundstation_telemetry/" class="md-nav__link">
         
   
   
@@ -701,7 +701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../system_diagrams/diagram_of_simulations/" class="md-nav__link">
+      <a href="../system_diagrams/diagram_of_simulations/" class="md-nav__link">
         
   
   
@@ -724,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../system_diagrams/diagram_of_ros_nodes/" class="md-nav__link">
+      <a href="../system_diagrams/diagram_of_ros_nodes/" class="md-nav__link">
         
   
   
@@ -792,7 +792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../hardware/wiring_color_scheme/" class="md-nav__link">
+      <a href="../hardware/wiring_color_scheme/" class="md-nav__link">
         
   
   
@@ -815,7 +815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../hardware/squircuit/" class="md-nav__link">
+      <a href="../hardware/squircuit/" class="md-nav__link">
         
   
   
@@ -842,20 +842,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -871,7 +869,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             ROS2 Packages and Nodes
@@ -923,7 +921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../autopilot_package/common_documentation_between_the_motorboat_autopilot_and_the_sailboat_autopilot/" class="md-nav__link">
+      <a href="../ros2_packages/autopilot_package/common_documentation_between_the_motorboat_autopilot_and_the_sailboat_autopilot/" class="md-nav__link">
         
   
   
@@ -946,7 +944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../autopilot_package/sailboat_autopilot/" class="md-nav__link">
+      <a href="../ros2_packages/autopilot_package/sailboat_autopilot/" class="md-nav__link">
         
   
   
@@ -969,7 +967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../autopilot_package/motorboat_autopilot/" class="md-nav__link">
+      <a href="../ros2_packages/autopilot_package/motorboat_autopilot/" class="md-nav__link">
         
   
   
@@ -992,7 +990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../autopilot_package/telemetry/" class="md-nav__link">
+      <a href="../ros2_packages/autopilot_package/telemetry/" class="md-nav__link">
         
   
   
@@ -1020,20 +1018,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
         
           
           <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
@@ -1049,7 +1045,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_2">
             <span class="md-nav__icon md-icon"></span>
             Sensors Package
@@ -1060,32 +1056,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    GPS Node
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../ros2_packages/sensors_package/gps/" class="md-nav__link">
         
   
   
@@ -1096,44 +1070,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-run" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to Run
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1146,7 +1082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rc/" class="md-nav__link">
+      <a href="../ros2_packages/sensors_package/rc/" class="md-nav__link">
         
   
   
@@ -1169,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wind_sensor/" class="md-nav__link">
+      <a href="../ros2_packages/sensors_package/wind_sensor/" class="md-nav__link">
         
   
   
@@ -1238,7 +1174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vesc_package/vesc/" class="md-nav__link">
+      <a href="../ros2_packages/vesc_package/vesc/" class="md-nav__link">
         
   
   
@@ -1307,7 +1243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../microros_package/microros/" class="md-nav__link">
+      <a href="../ros2_packages/microros_package/microros/" class="md-nav__link">
         
   
   
@@ -1376,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../object_detection_package/object_detection/" class="md-nav__link">
+      <a href="../ros2_packages/object_detection_package/object_detection/" class="md-nav__link">
         
   
   
@@ -1445,7 +1381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../autoboat_messages_package/autoboat_msgs/" class="md-nav__link">
+      <a href="../ros2_packages/autoboat_messages_package/autoboat_msgs/" class="md-nav__link">
         
   
   
@@ -1514,7 +1450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../simulation_package/sailboat_simulation/" class="md-nav__link">
+      <a href="../ros2_packages/simulation_package/sailboat_simulation/" class="md-nav__link">
         
   
   
@@ -1545,7 +1481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../other_nodes/what_about_the_other_nodes/" class="md-nav__link">
+      <a href="../ros2_packages/other_nodes/what_about_the_other_nodes/" class="md-nav__link">
         
   
   
@@ -1613,7 +1549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../telemetry_server/telemetry_server_overview/" class="md-nav__link">
+      <a href="../telemetry_server/telemetry_server_overview/" class="md-nav__link">
         
   
   
@@ -1636,7 +1572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../telemetry_server/telemetry_server_api_routes/" class="md-nav__link">
+      <a href="../telemetry_server/telemetry_server_api_routes/" class="md-nav__link">
         
   
   
@@ -1704,7 +1640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../groundstation/groundstation_overview/" class="md-nav__link">
+      <a href="../groundstation/groundstation_overview/" class="md-nav__link">
         
   
   
@@ -1772,7 +1708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../website/website_overview/" class="md-nav__link">
+      <a href="../website/website_overview/" class="md-nav__link">
         
   
   
@@ -1840,7 +1776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../misc/potential_security_risks/" class="md-nav__link">
+      <a href="../misc/potential_security_risks/" class="md-nav__link">
         
   
   
@@ -1870,7 +1806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../standards_and_definitions/" class="md-nav__link">
+      <a href="../standards_and_definitions/" class="md-nav__link">
         
   
   
@@ -1889,10 +1825,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../systemctl/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Running ROS2 on Jetson Startup with Systemctl
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1903,6 +1861,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#some-useful-stuff-to-know-how-to-do-in-systemctl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Some Useful Stuff to Know How to Do in Systemctl
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-of-a-systemctl-file-that-we-have-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of a Systemctl File That We Have Used
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extra-resources-to-learn-more-about-systemctl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra Resources to Learn More About Systemctl
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1914,7 +1919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../udev_rules/" class="md-nav__link">
+      <a href="../udev_rules/" class="md-nav__link">
         
   
   
@@ -1936,7 +1941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../crontabs/" class="md-nav__link">
+      <a href="../crontabs/" class="md-nav__link">
         
   
   
@@ -1958,7 +1963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../known_installation_issues/" class="md-nav__link">
+      <a href="../known_installation_issues/" class="md-nav__link">
         
   
   
@@ -2000,18 +2005,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#some-useful-stuff-to-know-how-to-do-in-systemctl" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Some Useful Stuff to Know How to Do in Systemctl
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-run" class="md-nav__link">
+  <a href="#example-of-a-systemctl-file-that-we-have-used" class="md-nav__link">
     <span class="md-ellipsis">
-      How to Run
+      Example of a Systemctl File That We Have Used
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extra-resources-to-learn-more-about-systemctl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra Resources to Learn More About Systemctl
     </span>
   </a>
   
@@ -2033,15 +2047,15 @@
 
 
 
-<h1 id="gps"><p style="text-align: center;"> GPS </p></h1>
-<h2 id="summary"><strong>Summary</strong></h2>
-<p>This node is responsible for communicating back and forth between our GPS (<a href="https://www.sparkfun.com/products/15005">Sparkfun NEO-M8P-2</a>) and using various filtering techniques to clean the data and make it less noisy. Our GPS gives us both position and velocity data by tracking satellites in the sky, so performance may vary depending on how cloudy it is. </p>
-<p>We use the sparkfun-ublox-gps pip package to communicate with the gps, although in the future, we could look into the pyubx2 library as that seems to have more features. </p>
-<p>In the future we may also want to look into RTK (real time kinematics) to increase our GPS accuracy, but even without that, our GPS module is really precise with 0.5 meter accuracy! RTK would be nice though because it allows us to apply less aggressive filtering techniques and still get good results.</p>
-<p><br></p>
-<h2 id="how-to-run"><strong>How to Run</strong></h2>
-<div class="highlight"><pre><span></span><code>ros2<span class="w"> </span>run<span class="w"> </span>sensors<span class="w"> </span>gps
-</code></pre></div>
+<h1 id="what-is-systemctl"><p style="text-align: center;"> What is Systemctl?</p></h1>
+<p>Systemctl is essentially a way to schedule scripts to run when a machine starts up, and this is super useful on the Jetson on the actual boat, because it allows us to start up the autopilot ROS nodes without SSH'ing into the Jetson all of the time. Before we started using systemctl, every single time we power cycled the boat, we would have to SSH into the boat and manually run <code>ros2 launch ......</code>, but now with systemctl, this command automatically runs for us everytime the boat starts up.</p>
+<h2 id="some-useful-stuff-to-know-how-to-do-in-systemctl"><p style="text-align: center;"> Some Useful Stuff to Know How to Do in Systemctl</p></h2>
+<p>Theres a whole bunch of things that are very useful to know how to do with systemctl processes. For example, how to create a new .service file, how to use <code>sudo systemctl enable myservice</code> (which enables the service to start on boot), how to use <code>sudo systemctl start myservice</code> (which starts the service right now), how to use <code>sudo systemctl stop myservice</code> (which stops the service from running right now), <code>sudo systemctl disable myservice</code> (which disables the service to start on boot), and <code>sudo journalctl -u myservice</code> (which shows you the print logs from a specific service).</p>
+<h2 id="example-of-a-systemctl-file-that-we-have-used"><p style="text-align: center;"> Example of a Systemctl File That We Have Used</p></h2>
+<p>TODO TODO TODO TODO</p>
+<h2 id="extra-resources-to-learn-more-about-systemctl"><p style="text-align: center;"> Extra Resources to Learn More About Systemctl</p></h2>
+<p>Making a new systemctl process: https://askubuntu.com/questions/919054/how-do-i-run-a-single-command-at-startup-using-systemd</p>
+<p>Using journalctl: https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs </p>
 
 
 
@@ -2090,12 +2104,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.select"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
