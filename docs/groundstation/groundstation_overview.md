@@ -85,7 +85,7 @@ this is a great place to start.
 
 ### popup_edit.py
 
-This widget is used to create `windows` that make it easier to modify text in the Ground Station. It takes highligther
+This widget is used to create 'windows' that make it easier to modify text in the Ground Station. It takes highligther
 (such as one of the syntax highlighters defined in the `syntax_highlighters` directory), some initial text, a tab width,
 and font size as arguments and uses a QSignal to return the modified text when the user clicks the "Save" button or
 closes the window. This widget is used in the Ground Station to edit buoy data, some data types in the autopilot
