@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
@@ -2014,9 +2014,9 @@
 <h1 id="what-are-udev-rules-and-how-do-we-use-them"><p style="text-align: center;"> What are UDev Rules and How Do We Use Them</p></h1>
 <p>Udev Rules allow us to rename specific devices, so that we can very easily access them through code. Devices can usually be found in the /dev/ folder in linux and are generally accessed like devices. For example, a USB device <em>could</em> be found as /dev/ttyACM0, and in order to access that device, you have to provide that specific filepath. However, notice how I said "<em>could</em> be found" because this actually depends on the number of USB devices connected to your computer/ Jetson and if your computer/ Jetson is feeling devious today. The USB device could actually be found at /dev/ttyACM1, /dev/ttyACM2, etc etc. In other words, just providing the filepath is unreliable.</p>
 <p>Thankfully, there is another way to access devices in Linux that is related, but much easier. Essentially, every single serial device on earth is uniquely identified with a 4 digit hexademical number called a VID (vendor ID), a 4 digital hexadecimal number called a PID (product ID), and a serial number. If you know this PID, VID, and serial number, you can search through all of the devices on your computer to try to find the port that corresponds to this specific PID, VID, and serial number to find the port that the device is on. The code for this would look a little something like this:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">serial.tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">list_ports</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">serial.tools</span> <span class="kn">import</span> <span class="n">list_ports</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">getPort</span><span class="p">(</span><span class="n">vid</span><span class="p">,</span> <span class="n">pid</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="k">def</span> <span class="nf">getPort</span><span class="p">(</span><span class="n">vid</span><span class="p">,</span> <span class="n">pid</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="n">device_list</span> <span class="o">=</span> <span class="n">list_ports</span><span class="o">.</span><span class="n">comports</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">device</span> <span class="ow">in</span> <span class="n">device_list</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">device</span><span class="o">.</span><span class="n">vid</span> <span class="o">==</span> <span class="n">vid</span> <span class="ow">and</span> <span class="n">device</span><span class="o">.</span><span class="n">pid</span> <span class="o">==</span> <span class="n">pid</span><span class="p">:</span>
@@ -2084,7 +2084,7 @@
       <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.select"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
         <script src="../javascripts/mathjax.js"></script>
       

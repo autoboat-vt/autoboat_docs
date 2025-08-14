@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#under-construction" class="md-skip">
+        <a href="#introduction" class="md-skip">
           Skip to content
         </a>
       
@@ -1955,7 +1955,130 @@
 
 
 
-<h1 id="under-construction"><strong>Under Construction</strong></h1>
+<h1 id="introduction">Introduction</h1>
+<p>This document provides an overview of the Ground Station system, detailing its components, functionalities, and how it
+integrates with other systems. The Ground Station is a critical part of the overall architecture, enabling communication
+with the telemetry server and facilitating the management of boat operations. Link to PyQt documentation:
+<a href="https://doc.qt.io/archives/qtforpython-5/contents.html">PyQt Documentation</a></p>
+<h1 id="components-overview">Components Overview</h1>
+<div class="admonition note">
+<p class="admonition-title">Components Overview</p>
+<p>Exceptions thrown in the groundstation do not behave like exceptions thrown in regular Python code.
+The reason for the exception will not be printed to the console and must be handled in order for the
+application to continue running. If you have code that you suspect may throw an exception, please enclose it
+in a try/except block and handle the exception appropriately (ask Barrett if you are unsure how to handle it).</p>
+</div>
+<p>All data that persists between runs of the Ground Station and its assets are stored in the <code>app_data</code> directory.
+I have tried to split up the code in the Ground Station into logical components to make it easier to understand and modify.
+The Ground Station is divided into the following main components:</p>
+<h2 id="base-components">base components</h2>
+<h3 id="constantspy">constants.py</h3>
+<p>We will begin with the <code>constants.py</code> file, which defines objects that are used throughout the entire codebase.
+In addition, this file checks for the presence of configuration files and assets that are essential for the
+Ground Station's operation. The code in this file is the first to be run and is run before the actual
+application is registered with PyQt. If you have code that will cause the application to crash or not behave correctly
+when missing assets, it is best to place that code in this file. Additionally, code in this file cannot access properties
+of the application object created by PyQt. <strong>The icons used in the Ground Station are defined in this file, but are not
+able to be used until the application is registered with PyQt, which happens in the <code>main.py</code> file.</strong></p>
+<h3 id="thread_classespy">thread_classes.py</h3>
+<p>The <code>thread_classes.py</code> file contains classes that are used to manage threads within the Ground Station application.
+I decided to places these classes in a seperate file since they don't really feel like widgets, but may be hard to
+find in the <code>constants.py</code> file if you didn't know they were there. These classes are essential for handling
+asynchronous operations and ensuring that the Ground Station can perform tasks without blocking the main application thread.
+I highly recommend reading the code in this file to understand how threads are managed and how they interact with the
+rest of the application. Online resources on threads and how they work in PyQt may also be helpful if you are trying to work
+with the code in this file.</p>
+<h3 id="mainpy">main.py</h3>
+<p>This file is the main entry point for the Ground Station application. The code in this file is pretty self-explanatory and
+will probably only need to be modified if you are adding entirely new functionality to the Ground Station. If you need
+to know the specifics of what happens in this file, I recommend reading the code itself.</p>
+<h2 id="syntax_highlighters">syntax_highlighters</h2>
+<h3 id="base_highlighterpy">base_highlighter.py</h3>
+<p>The <code>base_highlighter.py</code> file contains the base class for syntax highlighters used in the Ground Station. I wanted to
+take the QSyntaxHighlighter class and write some methods that would make it easier to write syntax highlighters for
+whatever I needed. The methods in this class are meant to guide the implementation of syntax highlighters so that time is
+not wasted trying to understand each individual method in the QSyntaxHighlighter class. The methods in this class are
+not meant to be used directly, but rather to be overridden in subclasses that implement specific syntax highlighting
+functionality. If you are writing a syntax highlighter for the Ground Station, you should start by subclassing this
+class and implementing the methods that are relevant to your use case.</p>
+<h3 id="jsonpy">json.py</h3>
+<p>The <code>json.py</code> file contains a syntax highlighter specifically designed for JSON files. It extends the base highlighter
+class and implements the necessary methods to provide syntax highlighting for JSON syntax. This highlighter is used
+to enhance the readability of JSON files within the Ground Station, making it easier to work with configuration
+files and other JSON data.</p>
+<h3 id="consolepy">console.py</h3>
+<p>The <code>console.py</code> file contains a syntax highlighter for the console output within the Ground Station. This highlighter
+is designed to improve the readability of console messages, making it easier to identify important information,
+warnings, and errors. It uses the base highlighter class to implement specific highlighting rules for console
+output, ensuring that messages are displayed in a clear and organized manner.</p>
+<h2 id="widgets">widgets</h2>
+<h3 id="groundstationpy">groundstation.py</h3>
+<p>This is the magnum opus of the Ground Station application. It was the first widget I wrote for the Ground Station
+and is first widget that you see when you open the application. It serves as the main interface for interacting
+with the Ground Station and allows users to add and remove waypoints and buoys, view telemetry data, and shows
+popups that that are used to modify the state of the Ground Station. This file also uses some of the classes in the
+<code>thread_classes.py</code> file to manage asynchronous operations, such as fetching telemetry data and updating the
+interface without blocking the main thread. If you are looking to understand how the Ground Station works,
+this is a great place to start.</p>
+<h3 id="popup_editpy">popup_edit.py</h3>
+<p>This widget is used to create <code>windows</code> that make it easier to modify text in the Ground Station. It takes highligther
+(such as one of the syntax highlighters defined in the <code>syntax_highlighters</code> directory), some initial text, a tab width,
+and font size as arguments and uses a QSignal to return the modified text when the user clicks the "Save" button or
+closes the window. This widget is used in the Ground Station to edit buoy data, some data types in the autopilot
+parameter editor, and the telemetry data 'limits' that are used to determine when a warning or error should be displayed.</p>
+<h3 id="console_outputpy">console_output.py</h3>
+<p>This widget is used to display the console output of the Ground Station. It uses a QPlainTextEdit to display the
+output and the <code>console.py</code> syntax highlighter to provide syntax highlighting for the output. It also contains the code
+that makes it possible to have the console output displayed in the terminal and in the Ground Station at the same time.
+This is done by using a QThread and some redirection of the standard output streams to capture the console output
+and display it in the widget.</p>
+<h3 id="map_widget">map_widget</h3>
+<p>This directory contains the code that is used to make displaying the waypoints and buoys on a interactive map possible.
+It contains a Go server that is used to manage the transfer of waypoints and buoys between the Python code and the
+JavaScript code running in the HTML file in this directory. The Go server exposes a <code>get</code> and <code>set</code> endpoint that modifies
+an array containing the latitude and longitude of the waypoints and buoys which takes the form:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="w">    </span><span class="p">[</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">],</span>
+<span class="w">    </span><span class="p">[</span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">],</span>
+<span class="w">    </span><span class="p">[</span><span class="mf">3.0</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="p">],</span>
+<span class="w">    </span><span class="err">...</span>
+<span class="p">]</span>
+</code></pre></div>
+<p>Where latitude is the first element of each array and longitude is the second element.
+The JavaScript code in this directory uses the <a href="https://leafletjs.com">Leaflet</a> library
+to display the waypoints and buoys on a map.</p>
+<h3 id="camera_widget">camera_widget</h3>
+<p>This widget is used to display the camera feed from the boat. It uses a QThread from the <code>thread_classes.py</code> file to
+fetch the camera feed and then runs some JavaScript code to display the feed in a HTML file. We are using an HTML file
+to display the camera feed because of its abibility to natively show base64 encoded images, saving us the trouble of
+having to do the decoding ourselves. The widget has buttons that allow you to start and stop the camera feed in order to
+save bandwidth and processing power when the camera feed is not needed.</p>
+<h3 id="autopilot_param_editor">autopilot_param_editor</h3>
+<p>This widget is used to manage the autopilot parameters of the boat. It provides a scrollable table that features a
+search bar to filter the parameters by name. The widget uses a json file located in the
+<code>app_data/autopilot_params/params_default.jsonc</code> file to manage the default configuration for each of the parameters.
+This json file takes the form:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;param_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example_type&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example_default_value&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This is a description of the parameter.&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="err">...</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Where <code>param_name</code> is the name of the parameter, <code>type</code> is the type of the parameter,
+<code>default</code> is the default value of the parameter, and <code>description</code> is a description of the parameter.
+The parameter type must be one of the built-in types (i.e <code>int</code>, <code>float</code>, <code>str</code>, <code>bool</code>, <code>list</code>, <code>dict</code>, or <code>set</code>)
+in order for the parameter to be usable in the widget. Additional types should be defined in the <code>constants.py</code> file
+and properly handled in the code for the widget.</p>
+<p>When the application is started, it copies the contents of the <code>params_default.jsonc</code> file to a new file
+in the <code>autopilot_param_editor</code> directory called <code>params_temp.json</code> (all comments are stripped). This file is used to
+store the current values of the parameters and is updated whenever the user modifies a parameter in the widget. When the
+user clicks the "Save" button, a dialog allows the user to save the current parameters to a new file. If no file is
+selected, the parameters are not saved and the application continues on.</p>
+<p>In addition, the widget allows you to send, recieve, and reset each parameter to the value defined in the
+<code>app_data/autopilot_params/params_default.jsonc</code> file.</p>
 
 
 
@@ -2007,7 +2130,7 @@
       <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       
