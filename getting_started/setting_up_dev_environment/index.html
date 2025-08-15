@@ -1979,9 +1979,17 @@ It is not advised to have this code in your <code>.bashrc</code> or <code>.zshrc
 </div>
 <p>Also ensure that you have VSCode or some other IDE that supports Docker dev environments installed (<strong>If you are using Windows you install VSCode in WSL too</strong>). For the purposes of this documentation, we will be using VSCode but there are plenty of other IDEs that support this and they each have their own documentation for how to get this setup.</p>
 <h1 id="installing-the-development-container"><p style="text-align: center;"> Installing the Development Container </p></h1>
+<div class="admonition note">
+<p class="admonition-title">Windows Users</p>
+<p><strong>If you are using Windows you must do all of the following commands in the WSL filesystem</strong></p>
+</div>
 <ul>
 <li>
-<p>First, (<strong>If you are using Windows you must do this in a WSL folder</strong>) we need to clone the main Github repository from the following URL: <a href="https://github.com/autoboat-vt/autoboat_vt">https://github.com/autoboat-vt/autoboat_vt</a>. Open up a terminal and type the following command:</p>
+<p>First, we need to install the development container, and to do this, please run the following command:
+    <code>sudo docker pull autoboatvt/autoboat_docker_dev_image</code> </p>
+</li>
+<li>
+<p>Next, we need to clone the main Github repository from the following URL: <a href="https://github.com/autoboat-vt/autoboat_vt">https://github.com/autoboat-vt/autoboat_vt</a>. Open up a terminal and type the following command:</p>
 <p><code>git clone https://github.com/autoboat-vt/autoboat_vt</code></p>
 </li>
 <li>
