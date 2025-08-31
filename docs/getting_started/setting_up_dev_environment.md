@@ -33,7 +33,11 @@ Also ensure that you have VSCode or some other IDE that supports Docker dev envi
 !!! Note "Windows Users"
     **If you are using Windows you must do all of the following commands in the WSL filesystem**
 
-- First, we need to install the development container, and to do this, please run the following command:
+!!! Note "General"
+    **Make sure that you have a Docker account and verify your email on that account, because it will ask you for your username and password**
+
+
+- First, we need to install the development image, and to do this, please run the following command:
 
     ```sudo docker pull autoboatvt/autoboat_docker_dev_image``` 
 
