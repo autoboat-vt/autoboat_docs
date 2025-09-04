@@ -46,9 +46,9 @@ Also ensure that you have VSCode or some other IDE that supports Docker dev envi
     ```git clone https://github.com/autoboat-vt/autoboat_vt && cd autoboat_vt```
 
 
-- We need to make sure that docker knows how to display stuff on our main computer, which can be accomplished with the following command:
+<!-- - We need to make sure that docker knows how to display stuff on our main computer, which can be accomplished with the following command:
   
-    ```echo "DISPLAY=$DISPLAY" >> .devcontainer/devcontainer_environment_variables```
+    ```echo "DISPLAY=$DISPLAY" >> .devcontainer/devcontainer_environment_variables``` -->
 
 
 - Then, open up that folder in VSCode by typing the following into the same terminal:
