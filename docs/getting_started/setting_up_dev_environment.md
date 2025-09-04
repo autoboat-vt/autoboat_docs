@@ -53,6 +53,7 @@ Also ensure that you have VSCode or some other IDE that supports Docker dev envi
 
 !!!NOTE "mac OS Users" 
     Before building the container, make sure that XQuartz is open and that you have run the following command in your terminal:
+    `export DISPLAY=:0`
     `xhost localhost`
 
     To test whether or not XQuartz is working correctly, run either `xeyes` or `xclock` in your terminal. Your should see a new window appear with one of the following images.

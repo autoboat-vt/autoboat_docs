@@ -7,13 +7,13 @@ nav:
   - Getting Started: 
     - Installing Docker: getting_started/installing_docker.md
     - Setting Up the Development Container: getting_started/setting_up_dev_environment.md
+    - Running the Simulation: getting_started/running_simulation.md
     - What Did You Just Install?: getting_started/what_did_you_just_install.md
     - Installing MicroROS: getting_started/installing_microros.md
     - How to Start Developing on the Telemetry Server: getting_started/how_to_develop_telemetry_server.md
     - How to Start Developing on the Website: getting_started/how_to_develop_website.md
 
   - Examples:
-    - Running the Simulation: examples/running_simulation.md
     - Running a Custom Simulation: examples/running_a_custom_simulation.md
     - Running Individual Nodes for Testing: examples/running_individual_nodes.md
     - Connecting A USB Device to WSL: examples/connecting_a_usb_device_to_wsl.md
