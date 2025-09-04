@@ -47,6 +47,7 @@ Also ensure that you have VSCode or some other IDE that supports Docker dev envi
 
 
 - We need to make sure that docker knows how to display stuff on our main computer, which can be accomplished with the following command:
+  
     ```echo "DISPLAY=$DISPLAY" >> .devcontainer/devcontainer_environment_variables```
 
 
