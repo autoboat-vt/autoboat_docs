@@ -40,6 +40,7 @@ sudo usermod -aG docker $USER
 newgrp docker
 ```
 
+
 <br> 
 
 ## <p style="text-align: center;"> **Installing Docker on Ubuntu Linux** </p>
