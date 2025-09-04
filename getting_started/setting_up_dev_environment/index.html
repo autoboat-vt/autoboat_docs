@@ -14,7 +14,7 @@
         <link rel="prev" href="../installing_docker/">
       
       
-        <link rel="next" href="../what_did_you_just_install/">
+        <link rel="next" href="../running_simulation/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -324,6 +324,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../running_simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Running the Simulation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../what_did_you_just_install/" class="md-nav__link">
         
   
@@ -453,29 +476,6 @@
             Examples
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../examples/running_simulation/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Running the Simulation
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -2007,6 +2007,7 @@ It is not advised to have this code in your <code>.bashrc</code> or <code>.zshrc
 <div class="admonition note">
 <p class="admonition-title">mac OS Users</p>
 <p>Before building the container, make sure that XQuartz is open and that you have run the following command in your terminal:
+<code>export DISPLAY=:0</code>
 <code>xhost localhost</code></p>
 <p>To test whether or not XQuartz is working correctly, run either <code>xeyes</code> or <code>xclock</code> in your terminal. Your should see a new window appear with one of the following images.</p>
 <p><p style="text-align: center;"><img alt="xclock" src="../../images/xclock.png" /><img alt="xeyes" src="../../images/xeyes.png" /></p></p>
