@@ -52,7 +52,7 @@ Also ensure that you have VSCode or some other IDE that supports Docker dev envi
 
 
 - Then, open up that folder in VSCode by typing the following into the same terminal:
-- 
+   
     ```code .```
 
 
