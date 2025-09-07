@@ -44,11 +44,11 @@ Also ensure that you have VSCode or some other IDE that supports docker dev envi
 
 - This next command is required to make sure that the docker container is able to display everything properly. If you are on **Windows** or **Linux**, run the following command:
 
-    ```echo "devcontainer_environment_variables \n\n DISPLAY=:0" >> .devcontainer/devcontainer_environment_variables```
+    ```echo "devcontainer_environment_variables \n\nDISPLAY=:0" >> .devcontainer/devcontainer_environment_variables```
 
 - If you are on **Mac**, run the following command:
 
-    ```echo "devcontainer_environment_variables \n\n DISPLAY=docker.for.mac.host.internal:0" >> .devcontainer/devcontainer_environment_variables```
+    ```echo "devcontainer_environment_variables \n\nDISPLAY=docker.for.mac.host.internal:0" >> .devcontainer/devcontainer_environment_variables```
 
 
 
