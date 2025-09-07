@@ -17,9 +17,7 @@ Make sure that you have installed Docker before doing this step. The following s
     4. In the Terminal app or whichever terminal your using, run the following:
 
     ```sh
-    IP=$(/usr/sbin/ipconfig getifaddr en0)
-    /opt/X11/bin/xhost + "$IP"
-    export DISPLAY="${IP}:0"
+    echo "xhost +localhost" >> ~/.zshrc
     ```
 
     You will need to run this everytime you are about to start the docker container.
