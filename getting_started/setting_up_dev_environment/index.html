@@ -1969,9 +1969,7 @@
 <li><em>Restart XQuartz</em>.</li>
 <li>In the Terminal app or whichever terminal your using, run the following:</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="nv">IP</span><span class="o">=</span><span class="k">$(</span>/usr/sbin/ipconfig<span class="w"> </span>getifaddr<span class="w"> </span>en0<span class="k">)</span>
-/opt/X11/bin/xhost<span class="w"> </span>+<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$IP</span><span class="s2">&quot;</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">DISPLAY</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">IP</span><span class="si">}</span><span class="s2">:0&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;xhost +localhost&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
 </code></pre></div>
 <p>You will need to run this everytime you are about to start the docker container.
 It is not advised to have this code in your <code>.bashrc</code> or <code>.zshrc</code> as macos is not expecting
