@@ -1969,13 +1969,10 @@
 <li><em>Restart XQuartz</em>.</li>
 <li>In the Terminal app or whichever terminal your using, run the following:</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;xhost +localhost&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;xhost +localhost&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/.zshrc
 </code></pre></div>
-<p>You will need to run this everytime you are about to start the docker container.
-It is not advised to have this code in your <code>.bashrc</code> or <code>.zshrc</code> as macos is not expecting
-<code>$DISPLAY</code> to be set to this value and x11 apps run outside the docker container will not work.</p>
 </div>
-<p>Also ensure that you have VSCode or some other IDE that supports Docker dev environments installed (<strong>If you are using Windows you install VSCode in WSL too</strong>). For the purposes of this documentation, we will be using VSCode but there are plenty of other IDEs that support this and they each have their own documentation for how to get this setup.</p>
+<p>Also ensure that you have VSCode or some other IDE that supports docker dev environments installed (<strong>If you are using Windows you install VSCode in WSL as well as on Windows</strong>). For the purposes of this documentation, we will be using VSCode but there are plenty of other IDEs that support this and they each have their own documentation for how to get this setup.</p>
 <h1 id="installing-the-development-container"><p style="text-align: center;"> Installing the Development Container </p></h1>
 <div class="admonition note">
 <p class="admonition-title">Windows Users</p>

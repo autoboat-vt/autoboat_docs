@@ -17,14 +17,12 @@ Make sure that you have installed Docker before doing this step. The following s
     4. In the Terminal app or whichever terminal your using, run the following:
 
     ```sh
-    echo "xhost +localhost" >> ~/.zshrc
+    echo "xhost +localhost" >> ~/.zshrc && source ~/.zshrc
     ```
 
-    You will need to run this everytime you are about to start the docker container.
-    It is not advised to have this code in your `.bashrc` or `.zshrc` as macos is not expecting
-    `$DISPLAY` to be set to this value and x11 apps run outside the docker container will not work.
 
-Also ensure that you have VSCode or some other IDE that supports Docker dev environments installed (**If you are using Windows you install VSCode in WSL too**). For the purposes of this documentation, we will be using VSCode but there are plenty of other IDEs that support this and they each have their own documentation for how to get this setup.
+
+Also ensure that you have VSCode or some other IDE that supports docker dev environments installed (**If you are using Windows you install VSCode in WSL as well as on Windows**). For the purposes of this documentation, we will be using VSCode but there are plenty of other IDEs that support this and they each have their own documentation for how to get this setup.
 
 # <p style="text-align: center;"> Installing the Development Container </p>
 
