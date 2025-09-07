@@ -2016,8 +2016,7 @@
 <div class="admonition note">
 <p class="admonition-title">mac OS Users</p>
 <p>Before building the container, make sure that XQuartz is open and that you have run the following command in your terminal:
-<code>export DISPLAY=:0</code></p>
-<p><code>xhost +localhost</code></p>
+<code>export xhost +localhost &gt;&gt; ~/.zshrc"</code></p>
 <p>To test whether or not XQuartz is working correctly, run either <code>xeyes</code> or <code>xclock</code> in your terminal. Your should see a new window appear with one of the following images.</p>
 <p><p style="text-align: center;"><img alt="xclock" src="../../images/xclock.png" /><img alt="xeyes" src="../../images/xeyes.png" /></p></p>
 <p>If you see one of these images, then XQuartz is working correctly.</p>
