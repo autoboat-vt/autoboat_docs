@@ -42,6 +42,16 @@ Also ensure that you have VSCode or some other IDE that supports docker dev envi
     ```git clone https://github.com/autoboat-vt/autoboat_vt && cd autoboat_vt```
 
 
+- This next command is required to make sure that the docker container is able to display everything properly. If you are on **Windows** or **Linux**, run the following command:
+
+    ```echo "devcontainer_environment_variables \n\n DISPLAY=:0" >> .devcontainer/devcontainer_environment_variables```
+
+- If you are on **Mac**, run the following command:
+
+    ```echo "devcontainer_environment_variables \n\n DISPLAY=docker.for.mac.host.internal:0" >> .devcontainer/devcontainer_environment_variables```
+
+
+
 <!-- - We need to make sure that docker knows how to display stuff on our main computer, which can be accomplished with the following command:
   
     ```echo "DISPLAY=$DISPLAY" >> .devcontainer/devcontainer_environment_variables``` -->
