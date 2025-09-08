@@ -1993,11 +1993,11 @@
 </li>
 <li>
 <p>This next command is required to make sure that the docker container is able to display everything properly. If you are on <strong>Windows</strong> or <strong>Linux</strong>, run the following command:</p>
-<p><code>echo "devcontainer_environment_variables\n\nDISPLAY=:0" &gt;&gt; .devcontainer/devcontainer_environment_variables</code></p>
+<p><code>echo -e "devcontainer_environment_variables\n\nDISPLAY=:0" &gt;&gt; .devcontainer/devcontainer_environment_variables</code></p>
 </li>
 <li>
 <p>If you are on <strong>Mac</strong>, run the following command:</p>
-<p><code>echo "devcontainer_environment_variables\n\nDISPLAY=docker.for.mac.host.internal:0" &gt;&gt; .devcontainer/devcontainer_environment_variables</code></p>
+<p><code>echo -e "devcontainer_environment_variables\n\nDISPLAY=docker.for.mac.host.internal:0" &gt;&gt; .devcontainer/devcontainer_environment_variables</code></p>
 </li>
 </ul>
 <!-- - We need to make sure that docker knows how to display stuff on our main computer, which can be accomplished with the following command:
