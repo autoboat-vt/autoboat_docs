@@ -42,3 +42,4 @@ git lfs install
 git clone https://huggingface.co/datasets/Aanimated/autoboat_vt_object_detection
 cd autoboat_vt_object_detection
 git lfs pull
+```
