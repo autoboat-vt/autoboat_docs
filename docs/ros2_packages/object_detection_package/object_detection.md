@@ -4,7 +4,7 @@
 
 This node detects **buoys** and **boats** on the water and estimates their **bearing (angle)** and **range (distance)**.  
 Detection is powered by an Ultralytics **YOLOv11** model. We use the
-[Ultralytics `results` object](https://docs.ultralytics.com/modes/predict/#working-with-results){:target="_blank"}
+[Ultralytics `results` object](https://docs.ultralytics.com/modes/predict/#working-with-results)
 to retrieve bounding boxes, classes, and confidences.
 
 The node runs on **ROS 2** and publishes:
