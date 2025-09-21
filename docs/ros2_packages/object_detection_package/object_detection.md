@@ -1,9 +1,44 @@
-# <p style="text-align: center;"> Object Detection </p>
+# <p style="text-align: center;">Object Detection</p>
 
-## **Summary**
+## Summary
 
-This node is responsible for detecting buoys and baoats while in the water, which includes calculating the angle and distance. To detect the buoys, our system uses a computer vision model based on Ultralytics Yolo11. We use the <a href="https://docs.ultralytics.com/modes/predict/#working-with-results" target="_blank">Ultralytics  results</a> object to retrieve any information about object detections. We also use ROS2 to publish the angle to the buoy, the depth distance to the buoy as well as a list of detection results that involve the cnofidence value, relative x-position, and relative y-position of the detrected bounding boxes.
+This node detects **buoys** and **boats** on the water and estimates their **bearing (angle)** and **range (distance)**.  
+Detection is powered by an Ultralytics **YOLOv11** model. We use the
+[Ultralytics `results` object](https://docs.ultralytics.com/modes/predict/#working-with-results){:target="_blank"}
+to retrieve bounding boxes, classes, and confidences.
 
-<br>
+The node runs on **ROS 2** and publishes:
+- **Bearing to target (angle)** — relative to the camera/boat frame.
+- **Range to target (depth distance)** — from depth data or geometric approximation.
+- **Per-detection metadata** — class label, confidence score, relative x/y of the bounding box, etc.
 
-To find the code for this node, please look at the follow huggingface repository: (Object Detection Hugging Face Repository)[https://huggingface.co/datasets/Aanimated/autoboat_vt_object_detection/tree/main]. The reason that we use a huggingface repository for the object detection code is because we have a lot of large images and models in the repository, which github does not like. Huggingface repositories work a lot like github repositories; however, they are able to handle much larger models and datasets, since they are made for models and datasets. 
+### What it publishes
+- `sensor_msgs/msg/Image` (optional debug overlays)
+- `sailbot_msgs/msg/ObjectDetectionResults`
+  - `detections[]`: `{ class_id, class_name, confidence, x_rel, y_rel, width_rel, height_rel }`
+  - `best_target`: `{ angle_deg, distance_m }` (when available)
+
+> QoS is configurable via `QoSProfile` and should be tuned to match the camera publisher
+> (e.g., `RELIABLE` vs `BEST_EFFORT`, `KEEP_LAST` depth, etc.).
+
+<br/>
+
+## Repository (Models & Dataset)
+
+The code, models, and dataset live on Hugging Face (handles large files better than GitHub):
+
+**Object Detection – Hugging Face Repository:**  
+[https://huggingface.co/datasets/Aanimated/autoboat_vt_object_detection/tree/main](https://huggingface.co/datasets/Aanimated/autoboat_vt_object_detection/tree/main)
+
+> We use a Hugging Face *dataset repo* because it supports large images and model weights via Git LFS.  
+> You can clone it and pull all LFS-tracked files locally.
+
+### Quick start
+```bash
+# Install Git LFS, clone, and pull large files
+sudo apt update && sudo apt install -y git-lfs
+git lfs install
+
+git clone https://huggingface.co/datasets/Aanimated/autoboat_vt_object_detection
+cd autoboat_vt_object_detection
+git lfs pull
