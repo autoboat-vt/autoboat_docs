@@ -35,7 +35,7 @@ Also ensure that you have VSCode or some other IDE that supports docker dev envi
 
 - First, we need to install the development image, and to do this, please run the following command:
 
-    ```sudo docker pull autoboatvt/autoboat_docker_dev_image``` 
+    ```sudo docker pull vtautoboat/autoboat_docker_dev_image``` 
 
 - Next, we need to clone the main Github repository from the following URL: <https://github.com/autoboat-vt/autoboat_vt>. Open up a terminal and type the following command:
 
