@@ -2097,7 +2097,7 @@
 <h2 id="summary">Summary</h2>
 <p>This node detects <strong>buoys</strong> and <strong>boats</strong> on the water and estimates their <strong>bearing (angle)</strong> and <strong>range (distance)</strong>.<br />
 Detection is powered by an Ultralytics <strong>YOLOv11</strong> model. We use the
-<a href="https://docs.ultralytics.com/modes/predict/#working-with-results">Ultralytics <code>results</code> object</a>{:target="_blank"}
+<a href="https://docs.ultralytics.com/modes/predict/#working-with-results">Ultralytics <code>results</code> object</a>
 to retrieve bounding boxes, classes, and confidences.</p>
 <p>The node runs on <strong>ROS 2</strong> and publishes:
 - <strong>Bearing to target (angle)</strong> — relative to the camera/boat frame.
@@ -2124,13 +2124,14 @@ to retrieve bounding boxes, classes, and confidences.</p>
 You can clone it and pull all LFS-tracked files locally.</p>
 </blockquote>
 <h3 id="quick-start">Quick start</h3>
-<p>```bash</p>
-<h1 id="install-git-lfs-clone-and-pull-large-files">Install Git LFS, clone, and pull large files</h1>
-<p>sudo apt update &amp;&amp; sudo apt install -y git-lfs
-git lfs install</p>
-<p>git clone https://huggingface.co/datasets/Aanimated/autoboat_vt_object_detection
-cd autoboat_vt_object_detection
-git lfs pull</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install Git LFS, clone, and pull large files</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>git-lfs
+git<span class="w"> </span>lfs<span class="w"> </span>install
+
+git<span class="w"> </span>clone<span class="w"> </span>https://huggingface.co/datasets/Aanimated/autoboat_vt_object_detection
+<span class="nb">cd</span><span class="w"> </span>autoboat_vt_object_detection
+git<span class="w"> </span>lfs<span class="w"> </span>pull
+</code></pre></div>
 
 
 
