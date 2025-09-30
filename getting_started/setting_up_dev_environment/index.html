@@ -1993,13 +1993,11 @@
 </li>
 <li>
 <p>This next commands are required to make sure that the docker container is able to display everything properly and utilize your GPU if necessary. If you are on <strong>Windows</strong> or <strong>Linux</strong>, run the following command:</p>
-<p><code>echo -e "devcontainer_environment_variables\n\nDISPLAY=:0" &gt; .devcontainer/devcontainer_environment_variables</code>
-<code>export DOCKER_GPU_RUN_ARGS="--runtime=nvidia"</code></p>
+<p><code>echo -e "devcontainer_environment_variables\n\nDISPLAY=:0" &gt; .devcontainer/devcontainer_environment_variables</code></p>
 </li>
 <li>
 <p>If you are on <strong>Mac</strong>, run the following commands:</p>
-<p><code>echo -e "devcontainer_environment_variables\n\nDISPLAY=docker.for.mac.host.internal:0" &gt; .devcontainer/devcontainer_environment_variables</code>
-<code>export DOCKER_GPU_RUN_ARGS=""</code></p>
+<p><code>echo -e "devcontainer_environment_variables\n\nDISPLAY=docker.for.mac.host.internal:0" &gt; .devcontainer/devcontainer_environment_variables</code></p>
 </li>
 </ul>
 <!-- sudo bash -c "source .devcontainer/display_and_gpu_setup.sh" -->
