@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e53b48f4.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -1372,6 +1372,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-it-publishes" class="md-nav__link">
+    <span class="md-ellipsis">
+      What it publishes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repository-models-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository (Models &amp; Dataset)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Repository (Models &amp; Dataset)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick start
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1997,6 +2036,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-it-publishes" class="md-nav__link">
+    <span class="md-ellipsis">
+      What it publishes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repository-models-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository (Models &amp; Dataset)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Repository (Models &amp; Dataset)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick start
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2015,11 +2093,44 @@
 
 
 
-<h1 id="object-detection"><p style="text-align: center;"> Object Detection </p></h1>
-<h2 id="summary"><strong>Summary</strong></h2>
-<p>This node is responsible for detecting buoys and baoats while in the water, which includes calculating the angle and distance. To detect the buoys, our system uses a computer vision model based on Ultralytics Yolo11. We use the <a href="https://docs.ultralytics.com/modes/predict/#working-with-results" target="_blank">Ultralytics  results</a> object to retrieve any information about object detections. We also use ROS2 to publish the angle to the buoy, the depth distance to the buoy as well as a list of detection results that involve the cnofidence value, relative x-position, and relative y-position of the detrected bounding boxes.</p>
-<p><br></p>
-<p>To find the code for this node, please look at the follow huggingface repository: (Object Detection Hugging Face Repository)[https://huggingface.co/datasets/Aanimated/autoboat_vt_object_detection/tree/main]. The reason that we use a huggingface repository for the object detection code is because we have a lot of large images and models in the repository, which github does not like. Huggingface repositories work a lot like github repositories; however, they are able to handle much larger models and datasets, since they are made for models and datasets. </p>
+<h1 id="object-detection"><p style="text-align: center;">Object Detection</p></h1>
+<h2 id="summary">Summary</h2>
+<p>This node detects <strong>buoys</strong> and <strong>boats</strong> on the water and estimates their <strong>bearing (angle)</strong> and <strong>range (distance)</strong>.<br />
+Detection is powered by an Ultralytics <strong>YOLOv11</strong> model. We use the
+<a href="https://docs.ultralytics.com/modes/predict/#working-with-results">Ultralytics <code>results</code> object</a>
+to retrieve bounding boxes, classes, and confidences.</p>
+<p>The node runs on <strong>ROS 2</strong> and publishes:
+- <strong>Bearing to target (angle)</strong> — relative to the camera/boat frame.
+- <strong>Range to target (depth distance)</strong> — from depth data or geometric approximation.
+- <strong>Per-detection metadata</strong> — confidence score, relative x/y of the bounding box, etc.</p>
+<h3 id="what-it-publishes">What it publishes</h3>
+<ul>
+<li><code>sensor_msgs/msg/Image</code></li>
+<li><code>sailbot_msgs/msg/ObjectDetectionResults</code></li>
+<li><code>detections[]</code>: <code>{ confidence value, x_postion, y_position}</code></li>
+</ul>
+<blockquote>
+<p>QoS is configurable via <code>QoSProfile</code> and should be tuned to match the camera publisher
+(e.g., <code>RELIABLE</code> vs <code>BEST_EFFORT</code>, <code>KEEP_LAST</code> depth, etc.).</p>
+</blockquote>
+<p><br/></p>
+<h2 id="repository-models-dataset">Repository (Models &amp; Dataset)</h2>
+<p>The code, models, and dataset live on Hugging Face (handles large files better than GitHub):</p>
+<p><strong>Object Detection – Hugging Face Repository:</strong><br />
+<a href="https://huggingface.co/datasets/Aanimated/autoboat_vt_object_detection/tree/main">https://huggingface.co/datasets/Aanimated/autoboat_vt_object_detection/tree/main</a></p>
+<blockquote>
+<p>We use a Hugging Face <em>dataset repo</em> because it supports large images and model weights via Git LFS.<br />
+You can clone it and pull all LFS-tracked files locally.</p>
+</blockquote>
+<h3 id="quick-start">Quick start</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install Git LFS, clone, and pull large files</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>git-lfs
+git<span class="w"> </span>lfs<span class="w"> </span>install
+
+git<span class="w"> </span>clone<span class="w"> </span>https://huggingface.co/datasets/Aanimated/autoboat_vt_object_detection
+<span class="nb">cd</span><span class="w"> </span>autoboat_vt_object_detection
+git<span class="w"> </span>lfs<span class="w"> </span>pull
+</code></pre></div>
 
 
 
@@ -2068,10 +2179,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
       
