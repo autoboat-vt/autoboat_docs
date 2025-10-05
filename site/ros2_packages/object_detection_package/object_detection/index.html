@@ -2102,13 +2102,12 @@ to retrieve bounding boxes, classes, and confidences.</p>
 <p>The node runs on <strong>ROS 2</strong> and publishes:
 - <strong>Bearing to target (angle)</strong> — relative to the camera/boat frame.
 - <strong>Range to target (depth distance)</strong> — from depth data or geometric approximation.
-- <strong>Per-detection metadata</strong> — class label, confidence score, relative x/y of the bounding box, etc.</p>
+- <strong>Per-detection metadata</strong> — confidence score, relative x/y of the bounding box, etc.</p>
 <h3 id="what-it-publishes">What it publishes</h3>
 <ul>
-<li><code>sensor_msgs/msg/Image</code> (optional debug overlays)</li>
+<li><code>sensor_msgs/msg/Image</code></li>
 <li><code>sailbot_msgs/msg/ObjectDetectionResults</code></li>
-<li><code>detections[]</code>: <code>{ class_id, class_name, confidence, x_rel, y_rel, width_rel, height_rel }</code></li>
-<li><code>best_target</code>: <code>{ angle_deg, distance_m }</code> (when available)</li>
+<li><code>detections[]</code>: <code>{ confidence value, x_postion, y_position}</code></li>
 </ul>
 <blockquote>
 <p>QoS is configurable via <code>QoSProfile</code> and should be tuned to match the camera publisher
