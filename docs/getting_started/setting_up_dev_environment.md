@@ -14,11 +14,12 @@ Make sure that you have installed Docker before doing this step. The following s
     1. Launch XQuartz. Under the XQuartz menu, select Settings.
     2. Go to the Security tab and ensure "Allow connections from network clients" is checked.
     3. *Restart XQuartz*.
-    4. In the Terminal app or whichever terminal your using, run the following:
 
-    ```sh
-    echo "xhost +localhost" >> ~/.zshrc && source ~/.zshrc
-    ```
+<!-- 4. In the Terminal app or whichever terminal your using, run the following:
+
+```sh
+echo "xhost +localhost" >> ~/.zshrc && source ~/.zshrc
+``` -->
 
 
 
@@ -33,23 +34,29 @@ Also ensure that you have VSCode or some other IDE that supports docker dev envi
     **Make sure that you have a Docker account and verify your email on that account, because it will ask you for your username and password**
 
 
-- First, we need to install the development image, and to do this, please run the following command:
+<!-- - First, we need to install the development image, and to do this, please run the following command:
 
-    ```sudo docker pull vtautoboat/autoboat_docker_dev_image``` 
+    ```sudo docker pull vtautoboat/autoboat_docker_dev_image```  -->
 
-- Next, we need to clone the main Github repository from the following URL: <https://github.com/autoboat-vt/autoboat_vt>. Open up a terminal and type the following command:
+- Next, we need to clone the main Github repository from the following URL: <https://github.com/autoboat-vt/autoboat_vt>. Open up a terminal and type the following commands:
 
     ```git clone https://github.com/autoboat-vt/autoboat_vt && cd autoboat_vt```
 
 
-- This next commands are required to make sure that the docker container is able to display everything properly and utilize your GPU if necessary. If you are on **Windows** or **Linux**, run the following command:
+
+- Next, we need to run the following script:
+
+    ```sudo bash -c "source .devcontainer/display_and_gpu_setup.sh"```
+
+
+<!-- - This next commands are required to make sure that the docker container is able to display everything properly and utilize your GPU if necessary. If you are on **Windows** or **Linux**, run the following command:
 
     ```echo -e "devcontainer_environment_variables\n\nDISPLAY=:0" > .devcontainer/devcontainer_environment_variables```
 
 - If you are on **Mac**, run the following commands:
 
     ```echo -e "devcontainer_environment_variables\n\nDISPLAY=docker.for.mac.host.internal:0" > .devcontainer/devcontainer_environment_variables```
-
+ -->
 
 <!-- sudo bash -c "source .devcontainer/display_and_gpu_setup.sh" -->
 
@@ -66,10 +73,12 @@ Also ensure that you have VSCode or some other IDE that supports docker dev envi
 
 - Install the Docker Dev Containers Extension on VSCode. It should look like the following: ![Docker Dev Containers VSCode](../images/dev_container_ext.png)
 
-!!!NOTE "mac OS Users" 
-    Before building the container, make sure that XQuartz is open and that you have run the following command in your terminal:
-    ```export xhost +localhost >> ~/.zshrc"```
 
+<!-- Before building the container, make sure that XQuartz is open and that you have run the following command in your terminal:
+    ```export xhost +localhost >> ~/.zshrc"``` -->
+
+
+!!!NOTE "mac OS Users" 
     To test whether or not XQuartz is working correctly, run either `xeyes` or `xclock` in your terminal. Your should see a new window appear with one of the following images.
 
     <p style="text-align: center;">![xclock](../images/xclock.png)![xeyes](../images/xeyes.png)</p>
