@@ -6,7 +6,13 @@ To install microros on your machine, run the following command. Note that the in
 
 ```sh
 	cd /home/ws/src/microros
-	source microros_setup.sh
+	bash microros_setup.sh
+```
+
+Don't forget to source your ~/.bashrc file:
+
+```sh
+	source ~/.bashrc
 ```
 
 !!!NOTE
