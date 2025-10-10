@@ -93,7 +93,7 @@ Also ensure that you have VSCode or some other IDE that supports docker dev envi
 Once you are inside your development container, go to the terminal and input the following command.
 
 ``` sh
-bash docker_dev_environment_setup.sh && source ~/.bashrc
+source docker_dev_environment_setup.sh
 ```
 
 !!!NOTE "mac OS Users" 
