@@ -1969,83 +1969,65 @@
 <li><em>Restart XQuartz</em>.</li>
 </ol>
 </div>
-<p>&lt;!-- 4. In the Terminal app or whichever terminal your using, run the following:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;xhost +localhost&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/.zshrc
-<span class="sb">```</span><span class="w"> </span>--&gt;
+<p>Also ensure that you have VSCode or some other IDE that supports docker dev environments installed (<strong>If you are using Windows you install VSCode in WSL as well as on Windows</strong>). For the purposes of this documentation, we will be using VSCode but there are plenty of other IDEs that support this and they each have their own documentation for how to get this setup.</p>
+<h1 id="installing-the-development-container"><p style="text-align: center;"> Installing the Development Container </p></h1>
+<div class="admonition note">
+<p class="admonition-title">Windows Users</p>
+<p><strong>If you are using Windows you must do all of the following commands in the WSL filesystem</strong></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">General</p>
+<p><strong>Make sure that you have a Docker account and verify your email on that account, because it will ask you for your username and password</strong></p>
+</div>
+<ul>
+<li>
+<p>Next, we need to clone the main Github repository from the following URL: <a href="https://github.com/autoboat-vt/autoboat_vt">https://github.com/autoboat-vt/autoboat_vt</a>. Open up a terminal and type the following commands:</p>
+<p><code>git clone https://github.com/autoboat-vt/autoboat_vt &amp;&amp; cd autoboat_vt</code></p>
+</li>
+<li>
+<p>Next, we need to run the following script:</p>
+<p><code>sudo bash -c "source .devcontainer/display_and_gpu_setup.sh"</code></p>
+</li>
+</ul>
+<!-- - This next commands are required to make sure that the docker container is able to display everything properly and utilize your GPU if necessary. If you are on **Windows** or **Linux**, run the following command:
 
+    ```echo -e "devcontainer_environment_variables\n\nDISPLAY=:0" > .devcontainer/devcontainer_environment_variables```
 
+- If you are on **Mac**, run the following commands:
 
-Also<span class="w"> </span>ensure<span class="w"> </span>that<span class="w"> </span>you<span class="w"> </span>have<span class="w"> </span>VSCode<span class="w"> </span>or<span class="w"> </span>some<span class="w"> </span>other<span class="w"> </span>IDE<span class="w"> </span>that<span class="w"> </span>supports<span class="w"> </span>docker<span class="w"> </span>dev<span class="w"> </span>environments<span class="w"> </span>installed<span class="w"> </span><span class="o">(</span>**If<span class="w"> </span>you<span class="w"> </span>are<span class="w"> </span>using<span class="w"> </span>Windows<span class="w"> </span>you<span class="w"> </span>install<span class="w"> </span>VSCode<span class="w"> </span><span class="k">in</span><span class="w"> </span>WSL<span class="w"> </span>as<span class="w"> </span>well<span class="w"> </span>as<span class="w"> </span>on<span class="w"> </span>Windows**<span class="o">)</span>.<span class="w"> </span>For<span class="w"> </span>the<span class="w"> </span>purposes<span class="w"> </span>of<span class="w"> </span>this<span class="w"> </span>documentation,<span class="w"> </span>we<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>using<span class="w"> </span>VSCode<span class="w"> </span>but<span class="w"> </span>there<span class="w"> </span>are<span class="w"> </span>plenty<span class="w"> </span>of<span class="w"> </span>other<span class="w"> </span>IDEs<span class="w"> </span>that<span class="w"> </span>support<span class="w"> </span>this<span class="w"> </span>and<span class="w"> </span>they<span class="w"> </span>each<span class="w"> </span>have<span class="w"> </span>their<span class="w"> </span>own<span class="w"> </span>documentation<span class="w"> </span><span class="k">for</span><span class="w"> </span>how<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>this<span class="w"> </span>setup.
+    ```echo -e "devcontainer_environment_variables\n\nDISPLAY=docker.for.mac.host.internal:0" > .devcontainer/devcontainer_environment_variables```
+ -->
 
-<span class="c1"># &lt;p style=&quot;text-align: center;&quot;&gt; Installing the Development Container &lt;/p&gt;</span>
+<!-- sudo bash -c "source .devcontainer/display_and_gpu_setup.sh" -->
 
-!!!<span class="w"> </span>Note<span class="w"> </span><span class="s2">&quot;Windows Users&quot;</span>
-<span class="w">    </span>**If<span class="w"> </span>you<span class="w"> </span>are<span class="w"> </span>using<span class="w"> </span>Windows<span class="w"> </span>you<span class="w"> </span>must<span class="w"> </span><span class="k">do</span><span class="w"> </span>all<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>commands<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>WSL<span class="w"> </span>filesystem**
+<!-- - We need to make sure that docker knows how to display stuff on our main computer, which can be accomplished with the following command:
 
-!!!<span class="w"> </span>Note<span class="w"> </span><span class="s2">&quot;General&quot;</span>
-<span class="w">    </span>**Make<span class="w"> </span>sure<span class="w"> </span>that<span class="w"> </span>you<span class="w"> </span>have<span class="w"> </span>a<span class="w"> </span>Docker<span class="w"> </span>account<span class="w"> </span>and<span class="w"> </span>verify<span class="w"> </span>your<span class="w"> </span>email<span class="w"> </span>on<span class="w"> </span>that<span class="w"> </span>account,<span class="w"> </span>because<span class="w"> </span>it<span class="w"> </span>will<span class="w"> </span>ask<span class="w"> </span>you<span class="w"> </span><span class="k">for</span><span class="w"> </span>your<span class="w"> </span>username<span class="w"> </span>and<span class="w"> </span>password**
+    ```echo "DISPLAY=$DISPLAY" >> .devcontainer/devcontainer_environment_variables``` -->
 
+<ul>
+<li>
+<p>Then, open up that folder in VSCode by typing the following into the same terminal:</p>
+<p><code>code .</code></p>
+</li>
+<li>
+<p>Install the Docker Dev Containers Extension on VSCode. It should look like the following: <img alt="Docker Dev Containers VSCode" src="../../images/dev_container_ext.png" /></p>
+</li>
+</ul>
+<!-- Before building the container, make sure that XQuartz is open and that you have run the following command in your terminal:
+    ```export xhost +localhost >> ~/.zshrc"``` -->
 
-&lt;!--<span class="w"> </span>-<span class="w"> </span>First,<span class="w"> </span>we<span class="w"> </span>need<span class="w"> </span>to<span class="w"> </span>install<span class="w"> </span>the<span class="w"> </span>development<span class="w"> </span>image,<span class="w"> </span>and<span class="w"> </span>to<span class="w"> </span><span class="k">do</span><span class="w"> </span>this,<span class="w"> </span>please<span class="w"> </span>run<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>command:
-
-<span class="w">    </span><span class="sb">```</span>sudo<span class="w"> </span>docker<span class="w"> </span>pull<span class="w"> </span>vtautoboat/autoboat_docker_dev_image<span class="sb">```</span><span class="w">  </span>--&gt;
-
--<span class="w"> </span>Next,<span class="w"> </span>we<span class="w"> </span>need<span class="w"> </span>to<span class="w"> </span>clone<span class="w"> </span>the<span class="w"> </span>main<span class="w"> </span>Github<span class="w"> </span>repository<span class="w"> </span>from<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>URL:<span class="w"> </span>&lt;https://github.com/autoboat-vt/autoboat_vt&gt;.<span class="w"> </span>Open<span class="w"> </span>up<span class="w"> </span>a<span class="w"> </span>terminal<span class="w"> </span>and<span class="w"> </span><span class="nb">type</span><span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>commands:
-
-<span class="w">    </span><span class="sb">```</span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/autoboat-vt/autoboat_vt<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>autoboat_vt<span class="sb">```</span>
-
-
-
--<span class="w"> </span>Next,<span class="w"> </span>we<span class="w"> </span>need<span class="w"> </span>to<span class="w"> </span>run<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>script:
-
-<span class="w">    </span><span class="sb">```</span>sudo<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;source .devcontainer/display_and_gpu_setup.sh&quot;</span><span class="sb">```</span>
-
-
-&lt;!--<span class="w"> </span>-<span class="w"> </span>This<span class="w"> </span>next<span class="w"> </span>commands<span class="w"> </span>are<span class="w"> </span>required<span class="w"> </span>to<span class="w"> </span>make<span class="w"> </span>sure<span class="w"> </span>that<span class="w"> </span>the<span class="w"> </span>docker<span class="w"> </span>container<span class="w"> </span>is<span class="w"> </span>able<span class="w"> </span>to<span class="w"> </span>display<span class="w"> </span>everything<span class="w"> </span>properly<span class="w"> </span>and<span class="w"> </span>utilize<span class="w"> </span>your<span class="w"> </span>GPU<span class="w"> </span><span class="k">if</span><span class="w"> </span>necessary.<span class="w"> </span>If<span class="w"> </span>you<span class="w"> </span>are<span class="w"> </span>on<span class="w"> </span>**Windows**<span class="w"> </span>or<span class="w"> </span>**Linux**,<span class="w"> </span>run<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>command:
-
-<span class="w">    </span><span class="sb">```</span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;devcontainer_environment_variables\n\nDISPLAY=:0&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>.devcontainer/devcontainer_environment_variables<span class="sb">```</span>
-
--<span class="w"> </span>If<span class="w"> </span>you<span class="w"> </span>are<span class="w"> </span>on<span class="w"> </span>**Mac**,<span class="w"> </span>run<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>commands:
-
-<span class="w">    </span><span class="sb">```</span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;devcontainer_environment_variables\n\nDISPLAY=docker.for.mac.host.internal:0&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>.devcontainer/devcontainer_environment_variables<span class="sb">```</span>
-<span class="w"> </span>--&gt;
-
-&lt;!--<span class="w"> </span>sudo<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;source .devcontainer/display_and_gpu_setup.sh&quot;</span><span class="w"> </span>--&gt;
-
-
-&lt;!--<span class="w"> </span>-<span class="w"> </span>We<span class="w"> </span>need<span class="w"> </span>to<span class="w"> </span>make<span class="w"> </span>sure<span class="w"> </span>that<span class="w"> </span>docker<span class="w"> </span>knows<span class="w"> </span>how<span class="w"> </span>to<span class="w"> </span>display<span class="w"> </span>stuff<span class="w"> </span>on<span class="w"> </span>our<span class="w"> </span>main<span class="w"> </span>computer,<span class="w"> </span>which<span class="w"> </span>can<span class="w"> </span>be<span class="w"> </span>accomplished<span class="w"> </span>with<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>command:
-
-<span class="w">    </span><span class="sb">```</span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;DISPLAY=</span><span class="nv">$DISPLAY</span><span class="s2">&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.devcontainer/devcontainer_environment_variables<span class="sb">```</span><span class="w"> </span>--&gt;
-
-
--<span class="w"> </span>Then,<span class="w"> </span>open<span class="w"> </span>up<span class="w"> </span>that<span class="w"> </span>folder<span class="w"> </span><span class="k">in</span><span class="w"> </span>VSCode<span class="w"> </span>by<span class="w"> </span>typing<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>into<span class="w"> </span>the<span class="w"> </span>same<span class="w"> </span>terminal:
-
-<span class="w">    </span><span class="sb">```</span>code<span class="w"> </span>.<span class="sb">```</span>
-
-
--<span class="w"> </span>Install<span class="w"> </span>the<span class="w"> </span>Docker<span class="w"> </span>Dev<span class="w"> </span>Containers<span class="w"> </span>Extension<span class="w"> </span>on<span class="w"> </span>VSCode.<span class="w"> </span>It<span class="w"> </span>should<span class="w"> </span>look<span class="w"> </span>like<span class="w"> </span>the<span class="w"> </span>following:<span class="w"> </span>!<span class="o">[</span>Docker<span class="w"> </span>Dev<span class="w"> </span>Containers<span class="w"> </span>VSCode<span class="o">](</span>../images/dev_container_ext.png<span class="o">)</span>
-
-
-&lt;!--<span class="w"> </span>Before<span class="w"> </span>building<span class="w"> </span>the<span class="w"> </span>container,<span class="w"> </span>make<span class="w"> </span>sure<span class="w"> </span>that<span class="w"> </span>XQuartz<span class="w"> </span>is<span class="w"> </span>open<span class="w"> </span>and<span class="w"> </span>that<span class="w"> </span>you<span class="w"> </span>have<span class="w"> </span>run<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span><span class="nb">command</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>your<span class="w"> </span>terminal:
-<span class="w">    </span><span class="sb">```</span><span class="nb">export</span><span class="w"> </span>xhost<span class="w"> </span>+localhost<span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc<span class="s2">&quot;``` --&gt;</span>
-
-
-<span class="s2">!!!NOTE &quot;</span>mac<span class="w"> </span>OS<span class="w"> </span>Users<span class="s2">&quot; </span>
-<span class="s2">    To test whether or not XQuartz is working correctly, run either `xeyes` or `xclock` in your terminal. Your should see a new window appear with one of the following images.</span>
-
-<span class="s2">    &lt;p style=&quot;</span>text-align:<span class="w"> </span>center<span class="p">;</span><span class="s2">&quot;&gt;![xclock](../images/xclock.png)![xeyes](../images/xeyes.png)&lt;/p&gt;</span>
-
-<span class="s2">    If you see one of these images, then XQuartz is working correctly.</span>
-
-<span class="s2">- Build and enter dev container for the repo by typing in the following into the search bar at the top `&gt;dev containers build`. You should see something similar to this at the top: ![alt text](../images/dev_container_search_bar.png). Wait for a moment as the container sets itself up!</span>
-
-<span class="s2"># &lt;p style=&quot;</span>text-align:<span class="w"> </span>center<span class="p">;</span><span class="s2">&quot;&gt; Final Setup after Loading Development Container &lt;/p&gt;</span>
-
-
-<span class="s2">Once you are inside your development container, go to the terminal and input the following command.</span>
-
-<span class="s2">``` sh</span>
-<span class="s2">source docker_dev_environment_setup.sh</span>
+<div class="admonition note">
+<p class="admonition-title">mac OS Users</p>
+<p>To test whether or not XQuartz is working correctly, run either <code>xeyes</code> or <code>xclock</code> in your terminal. Your should see a new window appear with one of the following images.</p>
+<p><p style="text-align: center;"><img alt="xclock" src="../../images/xclock.png" /><img alt="xeyes" src="../../images/xeyes.png" /></p></p>
+<p>If you see one of these images, then XQuartz is working correctly.</p>
+</div>
+<ul>
+<li>Build and enter dev container for the repo by typing in the following into the search bar at the top <code>&gt;dev containers build</code>. You should see something similar to this at the top: <img alt="alt text" src="../../images/dev_container_search_bar.png" />. Wait for a moment as the container sets itself up!</li>
+</ul>
+<h1 id="final-setup-after-loading-development-container"><p style="text-align: center;"> Final Setup after Loading Development Container </p></h1>
+<p>Once you are inside your development container, go to the terminal and input the following command.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>docker_dev_environment_setup.sh
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">mac OS Users</p>
