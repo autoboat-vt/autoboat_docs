@@ -15,13 +15,6 @@ Make sure that you have installed Docker before doing this step. The following s
     2. Go to the Security tab and ensure "Allow connections from network clients" is checked.
     3. *Restart XQuartz*.
 
-<!-- 4. In the Terminal app or whichever terminal your using, run the following:
-
-```sh
-echo "xhost +localhost" >> ~/.zshrc && source ~/.zshrc
-``` -->
-
-
 
 Also ensure that you have VSCode or some other IDE that supports docker dev environments installed (**If you are using Windows you install VSCode in WSL as well as on Windows**). For the purposes of this documentation, we will be using VSCode but there are plenty of other IDEs that support this and they each have their own documentation for how to get this setup.
 
@@ -34,10 +27,6 @@ Also ensure that you have VSCode or some other IDE that supports docker dev envi
     **Make sure that you have a Docker account and verify your email on that account, because it will ask you for your username and password**
 
 
-<!-- - First, we need to install the development image, and to do this, please run the following command:
-
-    ```sudo docker pull vtautoboat/autoboat_docker_dev_image```  -->
-
 - Next, we need to clone the main Github repository from the following URL: <https://github.com/autoboat-vt/autoboat_vt>. Open up a terminal and type the following commands:
 
     ```git clone https://github.com/autoboat-vt/autoboat_vt && cd autoboat_vt```
@@ -49,22 +38,6 @@ Also ensure that you have VSCode or some other IDE that supports docker dev envi
     ```sudo bash -c "source .devcontainer/display_and_gpu_setup.sh"```
 
 
-<!-- - This next commands are required to make sure that the docker container is able to display everything properly and utilize your GPU if necessary. If you are on **Windows** or **Linux**, run the following command:
-
-    ```echo -e "devcontainer_environment_variables\n\nDISPLAY=:0" > .devcontainer/devcontainer_environment_variables```
-
-- If you are on **Mac**, run the following commands:
-
-    ```echo -e "devcontainer_environment_variables\n\nDISPLAY=docker.for.mac.host.internal:0" > .devcontainer/devcontainer_environment_variables```
- -->
-
-<!-- sudo bash -c "source .devcontainer/display_and_gpu_setup.sh" -->
-
-
-<!-- - We need to make sure that docker knows how to display stuff on our main computer, which can be accomplished with the following command:
-  
-    ```echo "DISPLAY=$DISPLAY" >> .devcontainer/devcontainer_environment_variables``` -->
-
 
 - Then, open up that folder in VSCode by typing the following into the same terminal:
    
@@ -72,10 +45,6 @@ Also ensure that you have VSCode or some other IDE that supports docker dev envi
 
 
 - Install the Docker Dev Containers Extension on VSCode. It should look like the following: ![Docker Dev Containers VSCode](../images/dev_container_ext.png)
-
-
-<!-- Before building the container, make sure that XQuartz is open and that you have run the following command in your terminal:
-    ```export xhost +localhost >> ~/.zshrc"``` -->
 
 
 !!!NOTE "mac OS Users" 
