@@ -1988,23 +1988,6 @@
 <p>Next, we need to run the following script:</p>
 <p><code>sudo bash -c "source .devcontainer/display_and_gpu_setup.sh"</code></p>
 </li>
-</ul>
-<!-- - This next commands are required to make sure that the docker container is able to display everything properly and utilize your GPU if necessary. If you are on **Windows** or **Linux**, run the following command:
-
-    ```echo -e "devcontainer_environment_variables\n\nDISPLAY=:0" > .devcontainer/devcontainer_environment_variables```
-
-- If you are on **Mac**, run the following commands:
-
-    ```echo -e "devcontainer_environment_variables\n\nDISPLAY=docker.for.mac.host.internal:0" > .devcontainer/devcontainer_environment_variables```
- -->
-
-<!-- sudo bash -c "source .devcontainer/display_and_gpu_setup.sh" -->
-
-<!-- - We need to make sure that docker knows how to display stuff on our main computer, which can be accomplished with the following command:
-
-    ```echo "DISPLAY=$DISPLAY" >> .devcontainer/devcontainer_environment_variables``` -->
-
-<ul>
 <li>
 <p>Then, open up that folder in VSCode by typing the following into the same terminal:</p>
 <p><code>code .</code></p>
@@ -2013,9 +1996,6 @@
 <p>Install the Docker Dev Containers Extension on VSCode. It should look like the following: <img alt="Docker Dev Containers VSCode" src="../../images/dev_container_ext.png" /></p>
 </li>
 </ul>
-<!-- Before building the container, make sure that XQuartz is open and that you have run the following command in your terminal:
-    ```export xhost +localhost >> ~/.zshrc"``` -->
-
 <div class="admonition note">
 <p class="admonition-title">mac OS Users</p>
 <p>To test whether or not XQuartz is working correctly, run either <code>xeyes</code> or <code>xclock</code> in your terminal. Your should see a new window appear with one of the following images.</p>
