@@ -29,19 +29,25 @@ Also ensure that you have VSCode or some other IDE that supports docker dev envi
 
 - Next, we need to clone the main Github repository from the following URL: <https://github.com/autoboat-vt/autoboat_vt>. Open up a terminal and type the following commands:
 
-    ```git clone https://github.com/autoboat-vt/autoboat_vt && cd autoboat_vt```
+```sh
+git clone https://github.com/autoboat-vt/autoboat_vt && cd autoboat_vt
+```
 
 
 
 - Next, we need to run the following script:
 
-    ```sudo bash -c "source .devcontainer/display_and_gpu_setup.sh"```
+```sh
+sudo bash -c "source .devcontainer/display_and_gpu_setup.sh"
+```
 
 
 
 - Then, open up that folder in VSCode by typing the following into the same terminal:
    
-    ```code .```
+```sh
+code .
+```
 
 
 - Install the Docker Dev Containers Extension on VSCode. It should look like the following: ![Docker Dev Containers VSCode](../images/dev_container_ext.png)
