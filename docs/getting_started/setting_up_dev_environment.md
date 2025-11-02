@@ -38,7 +38,7 @@ git clone https://github.com/autoboat-vt/autoboat_vt && cd autoboat_vt
 - Next, we need to run the following script:
 
 ```sh
-sudo bash -c "source .devcontainer/display_and_gpu_setup.sh"
+sudo bash -c "source .devcontainer/setup_display_and_gpu.sh"
 ```
 
 
