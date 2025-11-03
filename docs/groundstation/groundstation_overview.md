@@ -8,10 +8,10 @@ with the telemetry server and facilitating the management of boat operations. Li
 # Components Overview
 
 !!! note "Note about exceptions in the groundstation"
-    Exceptions thrown in the groundstation do not behave like exceptions thrown in regular Python code.
-    The reason for the exception will not be printed to the console and must be handled in order for the
-    application to continue running. If you have code that you suspect may throw an exception, please enclose it
-    in a try/except block and handle the exception appropriately (ask Barrett if you are unsure how to handle it).
+Exceptions thrown in the groundstation do not behave like exceptions thrown in regular Python code.
+The reason for the exception will not be printed to the console and must be handled in order for the
+application to continue running. If you have code that you suspect may throw an exception, please enclose it
+in a try/except block and handle the exception appropriately (ask Barrett if you are unsure how to handle it).
 
 All data that persists between runs of the Ground Station and its assets are stored in the `app_data` directory.
 I have tried to split up the code in the Ground Station into logical components to make it easier to understand and modify.
