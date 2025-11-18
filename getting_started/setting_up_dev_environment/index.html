@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -1979,37 +1979,26 @@
 <p class="admonition-title">General</p>
 <p><strong>Make sure that you have a Docker account and verify your email on that account, because it will ask you for your username and password</strong></p>
 </div>
-<ul>
-<li>Next, we need to clone the main Github repository from the following URL: <a href="https://github.com/autoboat-vt/autoboat_vt">https://github.com/autoboat-vt/autoboat_vt</a>. Open up a terminal and type the following commands:</li>
-</ul>
+<p>Next, we need to clone the main Github repository from the following URL: <a href="https://github.com/autoboat-vt/autoboat_vt">https://github.com/autoboat-vt/autoboat_vt</a>. Open up a terminal and type the following commands:</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/autoboat-vt/autoboat_vt<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>autoboat_vt
 </code></pre></div>
-<ul>
-<li>Next, we need to run the following script:</li>
-</ul>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;source .devcontainer/setup_display_and_gpu.sh&quot;</span>
+<p>Then we need to set your computer up to use your display and GPU inside of the devcontainer by running the following command:</p>
+<div class="highlight"><pre><span></span><code>bash<span class="w"> </span>.devcontainer/setup_display_and_gpu.sh
 </code></pre></div>
-<ul>
-<li>Then, open up that folder in VSCode by typing the following into the same terminal:</li>
-</ul>
+<p>If the script asks you for your WSL password, please provide it. Once the script finishes running, open up that folder in VSCode by typing the following into the same terminal:</p>
 <div class="highlight"><pre><span></span><code>code<span class="w"> </span>.
 </code></pre></div>
-<ul>
-<li>Install the Docker Dev Containers Extension on VSCode. It should look like the following: <img alt="Docker Dev Containers VSCode" src="../../images/dev_container_ext.png" /></li>
-</ul>
+<p>Install the Docker Dev Containers Extension on VSCode. It should look like the following: <img alt="Docker Dev Containers VSCode" src="../../images/dev_container_ext.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">mac OS Users</p>
 <p>To test whether or not XQuartz is working correctly, run either <code>xeyes</code> or <code>xclock</code> in your terminal. Your should see a new window appear with one of the following images.</p>
 <p><p style="text-align: center;"><img alt="xclock" src="../../images/xclock.png" /><img alt="xeyes" src="../../images/xeyes.png" /></p></p>
 <p>If you see one of these images, then XQuartz is working correctly.</p>
 </div>
-<ul>
-<li>Build and enter dev container for the repo by typing in the following into the search bar at the top <code>&gt;dev containers build</code>. You should see something similar to this at the top: <img alt="alt text" src="../../images/dev_container_search_bar.png" />. Wait for a moment as the container sets itself up!</li>
-</ul>
+<p>Build and enter dev container for the repo by typing in the following into the search bar at the top <code>&gt;dev containers build</code>. You should see something similar to this at the top: <img alt="alt text" src="../../images/dev_container_search_bar.png" />. Wait for a moment as the container sets itself up!</p>
 <h1 id="final-setup-after-loading-development-container"><p style="text-align: center;"> Final Setup after Loading Development Container </p></h1>
-<p>Once you are inside your development container, go to the terminal and input the following command.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>docker_dev_environment_setup.sh
-</code></pre></div>
+<p>Once you are inside your development container, you can then open up a terminal by hitting the plus button:</p>
+<p><img alt="alt text" src="../../images/open_terminal_button.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">mac OS Users</p>
 <p>To test the connection to the Docker container, run the following commands in the terminal in the Docker container:</p>
@@ -2076,7 +2065,7 @@ This should navigate you to a file explorer. Using it, simply navigate to the fo
       <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       
