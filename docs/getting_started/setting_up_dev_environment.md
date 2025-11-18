@@ -27,30 +27,28 @@ Also ensure that you have VSCode or some other IDE that supports docker dev envi
     **Make sure that you have a Docker account and verify your email on that account, because it will ask you for your username and password**
 
 
-- Next, we need to clone the main Github repository from the following URL: <https://github.com/autoboat-vt/autoboat_vt>. Open up a terminal and type the following commands:
+Next, we need to clone the main Github repository from the following URL: <https://github.com/autoboat-vt/autoboat_vt>. Open up a terminal and type the following commands:
 
 ```sh
 git clone https://github.com/autoboat-vt/autoboat_vt && cd autoboat_vt
 ```
 
 
-
-- Next, we need to run the following script:
-
+Then we need to set your computer up to use your display and GPU inside of the devcontainer by running the following command:
+  
 ```sh
-sudo bash -c "source .devcontainer/setup_display_and_gpu.sh"
+bash .devcontainer/setup_display_and_gpu.sh
 ```
 
-
-
-- Then, open up that folder in VSCode by typing the following into the same terminal:
+If the script asks you for your WSL password, please provide it. Once the script finishes running, open up that folder in VSCode by typing the following into the same terminal:
    
+
 ```sh
 code .
 ```
 
 
-- Install the Docker Dev Containers Extension on VSCode. It should look like the following: ![Docker Dev Containers VSCode](../images/dev_container_ext.png)
+Install the Docker Dev Containers Extension on VSCode. It should look like the following: ![Docker Dev Containers VSCode](../images/dev_container_ext.png)
 
 
 !!!NOTE "mac OS Users" 
@@ -60,16 +58,14 @@ code .
 
     If you see one of these images, then XQuartz is working correctly.
 
-- Build and enter dev container for the repo by typing in the following into the search bar at the top `>dev containers build`. You should see something similar to this at the top: ![alt text](../images/dev_container_search_bar.png). Wait for a moment as the container sets itself up!
+Build and enter dev container for the repo by typing in the following into the search bar at the top `>dev containers build`. You should see something similar to this at the top: ![alt text](../images/dev_container_search_bar.png). Wait for a moment as the container sets itself up!
 
 # <p style="text-align: center;"> Final Setup after Loading Development Container </p>
 
 
-Once you are inside your development container, go to the terminal and input the following command.
+Once you are inside your development container, you can then open up a terminal by hitting the plus button:
 
-``` sh
-source docker_dev_environment_setup.sh
-```
+![alt text](../images/open_terminal_button.png)
 
 !!!NOTE "mac OS Users" 
     To test the connection to the Docker container, run the following commands in the terminal in the Docker container:
