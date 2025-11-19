@@ -25,15 +25,15 @@ You may now make changes to the website code. To edit an existing page, simply f
 
 To put your changes on the website, run:
 ```sh
-    mkdocs build
-    mkdocs serve
+mkdocs build
+mkdocs serve
 ```
 
 This will set the website to run locally on the `http://127.0.0.1:8000/` (localhost) IP address. To access it, just type that link in the web-browser.
 
 After you feel good about your changes, deploy them to the internet:
 ```sh
-    mkdocs gh-deploy
+mkdocs gh-deploy
 ```
 
 And don't forget to push them to the github repository!
