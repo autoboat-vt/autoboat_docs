@@ -12,6 +12,7 @@ nav:
     - Installing MicroROS: getting_started/installing_microros.md
     - How to Start Developing on the Telemetry Server: getting_started/how_to_develop_telemetry_server.md
     - How to Start Developing on the Website: getting_started/how_to_develop_website.md
+    - Installing and Running Deepstream for Object Detection: getting_started/install_object_detection.md
 
   - Examples:
     - Running a Custom Simulation: examples/running_a_custom_simulation.md
