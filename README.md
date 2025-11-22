@@ -1,2 +1,2 @@
-The documentation website is hosted over here: https://autoboat-vt.github.io/autoboat_docs/
+The documentation website is hosted over here: https://autoboat-vt.github.io/documentation/
 Check it out!
