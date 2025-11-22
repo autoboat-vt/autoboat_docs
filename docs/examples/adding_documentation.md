@@ -18,7 +18,7 @@ pip install mkdocs-material
 
 Then, clone the github repository:
 ```sh
-git clone https://github.com/autoboat-vt/autoboat_docs
+git clone https://github.com/autoboat-vt/documentation
 ```
 
 You may now make changes to the website code. To edit an existing page, simply find its .md file in `docs` and edit the text inside. To add a new page, add the file into whichever folder you want it to be (or create a new folder), type it up, and then include in `mkdocs.yml` under the nav section. The documentation supports html, markdown, and several extensions. <a href="https://facelessuser.github.io/pymdown-extensions">You can read about the extensions here</a>.
