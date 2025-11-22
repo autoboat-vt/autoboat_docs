@@ -8,31 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://localhost:8000/getting_started/how_to_develop_telemetry_server/">
+        <link rel="canonical" href="https://localhost:8000/groundstation_telemetry/groundstation_overview/">
       
       
-        <link rel="prev" href="../installing_microros/">
+        <link rel="prev" href="../../system_diagrams/diagram_of_ros_nodes/">
       
       
-        <link rel="next" href="../how_to_develop_website/">
-      
-      
-        
+        <link rel="next" href="../telemetry_server_api_routes/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
-        <title>How to Start Developing on the Telemetry Server - AutoBoat @ VT Documentation</title>
+        <title>Groundstation - AutoBoat @ VT Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -59,6 +56,7 @@
 
     
     
+    
   </head>
   
   
@@ -76,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-start-developing-on-the-telemetry-server" class="md-skip">
+        <a href="#introduction" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to Start Developing on the Telemetry Server
+              Groundstation
             
           </span>
         </div>
@@ -213,14 +211,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Home
-  
-
     
   </span>
-  
   
 
       </a>
@@ -232,20 +225,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -253,27 +244,18 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Getting Started
-  
-
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Getting Started
-  
-
+            Getting Started
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -284,19 +266,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../installing_docker/" class="md-nav__link">
+      <a href="../../getting_started/installing_docker/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
     Installing Docker
-  
-
     
   </span>
-  
   
 
       </a>
@@ -312,19 +289,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../setting_up_dev_environment/" class="md-nav__link">
+      <a href="../../getting_started/setting_up_dev_environment/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
     Setting Up the Development Container
-  
-
     
   </span>
-  
   
 
       </a>
@@ -340,19 +312,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../running_simulation/" class="md-nav__link">
+      <a href="../../getting_started/running_simulation/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
     Running the Simulation
-  
-
     
   </span>
-  
   
 
       </a>
@@ -368,19 +335,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../what_did_you_just_install/" class="md-nav__link">
+      <a href="../../getting_started/what_did_you_just_install/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
     What Did You Just Install?
-  
-
     
   </span>
-  
   
 
       </a>
@@ -396,119 +358,17 @@
   
   
     <li class="md-nav__item">
-      <a href="../installing_microros/" class="md-nav__link">
+      <a href="../../getting_started/installing_microros/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
     Installing MicroROS
-  
-
     
   </span>
-  
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    How to Start Developing on the Telemetry Server
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    How to Start Developing on the Telemetry Server
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installing-the-correct-version-of-python" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Installing the Correct Version of Python
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#downloading-the-codebase-for-the-telemetry-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Downloading the Codebase for the Telemetry Server
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -521,19 +381,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../how_to_develop_website/" class="md-nav__link">
+      <a href="../../getting_started/how_to_develop_website/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
     How to Start Developing on the Website
-  
-
     
   </span>
-  
   
 
       </a>
@@ -549,19 +404,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../install_object_detection/" class="md-nav__link">
+      <a href="../../getting_started/install_object_detection/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
     Installing and Running Deepstream for Object Detection
-  
-
     
   </span>
-  
   
 
       </a>
@@ -600,14 +450,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Examples
-  
-
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -616,11 +461,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Examples
-  
-
+            Examples
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -636,14 +477,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Running a Custom Simulation
-  
-
     
   </span>
-  
   
 
       </a>
@@ -664,14 +500,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Running Individual Nodes for Testing
-  
-
     
   </span>
-  
   
 
       </a>
@@ -692,14 +523,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Connecting A USB Device to WSL
-  
-
     
   </span>
-  
   
 
       </a>
@@ -720,14 +546,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Adding Documentation
-  
-
     
   </span>
-  
   
 
       </a>
@@ -748,14 +569,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Adding a New ROS2 Node to A Package
-  
-
     
   </span>
-  
   
 
       </a>
@@ -776,14 +592,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Adding A New ROS2 Package to the Workspace
-  
-
     
   </span>
-  
   
 
       </a>
@@ -804,14 +615,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Adding A New External Library that We Can Edit
-  
-
     
   </span>
-  
   
 
       </a>
@@ -850,14 +656,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     System Diagrams
-  
-
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -866,11 +667,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    System Diagrams
-  
-
+            System Diagrams
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -886,14 +683,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Communication Between Groundstation and Autopilot
-  
-
     
   </span>
-  
   
 
       </a>
@@ -914,14 +706,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     How the Simulation Works and Communicates with ROS
-  
-
     
   </span>
-  
   
 
       </a>
@@ -942,14 +729,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     ROS2 Node Diagrams
-  
-
     
   </span>
-  
   
 
       </a>
@@ -969,18 +751,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -988,27 +772,18 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    Hardware
-  
-
+    Groundstation/Telemetry
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Hardware
-  
-
+            Groundstation/Telemetry
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1016,25 +791,235 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../hardware/wiring_color_scheme/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Groundstation
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Wiring Color Scheme
-  
-
+    Groundstation
     
   </span>
   
-  
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Components Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Components Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      base components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="base components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constantspy" class="md-nav__link">
+    <span class="md-ellipsis">
+      constants.py
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thread_classespy" class="md-nav__link">
+    <span class="md-ellipsis">
+      thread_classes.py
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mainpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      main.py
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#syntax_highlighters" class="md-nav__link">
+    <span class="md-ellipsis">
+      syntax_highlighters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="syntax_highlighters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base_highlighterpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      base_highlighter.py
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jsonpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      json.py
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consolepy" class="md-nav__link">
+    <span class="md-ellipsis">
+      console.py
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#widgets" class="md-nav__link">
+    <span class="md-ellipsis">
+      widgets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="widgets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#groundstationpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      groundstation.py
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#popup_editpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      popup_edit.py
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#console_outputpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      console_output.py
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map_widget" class="md-nav__link">
+    <span class="md-ellipsis">
+      map_widget
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camera_widget" class="md-nav__link">
+    <span class="md-ellipsis">
+      camera_widget
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autopilot_param_editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      autopilot_param_editor
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1047,19 +1032,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/squircuit/" class="md-nav__link">
+      <a href="../telemetry_server_api_routes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Squircuit
-  
-
+    Telemetry Server
     
   </span>
-  
   
 
       </a>
@@ -1098,14 +1078,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     ROS2 Packages and Nodes
-  
-
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1114,11 +1089,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    ROS2 Packages and Nodes
-  
-
+            ROS2 Packages and Nodes
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1145,14 +1116,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Autopilot Package
-  
-
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1161,11 +1127,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_1">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Autopilot Package
-  
-
+            Autopilot Package
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1181,14 +1143,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Common Documentation Between the Motorboat Autopilot and the Sailboat Autopilot
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1209,14 +1166,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Sailboat Autopilot Node
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1237,14 +1189,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Motorboat Autopilot Node
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1265,14 +1212,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Telemetry
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1312,14 +1254,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Sensors Package
-  
-
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1328,11 +1265,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_2">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Sensors Package
-  
-
+            Sensors Package
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1348,14 +1281,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     GPS Node
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1376,14 +1304,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     RC (Remote Controller) Node
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1404,14 +1327,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Wind Sensor Node
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1451,14 +1369,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     VESC Package
-  
-
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1467,11 +1380,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    VESC Package
-  
-
+            VESC Package
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1487,14 +1396,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     VESC Node
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1534,14 +1438,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Microros Package
-  
-
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1550,11 +1449,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_4">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Microros Package
-  
-
+            Microros Package
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1570,14 +1465,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Raspberry Pi Pico Microros Node
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1617,14 +1507,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Object Detection Package
-  
-
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1633,11 +1518,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_5">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Object Detection Package
-  
-
+            Object Detection Package
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1653,14 +1534,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Object Detection Node
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1700,14 +1576,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     AutoBoat Messages Package
-  
-
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1716,11 +1587,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_6">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    AutoBoat Messages Package
-  
-
+            AutoBoat Messages Package
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1736,14 +1603,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     AutoBoat Messages Node
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1783,14 +1645,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Simulation Package
-  
-
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1799,11 +1656,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_7">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Simulation Package
-  
-
+            Simulation Package
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1819,14 +1672,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Sailboat Simulation Node
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1855,14 +1703,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     What About the Other Nodes
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1901,14 +1744,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    Telemetry Server
-  
-
+    Hardware
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1917,11 +1755,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Telemetry Server
-  
-
+            Hardware
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1932,19 +1766,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../telemetry_server/telemetry_server_overview/" class="md-nav__link">
+      <a href="../../hardware/wiring_color_scheme/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Telemetry Server Overview
-  
-
+    Wiring Color Scheme
     
   </span>
-  
   
 
       </a>
@@ -1960,19 +1789,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../telemetry_server/telemetry_server_api_routes/" class="md-nav__link">
+      <a href="../../hardware/squircuit/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Telemetry Server API Routes
-  
-
+    Squircuit
     
   </span>
-  
   
 
       </a>
@@ -2011,14 +1835,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    Groundstation
-  
-
+    Misc
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2027,175 +1846,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Groundstation
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../groundstation/groundstation_overview/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Groundstation Overview
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
-        
-          
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Website
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Website
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../website/website_overview/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    How to Start Developing on the Website
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
-        
-          
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Misc
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Misc
-  
-
+            Misc
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2211,14 +1862,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Potential Security Risks
-  
-
     
   </span>
-  
   
 
       </a>
@@ -2246,14 +1892,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Units, Standards, and Definitions
-  
-
     
   </span>
-  
   
 
       </a>
@@ -2273,14 +1914,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Running ROS2 on Jetson Startup with Systemctl
-  
-
     
   </span>
-  
   
 
       </a>
@@ -2300,14 +1936,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Automatically Finding Which Port Devices Are on with Udev Rules
-  
-
     
   </span>
-  
   
 
       </a>
@@ -2327,14 +1958,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Automating Periodic Scripts with Crontabs
-  
-
     
   </span>
-  
   
 
       </a>
@@ -2354,14 +1980,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Known Issues
-  
-
     
   </span>
-  
   
 
       </a>
@@ -2386,8 +2007,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2396,24 +2015,179 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installing-the-correct-version-of-python" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Installing the Correct Version of Python
-      
+      Introduction
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#downloading-the-codebase-for-the-telemetry-server" class="md-nav__link">
+  <a href="#components-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Downloading the Codebase for the Telemetry Server
-      
+      Components Overview
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Components Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      base components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="base components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constantspy" class="md-nav__link">
+    <span class="md-ellipsis">
+      constants.py
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thread_classespy" class="md-nav__link">
+    <span class="md-ellipsis">
+      thread_classes.py
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mainpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      main.py
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#syntax_highlighters" class="md-nav__link">
+    <span class="md-ellipsis">
+      syntax_highlighters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="syntax_highlighters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base_highlighterpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      base_highlighter.py
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jsonpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      json.py
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consolepy" class="md-nav__link">
+    <span class="md-ellipsis">
+      console.py
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#widgets" class="md-nav__link">
+    <span class="md-ellipsis">
+      widgets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="widgets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#groundstationpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      groundstation.py
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#popup_editpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      popup_edit.py
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#console_outputpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      console_output.py
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map_widget" class="md-nav__link">
+    <span class="md-ellipsis">
+      map_widget
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camera_widget" class="md-nav__link">
+    <span class="md-ellipsis">
+      camera_widget
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autopilot_param_editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      autopilot_param_editor
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2427,45 +2201,138 @@
           
           
             <div class="md-content" data-md-component="content">
-              
               <article class="md-content__inner md-typeset">
                 
                   
 
 
 
-<h1 id="how-to-start-developing-on-the-telemetry-server"><p style="text-align: center;"> <strong>How to Start Developing on the Telemetry Server</strong> </p></h1>
-<h2 id="installing-the-correct-version-of-python"><p style="text-align: center;"> <strong>Installing the Correct Version of Python</strong> </p></h2>
-<p>We will assume that if you are Windows, you already have WSL installed. If you are on Windows, then development on the telemetry server will be done on WSL exclusively. We will also assume that you have python version 3.9 installed. If you do not know which python version you currently have then please run the following command:</p>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>--version
-</code></pre></div>
-<p>If the version is incorrect or the command gives you an error because python is not found, then you will need to install the correct version of python. The easiest way to do this is probably through miniconda which is a tool that allows you to manage multiple different versions of python on the same computer very easily.</p>
-<p>To install miniconda, please follow the installation instructions found here: <a href="https://www.anaconda.com/docs/getting-started/miniconda/install">Miniconda installation instructions</a>.</p>
+  <h1>Groundstation</h1>
+
+<h2 id="introduction">Introduction</h2>
+<p>This document provides an overview of the Ground Station system, detailing its components, functionalities, and how it
+integrates with other systems. The Ground Station is a critical part of the overall architecture, enabling communication
+with the telemetry server and facilitating the management of boat operations. Link to PyQt documentation:
+<a href="https://doc.qt.io/archives/qtforpython-5/contents.html">PyQt Documentation</a></p>
+<h2 id="components-overview">Components Overview</h2>
 <div class="admonition note">
-<p class="admonition-title">Windows Users</p>
-<p>If you are on Windows, then make sure that you do this installation for linux in your WSL environment. We would like to develop the telemetry server using a unix environment because it makes everything a whole lot easier, so you need to install the correct version of python through WSL linux.</p>
+<p class="admonition-title">Note about exceptions in the groundstation</p>
 </div>
-<p>Once your installation is done and you open up a terminal, then if you run the following command:</p>
-<div class="highlight"><pre><span></span><code>conda<span class="w"> </span>activate<span class="w"> </span>base
+<p>Exceptions thrown in the groundstation do not behave like exceptions thrown in regular Python code.
+The reason for the exception will not be printed to the console and must be handled in order for the
+application to continue running. If you have code that you suspect may throw an exception, please enclose it
+in a try/except block and handle the exception appropriately (ask Barrett if you are unsure how to handle it).</p>
+<p>All data that persists between runs of the Ground Station and its assets are stored in the <code>app_data</code> directory.
+I have tried to split up the code in the Ground Station into logical components to make it easier to understand and modify.
+The Ground Station is divided into the following main components:</p>
+<h3 id="base-components">base components</h3>
+<h4 id="constantspy">constants.py</h4>
+<p>We will begin with the <code>constants.py</code> file, which defines objects that are used throughout the entire codebase.
+In addition, this file checks for the presence of configuration files and assets that are essential for the
+Ground Station's operation. The code in this file is the first to be run and is run before the actual
+application is registered with PyQt. If you have code that will cause the application to crash or not behave correctly
+when missing assets, it is best to place that code in this file. Additionally, code in this file cannot access properties
+of the application object created by PyQt. <strong>The icons used in the Ground Station are defined in this file, but are not
+able to be used until the application is registered with PyQt, which happens in the <code>main.py</code> file.</strong></p>
+<h4 id="thread_classespy">thread_classes.py</h4>
+<p>The <code>thread_classes.py</code> file contains classes that are used to manage threads within the Ground Station application.
+I decided to places these classes in a seperate file since they don't really feel like widgets, but may be hard to
+find in the <code>constants.py</code> file if you didn't know they were there. These classes are essential for handling
+asynchronous operations and ensuring that the Ground Station can perform tasks without blocking the main application thread.
+I highly recommend reading the code in this file to understand how threads are managed and how they interact with the
+rest of the application. Online resources on threads and how they work in PyQt may also be helpful if you are trying to work
+with the code in this file.</p>
+<h4 id="mainpy">main.py</h4>
+<p>This file is the main entry point for the Ground Station application. The code in this file is pretty self-explanatory and
+will probably only need to be modified if you are adding entirely new functionality to the Ground Station. If you need
+to know the specifics of what happens in this file, I recommend reading the code itself.</p>
+<h3 id="syntax_highlighters">syntax_highlighters</h3>
+<h4 id="base_highlighterpy">base_highlighter.py</h4>
+<p>The <code>base_highlighter.py</code> file contains the base class for syntax highlighters used in the Ground Station. I wanted to
+take the QSyntaxHighlighter class and write some methods that would make it easier to write syntax highlighters for
+whatever I needed. The methods in this class are meant to guide the implementation of syntax highlighters so that time is
+not wasted trying to understand each individual method in the QSyntaxHighlighter class. The methods in this class are
+not meant to be used directly, but rather to be overridden in subclasses that implement specific syntax highlighting
+functionality. If you are writing a syntax highlighter for the Ground Station, you should start by subclassing this
+class and implementing the methods that are relevant to your use case.</p>
+<h4 id="jsonpy">json.py</h4>
+<p>The <code>json.py</code> file contains a syntax highlighter specifically designed for JSON files. It extends the base highlighter
+class and implements the necessary methods to provide syntax highlighting for JSON syntax. This highlighter is used
+to enhance the readability of JSON files within the Ground Station, making it easier to work with configuration
+files and other JSON data.</p>
+<h4 id="consolepy">console.py</h4>
+<p>The <code>console.py</code> file contains a syntax highlighter for the console output within the Ground Station. This highlighter
+is designed to improve the readability of console messages, making it easier to identify important information,
+warnings, and errors. It uses the base highlighter class to implement specific highlighting rules for console
+output, ensuring that messages are displayed in a clear and organized manner.</p>
+<h3 id="widgets">widgets</h3>
+<h4 id="groundstationpy">groundstation.py</h4>
+<p>This is the magnum opus of the Ground Station application. It was the first widget I wrote for the Ground Station
+and is first widget that you see when you open the application. It serves as the main interface for interacting
+with the Ground Station and allows users to add and remove waypoints and buoys, view telemetry data, and shows
+popups that that are used to modify the state of the Ground Station. This file also uses some of the classes in the
+<code>thread_classes.py</code> file to manage asynchronous operations, such as fetching telemetry data and updating the
+interface without blocking the main thread. If you are looking to understand how the Ground Station works,
+this is a great place to start.</p>
+<h4 id="popup_editpy">popup_edit.py</h4>
+<p>This widget is used to create 'windows' that make it easier to modify text in the Ground Station. It takes highligther
+(such as one of the syntax highlighters defined in the <code>syntax_highlighters</code> directory), some initial text, a tab width,
+and font size as arguments and uses a QSignal to return the modified text when the user clicks the "Save" button or
+closes the window. This widget is used in the Ground Station to edit buoy data, some data types in the autopilot
+parameter editor, and the telemetry data 'limits' that are used to determine when a warning or error should be displayed.</p>
+<h4 id="console_outputpy">console_output.py</h4>
+<p>This widget is used to display the console output of the Ground Station. It uses a QPlainTextEdit to display the
+output and the <code>console.py</code> syntax highlighter to provide syntax highlighting for the output. It also contains the code
+that makes it possible to have the console output displayed in the terminal and in the Ground Station at the same time.
+This is done by using a QThread and some redirection of the standard output streams to capture the console output
+and display it in the widget.</p>
+<h4 id="map_widget">map_widget</h4>
+<p>This directory contains the code that is used to make displaying the waypoints and buoys on a interactive map possible.
+It contains a Go server that is used to manage the transfer of waypoints and buoys between the Python code and the
+JavaScript code running in the HTML file in this directory. The Go server exposes a <code>get</code> and <code>set</code> endpoint that modifies
+an array containing the latitude and longitude of the waypoints and buoys which takes the form:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="w">    </span><span class="p">[</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">],</span>
+<span class="w">    </span><span class="p">[</span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">],</span>
+<span class="w">    </span><span class="p">[</span><span class="mf">3.0</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="p">],</span>
+<span class="w">    </span><span class="err">...</span>
+<span class="p">]</span>
 </code></pre></div>
-<p>Once you right that, you should see the word "(base)" right next to your terminal which means that conda is activated and is correctly installed. In order to install the correct version of python now, please run the following command:</p>
-<div class="highlight"><pre><span></span><code>conda<span class="w"> </span>install<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
+<p>Where latitude is the first element of each array and longitude is the second element.
+The JavaScript code in this directory uses the <a href="https://leafletjs.com">Leaflet</a> library
+to display the waypoints and buoys on a map.</p>
+<h4 id="camera_widget">camera_widget</h4>
+<p>This widget is used to display the camera feed from the boat. It uses a QThread from the <code>thread_classes.py</code> file to
+fetch the camera feed and then runs some JavaScript code to display the feed in a HTML file. We are using an HTML file
+to display the camera feed because of its abibility to natively show base64 encoded images, saving us the trouble of
+having to do the decoding ourselves. The widget has buttons that allow you to start and stop the camera feed in order to
+save bandwidth and processing power when the camera feed is not needed.</p>
+<h4 id="autopilot_param_editor">autopilot_param_editor</h4>
+<p>This widget is used to manage the autopilot parameters of the boat. It provides a scrollable table that features a
+search bar to filter the parameters by name. The widget uses a json file located in the
+<code>app_data/autopilot_params/params_default.jsonc</code> file to manage the default configuration for each of the parameters.
+This json file takes the form:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;param_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example_type&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example_default_value&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This is a description of the parameter.&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="err">...</span>
+<span class="p">}</span>
 </code></pre></div>
-<h2 id="downloading-the-codebase-for-the-telemetry-server"><p style="text-align: center;"> <strong>Downloading the Codebase for the Telemetry Server</strong> </p></h2>
-<div class="admonition note">
-<p class="admonition-title">Windows Users</p>
-<p>Ensure that you are running the following commands in a WSL terminal in a WSL linux filesystem. If you would like to navigate to your linux filesystem from the WSL terminal then run the following command: <code>cd ~</code>, which will take you to the home directory for the linux filesystem. If you do not install this in the linux filesystem, then developing the telemetry server will be noticably laggier.</p>
-</div>
-<p>Run the following commands:</p>
-<div class="highlight"><pre><span></span><code>conda<span class="w"> </span>activate<span class="w"> </span>base
-git<span class="w"> </span>clone<span class="w"> </span>https://github.com/autoboat-vt/telemetry_server
-<span class="nb">cd</span><span class="w"> </span>telemetry_server
-pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Make Sure You Have Conda Activated When Developing</p>
-<p>If you do not see the word "(base)" next to your terminal, then conda is not activated and in order to use the correct version of python, you need to make sure you run <code>conda activate base</code> before you start running programs.</p>
-</div>
+<p>Where <code>param_name</code> is the name of the parameter, <code>type</code> is the type of the parameter,
+<code>default</code> is the default value of the parameter, and <code>description</code> is a description of the parameter.
+The parameter type must be one of the built-in types (i.e <code>int</code>, <code>float</code>, <code>str</code>, <code>bool</code>, <code>list</code>, <code>dict</code>, or <code>set</code>)
+in order for the parameter to be usable in the widget. Additional types should be defined in the <code>constants.py</code> file
+and properly handled in the code for the widget.</p>
+<p>When the application is started, it copies the contents of the <code>params_default.jsonc</code> file to a new file
+in the <code>autopilot_param_editor</code> directory called <code>params_temp.json</code> (all comments are stripped). This file is used to
+store the current values of the parameters and is updated whenever the user modifies a parameter in the widget. When the
+user clicks the "Save" button, a dialog allows the user to save the current parameters to a new file. If no file is
+selected, the parameters are not saved and the application continues on.</p>
+<p>In addition, the widget allows you to send, recieve, and reset each parameter to the value defined in the
+<code>app_data/autopilot_params/params_default.jsonc</code> file.</p>
 
 
 
@@ -2514,11 +2381,10 @@ pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </s
     
     
       
-      
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       
