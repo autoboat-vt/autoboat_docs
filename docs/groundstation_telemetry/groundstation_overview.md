@@ -1,11 +1,11 @@
-# Introduction
+## Introduction
 
 This document provides an overview of the Ground Station system, detailing its components, functionalities, and how it
 integrates with other systems. The Ground Station is a critical part of the overall architecture, enabling communication
 with the telemetry server and facilitating the management of boat operations. Link to PyQt documentation:
 [PyQt Documentation](https://doc.qt.io/archives/qtforpython-5/contents.html)
 
-# Components Overview
+## Components Overview
 
 !!! note "Note about exceptions in the groundstation"
 Exceptions thrown in the groundstation do not behave like exceptions thrown in regular Python code.
@@ -17,9 +17,9 @@ All data that persists between runs of the Ground Station and its assets are sto
 I have tried to split up the code in the Ground Station into logical components to make it easier to understand and modify.
 The Ground Station is divided into the following main components:
 
-## base components
+### base components
 
-### constants.py
+#### constants.py
 
 We will begin with the `constants.py` file, which defines objects that are used throughout the entire codebase.
 In addition, this file checks for the presence of configuration files and assets that are essential for the
@@ -29,7 +29,7 @@ when missing assets, it is best to place that code in this file. Additionally, c
 of the application object created by PyQt. **The icons used in the Ground Station are defined in this file, but are not
 able to be used until the application is registered with PyQt, which happens in the `main.py` file.**
 
-### thread_classes.py
+#### thread_classes.py
 
 The `thread_classes.py` file contains classes that are used to manage threads within the Ground Station application.
 I decided to places these classes in a seperate file since they don't really feel like widgets, but may be hard to
@@ -39,15 +39,15 @@ I highly recommend reading the code in this file to understand how threads are m
 rest of the application. Online resources on threads and how they work in PyQt may also be helpful if you are trying to work
 with the code in this file.
 
-### main.py
+#### main.py
 
 This file is the main entry point for the Ground Station application. The code in this file is pretty self-explanatory and
 will probably only need to be modified if you are adding entirely new functionality to the Ground Station. If you need
 to know the specifics of what happens in this file, I recommend reading the code itself.
 
-## syntax_highlighters
+### syntax_highlighters
 
-### base_highlighter.py
+#### base_highlighter.py
 
 The `base_highlighter.py` file contains the base class for syntax highlighters used in the Ground Station. I wanted to
 take the QSyntaxHighlighter class and write some methods that would make it easier to write syntax highlighters for
@@ -57,23 +57,23 @@ not meant to be used directly, but rather to be overridden in subclasses that im
 functionality. If you are writing a syntax highlighter for the Ground Station, you should start by subclassing this
 class and implementing the methods that are relevant to your use case.
 
-### json.py
+#### json.py
 
 The `json.py` file contains a syntax highlighter specifically designed for JSON files. It extends the base highlighter
 class and implements the necessary methods to provide syntax highlighting for JSON syntax. This highlighter is used
 to enhance the readability of JSON files within the Ground Station, making it easier to work with configuration
 files and other JSON data.
 
-### console.py
+#### console.py
 
 The `console.py` file contains a syntax highlighter for the console output within the Ground Station. This highlighter
 is designed to improve the readability of console messages, making it easier to identify important information,
 warnings, and errors. It uses the base highlighter class to implement specific highlighting rules for console
 output, ensuring that messages are displayed in a clear and organized manner.
 
-## widgets
+### widgets
 
-### groundstation.py
+#### groundstation.py
 
 This is the magnum opus of the Ground Station application. It was the first widget I wrote for the Ground Station
 and is first widget that you see when you open the application. It serves as the main interface for interacting
@@ -83,7 +83,7 @@ popups that that are used to modify the state of the Ground Station. This file a
 interface without blocking the main thread. If you are looking to understand how the Ground Station works,
 this is a great place to start.
 
-### popup_edit.py
+#### popup_edit.py
 
 This widget is used to create 'windows' that make it easier to modify text in the Ground Station. It takes highligther
 (such as one of the syntax highlighters defined in the `syntax_highlighters` directory), some initial text, a tab width,
@@ -91,7 +91,7 @@ and font size as arguments and uses a QSignal to return the modified text when t
 closes the window. This widget is used in the Ground Station to edit buoy data, some data types in the autopilot
 parameter editor, and the telemetry data 'limits' that are used to determine when a warning or error should be displayed.
 
-### console_output.py
+#### console_output.py
 
 This widget is used to display the console output of the Ground Station. It uses a QPlainTextEdit to display the
 output and the `console.py` syntax highlighter to provide syntax highlighting for the output. It also contains the code
@@ -99,7 +99,7 @@ that makes it possible to have the console output displayed in the terminal and 
 This is done by using a QThread and some redirection of the standard output streams to capture the console output
 and display it in the widget.
 
-### map_widget
+#### map_widget
 
 This directory contains the code that is used to make displaying the waypoints and buoys on a interactive map possible.
 It contains a Go server that is used to manage the transfer of waypoints and buoys between the Python code and the
@@ -119,7 +119,7 @@ Where latitude is the first element of each array and longitude is the second el
 The JavaScript code in this directory uses the [Leaflet](https://leafletjs.com) library
 to display the waypoints and buoys on a map.
 
-### camera_widget
+#### camera_widget
 
 This widget is used to display the camera feed from the boat. It uses a QThread from the `thread_classes.py` file to
 fetch the camera feed and then runs some JavaScript code to display the feed in a HTML file. We are using an HTML file
@@ -127,7 +127,7 @@ to display the camera feed because of its abibility to natively show base64 enco
 having to do the decoding ourselves. The widget has buttons that allow you to start and stop the camera feed in order to
 save bandwidth and processing power when the camera feed is not needed.
 
-### autopilot_param_editor
+#### autopilot_param_editor
 
 This widget is used to manage the autopilot parameters of the boat. It provides a scrollable table that features a
 search bar to filter the parameters by name. The widget uses a json file located in the
