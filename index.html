@@ -254,15 +254,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-the-purpose-of-this-document" class="md-nav__link">
-    <span class="md-ellipsis">
-      What Is the Purpose of This Document?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#how-do-i-get-started" class="md-nav__link">
     <span class="md-ellipsis">
       How Do I Get Started?
@@ -851,6 +842,29 @@
             Groundstation/Telemetry
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="groundstation_telemetry/new_member_info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    New Member Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1867,15 +1881,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-the-purpose-of-this-document" class="md-nav__link">
-    <span class="md-ellipsis">
-      What Is the Purpose of This Document?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#how-do-i-get-started" class="md-nav__link">
     <span class="md-ellipsis">
       How Do I Get Started?
@@ -1910,27 +1915,38 @@
 
 
 <h1 id="welcome-to-the-virginia-tech-autoboat-documentation"><p style="text-align: center;"> Welcome to the Virginia Tech AutoBoat Documentation!</p></h1>
-<p>This document will outline how to set up the software stack on theoretically any modern computer. All of our code is contained in <a href="https://github.com/autoboat-vt">this Github repository</a>, so if you want to check this out then feel free! All of the code is open source and we have a commitment to keeping all of our stuff open source for the forseable future.</p>
-<p><br></p>
-<h2 id="what-is-the-purpose-of-this-document"><em><p style="text-align: center;"> What Is the Purpose of This Document? </p></em></h2>
-<p>The purpose of this document is to be an installation guide, overview of all of the technologies that we use, a description of how the software works, and a guide to how to use the software all in one! This is basically, in professional terms, an <a href="https://en.wikipedia.org/wiki/Interface_control_document">ICD</a>, and the upkeep of this document is of paramount importance as this is the best and most efficient way to facilitate knowledge transfer between senior members of the club and newer members.</p>
+<p>This documentation is intended to be a comprehensive guide to everything related to the <a href="https://github.com/autoboat-vt">Virginia Tech AutoBoat software stack</a>. Here, you will find guides on how to set up your development environment, how to install all of the necessary dependencies, how to use actually the software, and explanations of how the software works under the hood.</p>
 <p><br></p>
 <h2 id="how-do-i-get-started"><em><p style="text-align: center;"> How Do I Get Started? </p></em></h2>
-<p>Head over to the <em>Getting Started</em> part of the documentation and complete the installation steps over at <a href="getting_started/installing_docker/"><em>Installing Docker</em></a> to install Docker. Then, complete the installation steps found in <a href="getting_started/setting_up_dev_environment/"><em>Setting Up the Development Container</em></a>, and once you have the development container all set up, you should be ready to test everything! To get a simple simulation scenario up and running, then please visit <em>Examples</em> and click on the <a href="getting_started/running_simulation/"><em>Running the Simulation</em></a>. </p>
+<p>The best way to get started is to follow the <a href="getting_started/installing_docker/">Getting Started Guide</a>. This guide will walk you through setting up your development environment, installing all of the necessary dependencies, and running your first mission with the AutoBoat software stack. It is recommended that you follow this guide in order, as it will ensure that you have everything set up correctly before moving on to more advanced topics.</p>
 <p><br></p>
 <h2 id="what-frameworks-and-tools-should-i-learn"><em><p style="text-align: center;"> What Frameworks and Tools Should I Learn? </p></em></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>TLDR</strong>: You should absolutely be familiar with ROS2 Humble, Git, and how to use a unix shell before you start working on this codebase. You may also want to learn Docker since it is extremely widely used and may be useful to know, but this is not necessary to work on the codebase.</p>
 </div>
-<p><strong>Git</strong>: This should be fairly self explanatory, but git and github are extremely important to learn if you want to work on any codebase. It helps us all work on the same codebase at the same time and merge together all of our contributions to the code.</p>
+<p><strong>Linux/Terminal</strong>: Since this codebase is primarily developed and run on Linux based systems (Ubuntu based specifically), it is important to have a basic understanding of how to use a unix shell. This includes understanding basic commands such as <code>ls</code>, <code>cd</code>, <code>cp</code>, <code>mv</code>, <code>rm</code>, <code>mkdir</code>, <code>touch</code>, <code>nano</code>/<code>vim</code>/<code>code</code> (for editing files), and how to run scripts. The more familiar you are with the inner workings of a unix based system, the easier it will be to navigate and understand the codebase. Here are some resources to help you get started:</p>
+<ul>
+<li><a href="https://ubuntu.com/tutorials/command-line-for-beginners#1-overview">Linux Command Line Basics</a></li>
+<li><a href="https://linuxconfig.org/bash-scripting-tutorial-for-beginners">Bash Scripting Tutorial</a></li>
+</ul>
+<p>Some people may prefer using Zsh as their shell instead of Bash, which is perfectly fine! Just make sure you understand the basics of whichever shell you choose to use.</p>
+<p><br></p>
+<p><strong>Git</strong>: This should be fairly self explanatory, but Git and Github are vital if you want to work on any codebase. It helps us all work on the same codebase at the same time and merge together all of our contributions to the code.</p>
 <p>Here are the things you should make sure you know how to do before you start working on anything:</p>
 <ul>
-<li>Understand the concepts behind and how to stage, commit, push, pull, clone</li>
-<li>Understand what merging two branches are and how to resolve merge conflicts (preferably in vscode)</li>
-<li>Understand how to reset to a previous commit by using the commands <code>git reset</code> and <code>git reset --hard</code></li>
-<li>Understand how to create new branches and switch between branches</li>
+<li>Understand the when and how you would use <code>git clone</code>, <code>git add</code>, <code>git commit</code>, <code>git push</code>, <code>git pull</code>, and <code>git fetch</code>.</li>
+<li>Understand what merging two branches means and how to resolve merge conflicts (preferably in vscode).</li>
+<li>Understand how to reset to a previous commit by using the commands <code>git reset</code> and <code>git reset --hard</code>.</li>
+<li>Understand how to create new branches and switch between branches.</li>
 </ul>
+<p><br></p>
+<p><strong>Python</strong>: A large portion of the codebase is written in Python, so it is important to have a basic understanding of the language. This includes understanding basic syntax, data structures (lists, dictionaries, sets, tuples), control flow (if statements, for loops, while loops), functions, classes, and modules. Here are some resources to help you get started:</p>
+<ul>
+<li><a href="https://docs.python.org/3/tutorial/index.html">Python Official Tutorial</a></li>
+<li><a href="https://automatetheboringstuff.com">Automate the Boring Stuff with Python</a></li>
+</ul>
+<p>The language is fairly easy to pick up, so even if you are new to programming, you should be able to get up to speed relatively quickly.</p>
 <p><br></p>
 <p><strong>ROS2</strong>: Our techstack utilizes ROS2 (The Robotics Operating System) at its core. Unlike its name implies, it is not an actual operating system, but rather a middleware wrapper that makes concurrency and communication between sensor, actuators, autopilots, and telemetry super easy! This is the industry standard for projects just like this one so if you ever want to do anything in robotics, then this is the framework to learn! The specific version we are using is ROS2 Humble Hawksbill or ROS2 Humble for short, and the documentation for it can be found right here: <a href="https://docs.ros.org/en/humble/index.html">ROS2 Humble Documentation</a>. Specifically, I would recommend heading to the <em>Tutorials</em> and <em>Concepts</em> sections as those are the most useful for beginners. In addition, there is a really good video series outlining how to get started and do stuff with ROS in addition to the concepts, which can be found here: <a href="https://www.youtube.com/watch?v=0aPbWsyENA8">ROS2 Tutorial Series EP1</a>.</p>
 <p>Here are the things you should make sure you know how to do before you start working on anything:</p>
