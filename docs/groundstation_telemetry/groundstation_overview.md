@@ -7,7 +7,7 @@ with the telemetry server and facilitating the management of boat operations. Li
 
 ## Components Overview
 
-!!! note "Note about exceptions in the groundstation"
+!!! note "**NOTE ABOUT EXCEPTIONS IN THE GROUNDSTATION**"
 Exceptions thrown in the groundstation do not behave like exceptions thrown in regular Python code.
 The reason for the exception will not be printed to the console and must be handled in order for the
 application to continue running. If you have code that you suspect may throw an exception, please enclose it

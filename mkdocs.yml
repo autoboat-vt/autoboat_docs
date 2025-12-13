@@ -28,6 +28,7 @@ nav:
       - ROS2 Node Diagrams: system_diagrams/diagram_of_ros_nodes.md
 
   - Groundstation/Telemetry:
+      - New Member Overview: groundstation_telemetry/new_member_info.md
       - Groundstation: groundstation_telemetry/groundstation_overview.md
       - Telemetry Server: groundstation_telemetry/telemetry_server_api_routes.md
 
