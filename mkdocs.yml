@@ -1,5 +1,7 @@
 site_name: AutoBoat @ VT Documentation
 site_url: https://localhost:8000
+repo_url: https://github.com/autoboat-vt
+repo_name: GitHub Organization
 
 nav:
   - Home: index.md
