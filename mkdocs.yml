@@ -16,7 +16,7 @@ nav:
       - Installing and Running Deepstream for Object Detection: getting_started/install_object_detection.md
 
   - Examples:
-      - Running a Custom Simulation: examples/running_a_custom_simulation.md
+    #   - Running a Custom Simulation: examples/running_a_custom_simulation.md
       - Running Individual Nodes for Testing: examples/running_individual_nodes.md
       - Connecting A USB Device to WSL: examples/connecting_a_usb_device_to_wsl.md
       - Adding Documentation: examples/adding_documentation.md
