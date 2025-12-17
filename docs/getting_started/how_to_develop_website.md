@@ -26,7 +26,7 @@ Once the person trying to get access has been approved, they should be able to a
 
 ## <p style="text-align: center;">Accessing the S4 Site</p>
 
-In order to access the S4 Web Hosting site (aka code.vt.edu), you need to either setup an SSH key or use a personal access token. It is recommended that you setup an SSH key, and you may already be required to do this depending on the classes you are taking/taken.
+In order to access the S4 Web Hosting site (aka code.vt.edu), you need to either setup an SSH key or use a personal access token. It is highly recommended that you setup an SSH key, and you may already be required to do this depending on the classes you are taking/taken.
 
 ### <p style="text-align: center;">Setting Up an SSH Key</p>
 
@@ -34,7 +34,7 @@ See the following link for instructions on how to set up an SSH key: [SSH Key Se
 
 ### <p style="text-align: center;">Creating a Personal Access Token</p>
 
-In order to access the website gitlab from your computer, you need to create a personal access token.
+If you are unable to set up an SSH key, you can use a personal access token to authenticate yourself. Here are the steps to create a personal access token:
 
 1. From the website, please click on your profile picture in the top left:
    ![alt text](../images/setting_up_website_step4.png)
