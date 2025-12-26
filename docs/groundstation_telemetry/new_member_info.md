@@ -4,7 +4,7 @@ This document provides information for new members interested in working on eith
 
 ## Recommended Skills and Knowledge
 
-To work on the Ground Station and Telemetry Server, you should have a solid understanding (_or be willing to learn_) the following:
+To work on the Ground Station or Telemetry Server, you should have a solid understanding (_or be willing to learn_) the following:
 
 - **Python Programming**: Both the Ground Station and Telemetry Server are written almost entirely in Python. You should be comfortable with Python syntax, data structures, and libraries.
 - **PyQt Framework**: The Ground Station utilizes the [PyQt](https://doc.qt.io/archives/qtforpython-5/contents.html) framework for its graphical user interface. The library is quite extensive, so you don't need to know everything about it, but you should be familiar with the basics of creating windows, widgets, and handling events.
