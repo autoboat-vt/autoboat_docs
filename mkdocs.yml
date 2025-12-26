@@ -56,7 +56,7 @@ nav:
       - Running the Simulation: examples/running_simulation.md
       - Connecting A USB Device to WSL: examples/connecting_a_usb_device_to_wsl.md
       - Adding Documentation: examples/adding_documentation.md
-      - Adding A New External Library that We Can Edit: examples/how_we_handle_external_libraries.md
+      - Adding A New External Pip Libraries that We Can Edit: examples/how_we_handle_external_libraries.md
       - Running Individual Nodes for Testing: examples/running_individual_nodes.md
       - Adding a New ROS2 Node to A Package: examples/adding_a_new_ros2_node.md
       - Adding A New ROS2 Package to the Workspace: examples/adding_a_new_ros2_package.md
@@ -100,9 +100,13 @@ nav:
 
       - What About the Other Nodes: ros2_packages/other_nodes/what_about_the_other_nodes.md
 
+
+
   - Hardware:
       - Wiring Color Scheme: hardware/wiring_color_scheme.md
       - Squircuit: hardware/squircuit.md
+
+
 
   - Misc:
       - Potential Security Risks: misc/potential_security_risks.md
