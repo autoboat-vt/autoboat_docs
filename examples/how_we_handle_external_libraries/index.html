@@ -22,7 +22,7 @@
     
     
       
-        <title>Adding A New External Library that We Can Edit - AutoBoat @ VT Documentation</title>
+        <title>Adding A New External Pip Libraries that We Can Edit - AutoBoat @ VT Documentation</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-add-external-libraries-that-we-can-edit" class="md-skip">
+        <a href="#how-to-add-external-pip-libraries-that-we-can-edit" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Adding A New External Library that We Can Edit
+              Adding A New External Pip Libraries that We Can Edit
             
           </span>
         </div>
@@ -533,7 +533,7 @@
   
   
   <span class="md-ellipsis">
-    Adding A New External Library that We Can Edit
+    Adding A New External Pip Libraries that We Can Edit
     
   </span>
   
@@ -1826,7 +1826,7 @@
   
 
 
-<h1 id="how-to-add-external-libraries-that-we-can-edit"><p style="text-align: center;"> How to Add External Libraries that We Can Edit</p></h1>
+<h1 id="how-to-add-external-pip-libraries-that-we-can-edit"><p style="text-align: center;"> How to Add External Pip Libraries that We Can Edit</p></h1>
 <p>Sometimes, we would like to use external pip packages, but still be able to edit the source code for them on the fly. One great example of this is the pyvesc library for the VESC node, where there are some minor differences between what the library does by default and what we want the library to do. In order to acheieve this, we will take advantage of the "-e" option in pip install, which allows us to install a <em>local pip package</em> as editable. Taking the example of the pyvesc library, here is how the source code is laid out:</p>
 <p><img alt="pyvesc library example" src="../../images/pyvesc_library_example.png" /></p>
 <p>Inside of the vesc ros2 package, we have the pyvesc library, which is very similar to the copy of the pyvesc library you can find here: <a href="https://github.com/LiamBindle/PyVESC">Official pyvesc Library</a>. This is where we would normally like to place our custom pip packages since it is easy to find what pip packages each ros2 package would like to use. Also, whenever you clone a git repository, it generates a folder named <strong>.git</strong> which contains all of the history of the repository. In short, we don't care about the history of the repository and in fact keeping this file makes it more annoying to use it in our codebase by automatically creating a nested repository. Nested repositories can become a nightmare to deal with, so to make all of our lives easier, just delete the .git folder. You can do so by using the rm -rf command:</p>
