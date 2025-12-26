@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://localhost:8000/standards_and_definitions/">
+        <link rel="canonical" href="https://localhost:8000/misc/crontabs/">
       
       
-        <link rel="prev" href="../misc/potential_security_risks/">
+        <link rel="prev" href="../udev_rules/">
       
       
-        <link rel="next" href="../systemctl/">
+        <link rel="next" href="../known_installation_issues/">
       
       
-      <link rel="icon" href="../images/logo.svg">
+      <link rel="icon" href="../../images/logo.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>Units, Standards, and Definitions - AutoBoat @ VT Documentation</title>
+        <title>Automating Periodic Scripts with Crontabs - AutoBoat @ VT Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../styles/extra.css">
+      <link rel="stylesheet" href="../../styles/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#standards-and-definitions" class="md-skip">
+        <a href="#crontabs" class="md-skip">
           Skip to content
         </a>
       
@@ -90,9 +90,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="AutoBoat @ VT Documentation" class="md-header__button md-logo" aria-label="AutoBoat @ VT Documentation" data-md-component="logo">
+    <a href="../.." title="AutoBoat @ VT Documentation" class="md-header__button md-logo" aria-label="AutoBoat @ VT Documentation" data-md-component="logo">
       
-  <img src="../images/logo.svg" alt="logo">
+  <img src="../../images/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Units, Standards, and Definitions
+              Automating Periodic Scripts with Crontabs
             
           </span>
         </div>
@@ -199,9 +199,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="AutoBoat @ VT Documentation" class="md-nav__button md-logo" aria-label="AutoBoat @ VT Documentation" data-md-component="logo">
+    <a href="../.." title="AutoBoat @ VT Documentation" class="md-nav__button md-logo" aria-label="AutoBoat @ VT Documentation" data-md-component="logo">
       
-  <img src="../images/logo.svg" alt="logo">
+  <img src="../../images/logo.svg" alt="logo">
 
     </a>
     AutoBoat @ VT Documentation
@@ -228,7 +228,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -288,7 +288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting_started/installing_docker/" class="md-nav__link">
+      <a href="../../getting_started/installing_docker/" class="md-nav__link">
         
   
   
@@ -311,7 +311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting_started/setting_up_dev_environment/" class="md-nav__link">
+      <a href="../../getting_started/setting_up_dev_environment/" class="md-nav__link">
         
   
   
@@ -334,7 +334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting_started/installing_microros/" class="md-nav__link">
+      <a href="../../getting_started/installing_microros/" class="md-nav__link">
         
   
   
@@ -357,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting_started/how_to_develop_website/" class="md-nav__link">
+      <a href="../../getting_started/how_to_develop_website/" class="md-nav__link">
         
   
   
@@ -380,7 +380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting_started/install_object_detection/" class="md-nav__link">
+      <a href="../../getting_started/install_object_detection/" class="md-nav__link">
         
   
   
@@ -448,7 +448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/running_simulation/" class="md-nav__link">
+      <a href="../../examples/running_simulation/" class="md-nav__link">
         
   
   
@@ -471,7 +471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/connecting_a_usb_device_to_wsl/" class="md-nav__link">
+      <a href="../../examples/connecting_a_usb_device_to_wsl/" class="md-nav__link">
         
   
   
@@ -494,7 +494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/adding_documentation/" class="md-nav__link">
+      <a href="../../examples/adding_documentation/" class="md-nav__link">
         
   
   
@@ -517,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/how_we_handle_external_libraries/" class="md-nav__link">
+      <a href="../../examples/how_we_handle_external_libraries/" class="md-nav__link">
         
   
   
@@ -540,7 +540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/running_individual_nodes/" class="md-nav__link">
+      <a href="../../examples/running_individual_nodes/" class="md-nav__link">
         
   
   
@@ -563,7 +563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/adding_a_new_ros2_node/" class="md-nav__link">
+      <a href="../../examples/adding_a_new_ros2_node/" class="md-nav__link">
         
   
   
@@ -586,7 +586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/adding_a_new_ros2_package/" class="md-nav__link">
+      <a href="../../examples/adding_a_new_ros2_package/" class="md-nav__link">
         
   
   
@@ -654,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../system_diagrams/diagram_of_groundstation_telemetry/" class="md-nav__link">
+      <a href="../../system_diagrams/diagram_of_groundstation_telemetry/" class="md-nav__link">
         
   
   
@@ -677,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../system_diagrams/diagram_of_simulations/" class="md-nav__link">
+      <a href="../../system_diagrams/diagram_of_simulations/" class="md-nav__link">
         
   
   
@@ -700,7 +700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../system_diagrams/diagram_of_ros_nodes/" class="md-nav__link">
+      <a href="../../system_diagrams/diagram_of_ros_nodes/" class="md-nav__link">
         
   
   
@@ -768,7 +768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../groundstation_telemetry/new_member_info/" class="md-nav__link">
+      <a href="../../groundstation_telemetry/new_member_info/" class="md-nav__link">
         
   
   
@@ -791,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../groundstation_telemetry/groundstation_overview/" class="md-nav__link">
+      <a href="../../groundstation_telemetry/groundstation_overview/" class="md-nav__link">
         
   
   
@@ -814,7 +814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../groundstation_telemetry/telemetry_server_api_routes/" class="md-nav__link">
+      <a href="../../groundstation_telemetry/telemetry_server_api_routes/" class="md-nav__link">
         
   
   
@@ -920,7 +920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/autopilot_package/common_documentation_between_the_motorboat_autopilot_and_the_sailboat_autopilot/" class="md-nav__link">
+      <a href="../../ros2_packages/autopilot_package/common_documentation_between_the_motorboat_autopilot_and_the_sailboat_autopilot/" class="md-nav__link">
         
   
   
@@ -943,7 +943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/autopilot_package/sailboat_autopilot/" class="md-nav__link">
+      <a href="../../ros2_packages/autopilot_package/sailboat_autopilot/" class="md-nav__link">
         
   
   
@@ -966,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/autopilot_package/motorboat_autopilot/" class="md-nav__link">
+      <a href="../../ros2_packages/autopilot_package/motorboat_autopilot/" class="md-nav__link">
         
   
   
@@ -989,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/autopilot_package/telemetry/" class="md-nav__link">
+      <a href="../../ros2_packages/autopilot_package/telemetry/" class="md-nav__link">
         
   
   
@@ -1058,7 +1058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/sensors_package/gps/" class="md-nav__link">
+      <a href="../../ros2_packages/sensors_package/gps/" class="md-nav__link">
         
   
   
@@ -1081,7 +1081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/sensors_package/rc/" class="md-nav__link">
+      <a href="../../ros2_packages/sensors_package/rc/" class="md-nav__link">
         
   
   
@@ -1104,7 +1104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/sensors_package/wind_sensor/" class="md-nav__link">
+      <a href="../../ros2_packages/sensors_package/wind_sensor/" class="md-nav__link">
         
   
   
@@ -1173,7 +1173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/vesc_package/vesc/" class="md-nav__link">
+      <a href="../../ros2_packages/vesc_package/vesc/" class="md-nav__link">
         
   
   
@@ -1242,7 +1242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/microros_package/microros/" class="md-nav__link">
+      <a href="../../ros2_packages/microros_package/microros/" class="md-nav__link">
         
   
   
@@ -1311,7 +1311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/object_detection_package/object_detection/" class="md-nav__link">
+      <a href="../../ros2_packages/object_detection_package/object_detection/" class="md-nav__link">
         
   
   
@@ -1380,7 +1380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/autoboat_messages_package/autoboat_msgs/" class="md-nav__link">
+      <a href="../../ros2_packages/autoboat_messages_package/autoboat_msgs/" class="md-nav__link">
         
   
   
@@ -1449,7 +1449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/simulation_package/sailboat_simulation/" class="md-nav__link">
+      <a href="../../ros2_packages/simulation_package/sailboat_simulation/" class="md-nav__link">
         
   
   
@@ -1480,7 +1480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/other_nodes/what_about_the_other_nodes/" class="md-nav__link">
+      <a href="../../ros2_packages/other_nodes/what_about_the_other_nodes/" class="md-nav__link">
         
   
   
@@ -1548,7 +1548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hardware/wiring_color_scheme/" class="md-nav__link">
+      <a href="../../hardware/wiring_color_scheme/" class="md-nav__link">
         
   
   
@@ -1571,7 +1571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hardware/squircuit/" class="md-nav__link">
+      <a href="../../hardware/squircuit/" class="md-nav__link">
         
   
   
@@ -1598,18 +1598,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -1625,7 +1627,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Misc
@@ -1639,7 +1641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../misc/potential_security_risks/" class="md-nav__link">
+      <a href="../potential_security_risks/" class="md-nav__link">
         
   
   
@@ -1655,15 +1657,77 @@
 
               
             
-          </ul>
-        </nav>
-      
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../standards_and_definitions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Units, Standards, and Definitions
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systemctl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Running ROS2 on Jetson Startup with Systemctl
     
-      
-      
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../udev_rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Automatically Finding Which Port Devices Are on with Udev Rules
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
   
   
     
@@ -1683,7 +1747,7 @@
   
   
   <span class="md-ellipsis">
-    Units, Standards, and Definitions
+    Automating Periodic Scripts with Crontabs
     
   </span>
   
@@ -1696,7 +1760,7 @@
   
   
   <span class="md-ellipsis">
-    Units, Standards, and Definitions
+    Automating Periodic Scripts with Crontabs
     
   </span>
   
@@ -1719,78 +1783,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#units" class="md-nav__link">
+  <a href="#what-are-crontabs" class="md-nav__link">
     <span class="md-ellipsis">
-      Units:
+      What are Crontabs?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#definitions" class="md-nav__link">
+  <a href="#allowing-devices-to-always-be-accessed-by-non-sudo-users-chmod777jobtxt" class="md-nav__link">
     <span class="md-ellipsis">
-      Definitions:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#wind-angle-vector-standards" class="md-nav__link">
-    <span class="md-ellipsis">
-      Wind Angle/ Vector Standards
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Wind Angle/ Vector Standards">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#apparent-wind-angle" class="md-nav__link">
-    <span class="md-ellipsis">
-      Apparent Wind Angle
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#how-are-wind-vectors-calculated" class="md-nav__link">
-    <span class="md-ellipsis">
-      How Are Wind Vectors Calculated?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#true-wind-angle" class="md-nav__link">
-    <span class="md-ellipsis">
-      True Wind Angle
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#global-true-wind-angle" class="md-nav__link">
-    <span class="md-ellipsis">
-      Global True Wind Angle
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#global-and-local-velocity" class="md-nav__link">
-    <span class="md-ellipsis">
-      Global and Local Velocity
+      Allowing Devices to Always be Accessed by Non-Sudo Users: chmod777job.txt
     </span>
   </a>
   
@@ -1803,75 +1807,10 @@
     </li>
   
 
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../systemctl/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Running ROS2 on Jetson Startup with Systemctl
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../udev_rules/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Automatically Finding Which Port Devices Are on with Udev Rules
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../crontabs/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Automating Periodic Scripts with Crontabs
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -1888,6 +1827,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1919,78 +1866,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#units" class="md-nav__link">
+  <a href="#what-are-crontabs" class="md-nav__link">
     <span class="md-ellipsis">
-      Units:
+      What are Crontabs?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#definitions" class="md-nav__link">
+  <a href="#allowing-devices-to-always-be-accessed-by-non-sudo-users-chmod777jobtxt" class="md-nav__link">
     <span class="md-ellipsis">
-      Definitions:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#wind-angle-vector-standards" class="md-nav__link">
-    <span class="md-ellipsis">
-      Wind Angle/ Vector Standards
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Wind Angle/ Vector Standards">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#apparent-wind-angle" class="md-nav__link">
-    <span class="md-ellipsis">
-      Apparent Wind Angle
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#how-are-wind-vectors-calculated" class="md-nav__link">
-    <span class="md-ellipsis">
-      How Are Wind Vectors Calculated?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#true-wind-angle" class="md-nav__link">
-    <span class="md-ellipsis">
-      True Wind Angle
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#global-true-wind-angle" class="md-nav__link">
-    <span class="md-ellipsis">
-      Global True Wind Angle
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#global-and-local-velocity" class="md-nav__link">
-    <span class="md-ellipsis">
-      Global and Local Velocity
+      Allowing Devices to Always be Accessed by Non-Sudo Users: chmod777job.txt
     </span>
   </a>
   
@@ -2015,51 +1902,14 @@
   
 
 
-<h1 id="standards-and-definitions"><p style="text-align: center;"> Standards and Definitions</p></h1>
-<h2 id="units">Units:</h2>
-<p>Unless stated otherwise, all variables are in SI units (meters, seconds, etc). All measurements of angles by default are in degrees from 0 to 360 degrees. </p>
-<h2 id="definitions">Definitions:</h2>
-<ul>
-<li>
-<p>Autopilot Mode: Autopilot mode typically refers to whether or not the autopilot is in RC control, a semi-autonomous mode like hold heading, or in a full autonomous mode. This is just a string that describes the autopilot mode for the telemetry.</p>
-</li>
-<li>
-<p>Full Autonomy Maneuver: The full autonomy maneuver is only really used for the sailboat in a fully autonomous mode. This describes whether the boat is currently tacking clockwise, tacking counterclockwise, or is normally sailing and navigating towards a specific heading.</p>
-</li>
-</ul>
-<h2 id="wind-angle-vector-standards">Wind Angle/ Vector Standards</h2>
-<p>There are several ways of measuring the wind direction and intensity that are each useful in different situations. The following are the main standards that we have chosen to go with; these exact definitions aren't standard across sailers, and you probably won't even find the words "Global True Wind Angle" anywhere online, but we believe that it is useful for our application and hopefully you will see why.</p>
-<p><br></p>
-<h3 id="apparent-wind-angle">Apparent Wind Angle</h3>
-<p>Apparent Wind Angle: The <a href="https://en.wikipedia.org/wiki/Apparent_wind">Apparent Wind</a> is the wind measured on top of the boat. Imagine for a second that you are on a speedboat with no wind outside. When the speed boat is moving quickly, then you can feel the wind brush over your face because you are moving quickly even though there is no real wind. This is because you are moving into the air around you, which creates the sensation of wind and works in a similar way to <a href="https://en.wikipedia.org/wiki/Relative_velocity">relative motion</a>. The following Youtube video gives a pretty good explanation of apparent wind: <a href="https://www.youtube.com/watch?v=ndL1FcTRPwU">Apparent Wind Explanation Youtube Video</a>. The way that we measure this angle is counter-clockwise from the centerline of the boat, which visually looks like this if the boat is facing upwards:</p>
-<p><img alt="Apparent Wind Angles Visualization" src="../images/apparent_wind_angles_visualization.png" /></p>
-<p>This means that if the boat is going downwind, then the wind angle is 0 degrees. If the boat is going upwind, then the wind angle is 180 degrees. If the wind is blowing towards the left side of the boat, then the wind angle is 90 degrees. This measurement of the apparent wind direction and speed is really useful for managing the exact position of our sail because the direction that our sail should be pointing is dictated mainly by the apparent wind angle. The exact behaviour of the sail will always be defined by a lookup table, so for instance, if the boat is headed downwind, then the sail should be out all of the way. If the boat is heading directly upwind, then you will want to pull the sails all the way in.  </p>
-<h3 id="how-are-wind-vectors-calculated">How Are Wind Vectors Calculated?</h3>
-<p>In the next section about the true wind angle, we will talk about the true wind vector and the apparent wind vector, so it may be useful to define them since we have not talked about them before. Whenever we are talking about a wind vector in any standard, the vectors always have a specific definition in relation to their corresponding wind angles and magnitudes and it is the following:</p>
-<p><span class="arithmatex">\(\text{wind_vector_x} = \text{wind_magnitude} * cos(\text{wind_angle})\)</span></p>
-<p><span class="arithmatex">\(\text{wind_vector_y} = \text{wind_magnitude} * sin(\text{wind_angle})\)</span> </p>
-<p>This gives some pretty funky results when we start talking about the global true wind angle, but I promise it makes the math easier if you are able to follow along. Here are the x and y axes labeled for the apparent wind angle using this definition of the apparent wind vector:</p>
-<p><img alt="Apparent Wind Vector Axes Labeled" src="../images/apparent_wind_vector_axes_labeled.png" /></p>
-<p>This means that the axes that the apparent wind vector are based off of change if the heading/ direction of the boat changes. <strong>You have to keep this fact in mind when doing calculations with the apparent wind vector because this is very important</strong>.</p>
-<h3 id="true-wind-angle">True Wind Angle</h3>
-<p>The true wind vector is basically just the wind speed of the location as measured by a stationary sensor, and is just computed by taking the apparent wind vector and adding the local velocity vector of the boat. <strong>You must make sure that the velocity vector is measured using the same axes as the apparent wind vector. This is called the local velocity vector and is mentioned in a following section</strong>. </p>
-<p><span class="arithmatex">\(\text{true_wind_angle} = \text{apparent_wind_vector} + \text{local_velocity_vector}\)</span></p>
-<p>The true wind angle is also measured counter-clockwise from the centerline of the boat just like the apparent wind angle, and the true wind vector has the same base axes as the apparent wind vector. The true wind angle doesn't actually do anything on its own, but it can be used to compute the global true wind angle, which is quite useful for us in plotting courses and in visualizations.</p>
-<h3 id="global-true-wind-angle">Global True Wind Angle</h3>
-<p>As you may have realized, both of the two previous standards for determining the wind angle are relative to the centerline of the boat and if the direction of the boat changes, then the apparent/ true wind angles will change even if the real wind hasn't shifted. So in order to account for this, we would like to cancel out the direction the boat is facing from the true wind angle. The formula for this is quite simple: </p>
-<p><span class="arithmatex">\(\text{global_true_wind_angle} = \text{heading_counter_clockwise_from_true_east} + \text{true_wind_angle}\)</span> </p>
-<p>I would encourage you to draw this out and convince yourself of why this fact is true and follows naturally from how we have defined everything so far.</p>
-<p>This calculation gives us a really good sense of where the wind is actually going regardless of our current heading/ direction and regardless of our velocity vector, which is very useful for displaying wind information to a map and figuring out where the no sail zone is.</p>
-<p>If you haven't realized already, this definition of the global true wind angle means that the global true wind vector has the x axis defined as true east and the y axis defined as true north. <strong>This is very different from the apparent/ true wind vectors so keep that in mind. The apparent/ true wind vector will change if the boat changes directions but the global true wind vector does not change if the boat changes directions</strong>.</p>
-<h2 id="global-and-local-velocity">Global and Local Velocity</h2>
-<p>Similarly to the wind angle, there is a distinction between the global velocity and the local velocity. The global velocity is simply the velocity that the GPS gives us which is measured with the x axis being true east and the y axis being true north. In order to convert this into something where the x axis is the centerline of the boat and the y axis points to the left of the boat, we need to convert to the local velocity which can be done with the following equations:</p>
-<p><span class="arithmatex">\(\text{boat_speed} = \sqrt{\text{global_velocity_vector_y}^2 + \text{global_velocity_vector_y}^2}\)</span></p>
-<p><span class="arithmatex">\(\text{global_velocity_angle} = arctan2(\text{global_velocity_vector_y}, \text{global_velocity_vector_x})\)</span></p>
-<p><span class="arithmatex">\(\text{local_velocity_angle} = \text{global_velocity_angle} - \text{heading_angle}\)</span></p>
-<p><span class="arithmatex">\(\text{local_velocity_vector_x} = \text{boat_speed} * cos(\text{local_velocity_angle})\)</span></p>
-<p><span class="arithmatex">\(\text{local_velocity_vector_y} = \text{boat_speed} * sin(\text{local_velocity_angle})\)</span></p>
-<p>arctan2 is defined as simply a function that takes in the x and y components of a vector and outputs the angle that vector makes counter-clockwise from the x axis. See the following link for more details: <a href="https://en.wikipedia.org/wiki/Atan2">Arctan2 Wikipedia Page</a></p>
-<p>Now, similarly to the apparent/ true wind angle, local_velocity_vector_x faces the same direction as the centerline of the boat, and local_velocity_vector_y faces to the left of the boat. This version of the velocity vector can now be added to the apparent wind vector since now both of them are being measured the same way.</p>
+<h1 id="crontabs"><p style="text-align: center;"> Crontabs </p></h1>
+<h3 id="what-are-crontabs"><p style="text-align: center;"> What are Crontabs? </p></h3>
+<p>Crontabs are simply processes that linux makes run periodically. If we want to run a specific command every 5 seconds, then this is the way to do it. I encourage you to check out the crontabs documentation: <a href="https://man7.org/linux/man-pages/man5/crontab.5.html">Crontab Man Page (Official Documentation)</a> and <a href="https://docs.passwork.pro/crontab-basics">Third Party Crontab Tutorial</a>.</p>
+<h3 id="allowing-devices-to-always-be-accessed-by-non-sudo-users-chmod777jobtxt"><p style="text-align: center;"> Allowing Devices to Always be Accessed by Non-Sudo Users: chmod777job.txt</p></h3>
+<p>Lets say, that you would like to test the GPS on your laptop inside of the dev container. You would plug the GPS in and then linux automatically will create a file called /dev/ttyACM01 or some other name for the file that linux decides. We can control what the file is called and override the linux default, but that is outside of the scope of this part of the documentation. Critically, this file represents the GPS, and the only way to communicate and read/ write over the GPS USB port is to access this file. However, by default, you may or may not actually have access to this file as a normal user on the linux system, and sometimes, the only person who has access to this file is the sudo or admin user. So, whenever you would like to communicate with the GPS from your computer and run the GPS node, you will have to run the following command:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">777</span><span class="w"> </span>/dev/**
+</code></pre></div>
+<p>This command <em>essentially</em> just steps in as an admin user and says that "as an admin user, I allow all other users to do whatever they want to the GPS, read or write, I don't care. This is simplifying a little bit, but I hope it gets the point across. Normally, we would need to run this command everytime we plug in the GPS to our computers; however, there is an easier way. We can instead set it up so that this command runs every 0.5 seconds so that when you plug it in, and by the time you try to interact with the GPS, the command will very likely have already been run. This concept applies to all USB devices that you would like to plug into your computer, but I just used the GPS as a simple example.</p>
 
 
 
@@ -2108,12 +1958,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.select"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

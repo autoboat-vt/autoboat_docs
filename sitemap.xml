@@ -5,26 +5,6 @@
          <lastmod>2025-12-26</lastmod>
     </url>
     <url>
-         <loc>https://localhost:8000/crontabs/</loc>
-         <lastmod>2025-12-26</lastmod>
-    </url>
-    <url>
-         <loc>https://localhost:8000/known_installation_issues/</loc>
-         <lastmod>2025-12-26</lastmod>
-    </url>
-    <url>
-         <loc>https://localhost:8000/standards_and_definitions/</loc>
-         <lastmod>2025-12-26</lastmod>
-    </url>
-    <url>
-         <loc>https://localhost:8000/systemctl/</loc>
-         <lastmod>2025-12-26</lastmod>
-    </url>
-    <url>
-         <loc>https://localhost:8000/udev_rules/</loc>
-         <lastmod>2025-12-26</lastmod>
-    </url>
-    <url>
          <loc>https://localhost:8000/examples/adding_a_new_ros2_node/</loc>
          <lastmod>2025-12-26</lastmod>
     </url>
@@ -101,7 +81,27 @@
          <lastmod>2025-12-26</lastmod>
     </url>
     <url>
+         <loc>https://localhost:8000/misc/crontabs/</loc>
+         <lastmod>2025-12-26</lastmod>
+    </url>
+    <url>
+         <loc>https://localhost:8000/misc/known_installation_issues/</loc>
+         <lastmod>2025-12-26</lastmod>
+    </url>
+    <url>
          <loc>https://localhost:8000/misc/potential_security_risks/</loc>
+         <lastmod>2025-12-26</lastmod>
+    </url>
+    <url>
+         <loc>https://localhost:8000/misc/standards_and_definitions/</loc>
+         <lastmod>2025-12-26</lastmod>
+    </url>
+    <url>
+         <loc>https://localhost:8000/misc/systemctl/</loc>
+         <lastmod>2025-12-26</lastmod>
+    </url>
+    <url>
+         <loc>https://localhost:8000/misc/udev_rules/</loc>
          <lastmod>2025-12-26</lastmod>
     </url>
     <url>

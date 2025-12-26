@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://localhost:8000/udev_rules/">
+        <link rel="canonical" href="https://localhost:8000/misc/systemctl/">
       
       
-        <link rel="prev" href="../systemctl/">
+        <link rel="prev" href="../standards_and_definitions/">
       
       
-        <link rel="next" href="../crontabs/">
+        <link rel="next" href="../udev_rules/">
       
       
-      <link rel="icon" href="../images/logo.svg">
+      <link rel="icon" href="../../images/logo.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>Automatically Finding Which Port Devices Are on with Udev Rules - AutoBoat @ VT Documentation</title>
+        <title>Running ROS2 on Jetson Startup with Systemctl - AutoBoat @ VT Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../styles/extra.css">
+      <link rel="stylesheet" href="../../styles/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#what-are-udev-rules-and-how-do-we-use-them" class="md-skip">
+        <a href="#what-is-systemctl" class="md-skip">
           Skip to content
         </a>
       
@@ -90,9 +90,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="AutoBoat @ VT Documentation" class="md-header__button md-logo" aria-label="AutoBoat @ VT Documentation" data-md-component="logo">
+    <a href="../.." title="AutoBoat @ VT Documentation" class="md-header__button md-logo" aria-label="AutoBoat @ VT Documentation" data-md-component="logo">
       
-  <img src="../images/logo.svg" alt="logo">
+  <img src="../../images/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Automatically Finding Which Port Devices Are on with Udev Rules
+              Running ROS2 on Jetson Startup with Systemctl
             
           </span>
         </div>
@@ -199,9 +199,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="AutoBoat @ VT Documentation" class="md-nav__button md-logo" aria-label="AutoBoat @ VT Documentation" data-md-component="logo">
+    <a href="../.." title="AutoBoat @ VT Documentation" class="md-nav__button md-logo" aria-label="AutoBoat @ VT Documentation" data-md-component="logo">
       
-  <img src="../images/logo.svg" alt="logo">
+  <img src="../../images/logo.svg" alt="logo">
 
     </a>
     AutoBoat @ VT Documentation
@@ -228,7 +228,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -288,7 +288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting_started/installing_docker/" class="md-nav__link">
+      <a href="../../getting_started/installing_docker/" class="md-nav__link">
         
   
   
@@ -311,7 +311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting_started/setting_up_dev_environment/" class="md-nav__link">
+      <a href="../../getting_started/setting_up_dev_environment/" class="md-nav__link">
         
   
   
@@ -334,7 +334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting_started/installing_microros/" class="md-nav__link">
+      <a href="../../getting_started/installing_microros/" class="md-nav__link">
         
   
   
@@ -357,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting_started/how_to_develop_website/" class="md-nav__link">
+      <a href="../../getting_started/how_to_develop_website/" class="md-nav__link">
         
   
   
@@ -380,7 +380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting_started/install_object_detection/" class="md-nav__link">
+      <a href="../../getting_started/install_object_detection/" class="md-nav__link">
         
   
   
@@ -448,7 +448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/running_simulation/" class="md-nav__link">
+      <a href="../../examples/running_simulation/" class="md-nav__link">
         
   
   
@@ -471,7 +471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/connecting_a_usb_device_to_wsl/" class="md-nav__link">
+      <a href="../../examples/connecting_a_usb_device_to_wsl/" class="md-nav__link">
         
   
   
@@ -494,7 +494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/adding_documentation/" class="md-nav__link">
+      <a href="../../examples/adding_documentation/" class="md-nav__link">
         
   
   
@@ -517,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/how_we_handle_external_libraries/" class="md-nav__link">
+      <a href="../../examples/how_we_handle_external_libraries/" class="md-nav__link">
         
   
   
@@ -540,7 +540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/running_individual_nodes/" class="md-nav__link">
+      <a href="../../examples/running_individual_nodes/" class="md-nav__link">
         
   
   
@@ -563,7 +563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/adding_a_new_ros2_node/" class="md-nav__link">
+      <a href="../../examples/adding_a_new_ros2_node/" class="md-nav__link">
         
   
   
@@ -586,7 +586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/adding_a_new_ros2_package/" class="md-nav__link">
+      <a href="../../examples/adding_a_new_ros2_package/" class="md-nav__link">
         
   
   
@@ -654,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../system_diagrams/diagram_of_groundstation_telemetry/" class="md-nav__link">
+      <a href="../../system_diagrams/diagram_of_groundstation_telemetry/" class="md-nav__link">
         
   
   
@@ -677,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../system_diagrams/diagram_of_simulations/" class="md-nav__link">
+      <a href="../../system_diagrams/diagram_of_simulations/" class="md-nav__link">
         
   
   
@@ -700,7 +700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../system_diagrams/diagram_of_ros_nodes/" class="md-nav__link">
+      <a href="../../system_diagrams/diagram_of_ros_nodes/" class="md-nav__link">
         
   
   
@@ -768,7 +768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../groundstation_telemetry/new_member_info/" class="md-nav__link">
+      <a href="../../groundstation_telemetry/new_member_info/" class="md-nav__link">
         
   
   
@@ -791,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../groundstation_telemetry/groundstation_overview/" class="md-nav__link">
+      <a href="../../groundstation_telemetry/groundstation_overview/" class="md-nav__link">
         
   
   
@@ -814,7 +814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../groundstation_telemetry/telemetry_server_api_routes/" class="md-nav__link">
+      <a href="../../groundstation_telemetry/telemetry_server_api_routes/" class="md-nav__link">
         
   
   
@@ -920,7 +920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/autopilot_package/common_documentation_between_the_motorboat_autopilot_and_the_sailboat_autopilot/" class="md-nav__link">
+      <a href="../../ros2_packages/autopilot_package/common_documentation_between_the_motorboat_autopilot_and_the_sailboat_autopilot/" class="md-nav__link">
         
   
   
@@ -943,7 +943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/autopilot_package/sailboat_autopilot/" class="md-nav__link">
+      <a href="../../ros2_packages/autopilot_package/sailboat_autopilot/" class="md-nav__link">
         
   
   
@@ -966,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/autopilot_package/motorboat_autopilot/" class="md-nav__link">
+      <a href="../../ros2_packages/autopilot_package/motorboat_autopilot/" class="md-nav__link">
         
   
   
@@ -989,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/autopilot_package/telemetry/" class="md-nav__link">
+      <a href="../../ros2_packages/autopilot_package/telemetry/" class="md-nav__link">
         
   
   
@@ -1058,7 +1058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/sensors_package/gps/" class="md-nav__link">
+      <a href="../../ros2_packages/sensors_package/gps/" class="md-nav__link">
         
   
   
@@ -1081,7 +1081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/sensors_package/rc/" class="md-nav__link">
+      <a href="../../ros2_packages/sensors_package/rc/" class="md-nav__link">
         
   
   
@@ -1104,7 +1104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/sensors_package/wind_sensor/" class="md-nav__link">
+      <a href="../../ros2_packages/sensors_package/wind_sensor/" class="md-nav__link">
         
   
   
@@ -1173,7 +1173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/vesc_package/vesc/" class="md-nav__link">
+      <a href="../../ros2_packages/vesc_package/vesc/" class="md-nav__link">
         
   
   
@@ -1242,7 +1242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/microros_package/microros/" class="md-nav__link">
+      <a href="../../ros2_packages/microros_package/microros/" class="md-nav__link">
         
   
   
@@ -1311,7 +1311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/object_detection_package/object_detection/" class="md-nav__link">
+      <a href="../../ros2_packages/object_detection_package/object_detection/" class="md-nav__link">
         
   
   
@@ -1380,7 +1380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/autoboat_messages_package/autoboat_msgs/" class="md-nav__link">
+      <a href="../../ros2_packages/autoboat_messages_package/autoboat_msgs/" class="md-nav__link">
         
   
   
@@ -1449,7 +1449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/simulation_package/sailboat_simulation/" class="md-nav__link">
+      <a href="../../ros2_packages/simulation_package/sailboat_simulation/" class="md-nav__link">
         
   
   
@@ -1480,7 +1480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2_packages/other_nodes/what_about_the_other_nodes/" class="md-nav__link">
+      <a href="../../ros2_packages/other_nodes/what_about_the_other_nodes/" class="md-nav__link">
         
   
   
@@ -1548,7 +1548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hardware/wiring_color_scheme/" class="md-nav__link">
+      <a href="../../hardware/wiring_color_scheme/" class="md-nav__link">
         
   
   
@@ -1571,7 +1571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hardware/squircuit/" class="md-nav__link">
+      <a href="../../hardware/squircuit/" class="md-nav__link">
         
   
   
@@ -1598,18 +1598,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -1625,7 +1627,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Misc
@@ -1639,7 +1641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../misc/potential_security_risks/" class="md-nav__link">
+      <a href="../potential_security_risks/" class="md-nav__link">
         
   
   
@@ -1655,15 +1657,8 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
+              
+                
   
   
   
@@ -1683,31 +1678,10 @@
     </li>
   
 
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../systemctl/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Running ROS2 on Jetson Startup with Systemctl
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
+              
+            
+              
+                
   
   
     
@@ -1727,7 +1701,7 @@
   
   
   <span class="md-ellipsis">
-    Automatically Finding Which Port Devices Are on with Udev Rules
+    Running ROS2 on Jetson Startup with Systemctl
     
   </span>
   
@@ -1740,7 +1714,7 @@
   
   
   <span class="md-ellipsis">
-    Automatically Finding Which Port Devices Are on with Udev Rules
+    Running ROS2 on Jetson Startup with Systemctl
     
   </span>
   
@@ -1763,9 +1737,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#here-are-some-extra-resources" class="md-nav__link">
+  <a href="#some-useful-stuff-to-know-how-to-do-in-systemctl" class="md-nav__link">
     <span class="md-ellipsis">
-      Here Are Some Extra Resources
+      Some Useful Stuff to Know How to Do in Systemctl
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-of-a-systemctl-file-that-we-have-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of a Systemctl File That We Have Used
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extra-resources-to-learn-more-about-systemctl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra Resources to Learn More About Systemctl
     </span>
   </a>
   
@@ -1778,9 +1770,33 @@
     </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../udev_rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Automatically Finding Which Port Devices Are on with Udev Rules
     
-      
-      
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
   
   
   
@@ -1800,9 +1816,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -1819,6 +1836,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1850,9 +1875,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#here-are-some-extra-resources" class="md-nav__link">
+  <a href="#some-useful-stuff-to-know-how-to-do-in-systemctl" class="md-nav__link">
     <span class="md-ellipsis">
-      Here Are Some Extra Resources
+      Some Useful Stuff to Know How to Do in Systemctl
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-of-a-systemctl-file-that-we-have-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of a Systemctl File That We Have Used
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extra-resources-to-learn-more-about-systemctl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra Resources to Learn More About Systemctl
     </span>
   </a>
   
@@ -1877,28 +1920,15 @@
   
 
 
-<h1 id="what-are-udev-rules-and-how-do-we-use-them"><p style="text-align: center;"> What are UDev Rules and How Do We Use Them</p></h1>
-<p>Udev Rules allow us to rename specific devices, so that we can very easily access them through code. Devices can usually be found in the /dev/ folder in linux and are generally accessed like devices. For example, a USB device <em>could</em> be found as /dev/ttyACM0, and in order to access that device, you have to provide that specific filepath. However, notice how I said "<em>could</em> be found" because this actually depends on the number of USB devices connected to your computer/ Jetson and if your computer/ Jetson is feeling devious today. The USB device could actually be found at /dev/ttyACM1, /dev/ttyACM2, etc etc. In other words, just providing the filepath is unreliable.</p>
-<p>Thankfully, there is another way to access devices in Linux that is related, but much easier. Essentially, every single serial device on earth is uniquely identified with a 4 digit hexademical number called a VID (vendor ID), a 4 digital hexadecimal number called a PID (product ID), and a serial number. If you know this PID, VID, and serial number, you can search through all of the devices on your computer to try to find the port that corresponds to this specific PID, VID, and serial number to find the port that the device is on. The code for this would look a little something like this:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">serial.tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">list_ports</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">getPort</span><span class="p">(</span><span class="n">vid</span><span class="p">,</span> <span class="n">pid</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-    <span class="n">device_list</span> <span class="o">=</span> <span class="n">list_ports</span><span class="o">.</span><span class="n">comports</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">device</span> <span class="ow">in</span> <span class="n">device_list</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">device</span><span class="o">.</span><span class="n">vid</span> <span class="o">==</span> <span class="n">vid</span> <span class="ow">and</span> <span class="n">device</span><span class="o">.</span><span class="n">pid</span> <span class="o">==</span> <span class="n">pid</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">device</span><span class="o">.</span><span class="n">device</span>
-    <span class="k">raise</span> <span class="ne">OSError</span><span class="p">(</span><span class="s1">&#39;Device not found&#39;</span><span class="p">)</span>
-</code></pre></div>
-<p>However, this is also not perfect, since we would have to repeat this code throughout every single node that connects to a USB device. Also, this won't actually help us connect to a microros agent that easily, since we need to know the name of the device in /dev/ ahead of time. To solve this and make it a little bit cleaner, we can utilize udev rules. With udev rules, we can give the udev rules a specific VID and PID and then it will automatically rename any device with that VID and PID to "/dev/gps" or "/dev/wind_sensor" or whatever you want. Here is an example of a udev rule:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">ACTION</span><span class="o">==</span><span class="s2">&quot;add&quot;</span>,<span class="w"> </span>ATTRS<span class="o">{</span>idVendor<span class="o">}==</span><span class="s2">&quot;0403&quot;</span>,<span class="w"> </span>ATTRS<span class="o">{</span>idProduct<span class="o">}==</span><span class="s2">&quot;6001&quot;</span>,<span class="w"> </span>ATTRS<span class="o">{</span>serial<span class="o">}==</span><span class="s2">&quot;A9001WL3&quot;</span>,<span class="w"> </span><span class="nv">SYMLINK</span><span class="o">+=</span><span class="s2">&quot;rc&quot;</span>
-</code></pre></div>
-<p>In this example, the USB device has a VID of 0x0403, a PID of 0x6001, and a serial number of A9001WL3. This udev rule will then automatically detect if a device with this VID, PID, and serial number connects to your computer and automatically rename the device to /dev/rc, which makes it super easy to access. </p>
-<p>In order to make this udev rule actually work, you need to add it to a file like /etc/udev/rules.d/99-autoboat-udev.rules or any other .rules file in the /etc/udev/rules.d folder. Once this line is added to a file in the /etc/udev/rules.d folder, it will automatically take effect. </p>
-<p>If you wanted to automatically add a udev rule to a file like /etc/udev/rules.d/99-autoboat-udev.rules, then you would just have to run the following command in your linux terminal:</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">ACTION</span><span class="o">==</span><span class="s2">&quot;add&quot;</span>,<span class="w"> </span>ATTRS<span class="o">{</span>idVendor<span class="o">}==</span><span class="s2">&quot;0403&quot;</span>,<span class="w"> </span>ATTRS<span class="o">{</span>idProduct<span class="o">}==</span><span class="s2">&quot;6001&quot;</span>,<span class="w"> </span>ATTRS<span class="o">{</span>serial<span class="o">}==</span><span class="s2">&quot;A9001WL3&quot;</span>,<span class="w"> </span><span class="nv">SYMLINK</span><span class="o">+=</span><span class="s2">&quot;rc&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/udev/rules.d/99-autoboat-udev.rules
-</code></pre></div>
-<h2 id="here-are-some-extra-resources"><p style="text-align: center;"> Here Are Some Extra Resources</p></h2>
-<p>https://www.clearpathrobotics.com/assets/guides/kinetic/ros/Udev%20Rules.html</p>
+<h1 id="what-is-systemctl"><p style="text-align: center;"> What is Systemctl?</p></h1>
+<p>Systemctl is essentially a way to schedule scripts to run when a machine starts up, and this is super useful on the Jetson on the actual boat, because it allows us to start up the autopilot ROS nodes without SSH'ing into the Jetson all of the time. Before we started using systemctl, every single time we power cycled the boat, we would have to SSH into the boat and manually run <code>ros2 launch ......</code>, but now with systemctl, this command automatically runs for us everytime the boat starts up.</p>
+<h2 id="some-useful-stuff-to-know-how-to-do-in-systemctl"><p style="text-align: center;"> Some Useful Stuff to Know How to Do in Systemctl</p></h2>
+<p>Theres a whole bunch of things that are very useful to know how to do with systemctl processes. For example, how to create a new .service file, how to use <code>sudo systemctl enable myservice</code> (which enables the service to start on boot), how to use <code>sudo systemctl start myservice</code> (which starts the service right now), how to use <code>sudo systemctl stop myservice</code> (which stops the service from running right now), <code>sudo systemctl disable myservice</code> (which disables the service to start on boot), and <code>sudo journalctl -u myservice</code> (which shows you the print logs from a specific service).</p>
+<h2 id="example-of-a-systemctl-file-that-we-have-used"><p style="text-align: center;"> Example of a Systemctl File That We Have Used</p></h2>
+<p>TODO TODO TODO TODO</p>
+<h2 id="extra-resources-to-learn-more-about-systemctl"><p style="text-align: center;"> Extra Resources to Learn More About Systemctl</p></h2>
+<p>Making a new systemctl process: https://askubuntu.com/questions/919054/how-do-i-run-a-single-command-at-startup-using-systemd</p>
+<p>Using journalctl: https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs </p>
 
 
 
@@ -1947,12 +1977,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.select"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
