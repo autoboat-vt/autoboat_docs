@@ -106,13 +106,8 @@ nav:
 
   - Misc:
       - Potential Security Risks: misc/potential_security_risks.md
-
-  - Units, Standards, and Definitions: standards_and_definitions.md
-
-  - Running ROS2 on Jetson Startup with Systemctl: systemctl.md
-
-  - Automatically Finding Which Port Devices Are on with Udev Rules: udev_rules.md
-
-  - Automating Periodic Scripts with Crontabs: crontabs.md
-
-  - Known Issues: known_installation_issues.md
+      - Units, Standards, and Definitions: misc/standards_and_definitions.md
+      - Running ROS2 on Jetson Startup with Systemctl: misc/systemctl.md
+      - Automatically Finding Which Port Devices Are on with Udev Rules: misc/udev_rules.md
+      - Automating Periodic Scripts with Crontabs: misc/crontabs.md
+      - Known Issues: misc/known_installation_issues.md
