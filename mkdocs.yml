@@ -107,7 +107,10 @@ nav:
       - Squircuit: hardware/squircuit.md
 
 
-
+  
+  - Funding/ Business:
+      - SEC Funding: finances/SEC.md
+      
   - Misc:
       - Potential Security Risks: misc/potential_security_risks.md
       - Units, Standards, and Definitions: misc/standards_and_definitions.md
